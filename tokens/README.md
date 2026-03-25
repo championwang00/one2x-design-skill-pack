@@ -57,6 +57,10 @@
 | `space/s9` | `--space-s9` | 48px |
 | `space/s10` | `--space-s10` | 64px |
 
+### 消费稿里 Auto Layout 要绑 `space/s*` 时（库发布）
+
+`importVariableByKeyAsync` **只能拉取「已发布到团队库」的变量**。若主库 **`Shape`** 集合里虽有 `space/s0`…`space/s10`，但**发布库时未包含间距变量**，其它文件里会出现 **间距无法 import、只能手写 px** 的现象。请在 📖One2X 主库 **发布库** 时把 **`Shape`** 中的 **`space/s*`** 一并纳入（与 `Corner/*` 同级），消费稿即可对 `padding*`、`itemSpacing` 等使用 **`setBoundVariable`** 绑定 FLOAT 变量。可用插件侧 `figma.teamLibrary.getVariablesInLibraryCollectionAsync(Shape 集合 key)` 核对发布结果里是否出现 `space/s*`。
+
 ## 全量 Figma 变量
 
 `Color` 等集合有数百项；`tokens.css` 只收录实现常用子集。全量请用 Figma Variables 面板或 MCP `use_figma` 导出。

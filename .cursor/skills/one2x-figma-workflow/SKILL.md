@@ -70,6 +70,13 @@ description: >-
 
 **主库文件**（`fileKey`: `wHNBqjzSQZM8a4DlyBIDqW`）内作稿：直接用本地变量即可，无需 import。
 
+### Shape：`Corner/*` 与 `space/s*`（库发布 ≠ 主库本地全量）
+
+- 主库 **`Shape`** 集合（`VariableCollection` key：`4cd8a4e9257f11c5a4e270e284ac654d1e799545`）在**本地**含 **`space/s0`…`space/s10`** 与 **`Corner/*`**；**已发布到团队库**的同一集合在消费稿中 **可能只包含部分变量**（例如仅 **Corner** 若干项）。**未出现在发布列表里的 `space/s*`** 无法 `importVariableByKeyAsync`，Auto Layout 的 **padding / itemSpacing** 也就**不能**在消费稿里绑变量，直至主库发布流程把间距变量纳入库。
+- **核对**：在消费稿用 **`await figma.teamLibrary.getVariablesInLibraryCollectionAsync('4cd8a4e9257f11c5a4e270e284ac654d1e799545')`**，检查返回数组里是否有 **`space/s*`** 名称。
+- **圆角**：消费稿侧 **`importVariableByKeyAsync`** 使用的 **key 与主库一致**；库内展示名可能是 **`Corner/Small-H40`**（8px）等，与主库画布里的 **`Corner/8`** 命名不同，**以 key 为准**。
+- **绑定 API**：`paddingLeft` / `itemSpacing` / `topLeftRadius` 等见 **`figma-use`** [api-reference](../figma-use/references/api-reference.md) 的 **`setBoundVariable`** 列表（FLOAT 变量）。
+
 ## 字阶（Typescale）：用库「文字样式」承接变量
 
 **为什么**图层上只看到「填色」接了 Color 变量，却看不到每个字号、行高都单独绑 FLOAT？因为在 Figma 里，**单个 Text 图层**上对 `fontSize` / `lineHeight` 等 **不能**像填色那样稳定地用 `setBoundVariable` 串 Typescale（见 **`figma-use`** [api-reference](../figma-use/references/api-reference.md) / [wwds-text-styles](../figma-use/references/working-with-design-systems/wwds-text-styles.md)）。**推荐做法**：

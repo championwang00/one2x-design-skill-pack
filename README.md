@@ -29,6 +29,22 @@ Git 仓库地址：
 
 如果这是公司内部仓库，也可以在团队文档里直接贴该仓库链接。
 
+## 为什么要用
+
+这套 skill 不是单纯“多几个提示词”，而是把 **One2X 设计规范、Web Token、Figma MCP 工作流** 放到一处，解决团队里最常见的几个问题：
+
+- **同一页面不同人写出来风格不一致**：有人写裸 hex、有人写裸 `font-size`、有人自己猜间距。
+- **从 Figma 到代码会漂**：颜色、字阶、圆角、主按钮层级容易被写偏。
+- **Agent 能写出来，但不一定符合 One2X**：默认通用生成很容易脱离你们自己的 Token 和组件规则。
+- **动效没有统一标准**：有人乱用 `ease-in`、有人没做 `prefers-reduced-motion`、有人把高频操作也做得太花。
+
+用这套包的目标是：
+
+- **写前端页面时有统一规则**
+- **让 Agent 直接按 One2X 命名和 Token 落地**
+- **在 Figma 与代码之间保持同一份来源**
+- **后续更新时，团队知道去哪里看**
+
 ## 同事怎么用
 
 ### 1. 安装到项目
@@ -45,7 +61,32 @@ Git 仓库地址：
 
 若对方项目目录不同，需同步调整 skill 内指向 `design.md` 的相对路径。
 
-### 2. 在什么场景用哪个 skill
+### 2. 在 Cursor 里怎么实际用
+
+安装完后，在 Cursor 里给 Agent 说清楚你要做的是哪一类任务：
+
+| 你要做什么 | 建议说法 |
+|------|------|
+| 写页面 / 改页面 | “按 One2X design system 实现这个页面” |
+| 页面有动效 | “按 One2X design system 实现，并参考 web-animation-design 处理动效” |
+| 在 Figma 里改稿 | “用 one2x-figma-workflow 在 Figma 里改这个页面” |
+| 写 `use_figma` 脚本 | “先按 figma-use 的规则，再帮我写这个 use_figma 脚本” |
+
+可直接复制这些示例：
+
+```text
+按 One2X design system 实现这个页面，遵循 design.md 和 tokens/tokens.css。
+```
+
+```text
+按 One2X design system 实现这个页面；如果涉及 hover、过渡、入场出场，请同时参考 web-animation-design。
+```
+
+```text
+用 one2x-figma-workflow 在 Figma 里改这个页面，保持 One2X 的变量、Text style 和组件用法。
+```
+
+### 3. 在什么场景用哪个 skill
 
 | 场景 | 使用 |
 |------|------|
@@ -55,7 +96,7 @@ Git 仓库地址：
 | 直接写 `use_figma` 脚本 | `figma-use` |
 | 在 Figma 里从设计系统拼整页 / 多区块 | `figma-use` + `figma-generate-design` |
 
-### 3. 默认规则
+### 4. 默认规则
 
 - **前端实现**：以 `design.md` + `tokens/tokens.css` 为准。
 - **颜色 / 字阶 / 字族**：`--color-*`、`--type-*`、`--font-family-*`。

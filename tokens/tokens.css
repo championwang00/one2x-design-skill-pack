@@ -1,0 +1,197 @@
+/**
+ * One2X — Color、Shape、字阶、间距
+ * Figma: wHNBqjzSQZM8a4DlyBIDqW
+ * - Color / Shape：见各集合 Mode
+ * - Typescale / Typeface：节选见 design.md §3；本文件为网页落盘
+ * - 字族：页面需引入 Manrope、Nohemi（如 Google Fonts），再使用 --font-family-*
+ *
+ * 命名：Figma `Schemes/Primary` → `--color-schemes-primary`
+ * 字阶：Figma `label/medium` → `--type-label-medium-*`（size / leading / tracking / weight）
+ * 间距（与圆角命名规则不同）：Figma **`space/s0`…`space/s10`**（**s** = 阶梯档，**非** px）；CSS **`--space-s0`…`--space-s10`**。圆角 **`Corner/{px}`** 则名与像素一致。
+ */
+
+/* —— Medeo light（默认） —— */
+:root {
+  /* Shape — 圆角半径（4px 网格，单位 px；`full` = 胶囊/全圆） */
+  --shape-radius-0: 0;
+  --shape-radius-4: 4px;
+  --shape-radius-6: 6px;
+  --shape-radius-8: 8px;
+  --shape-radius-12: 12px;
+  --shape-radius-16: 16px;
+  --shape-radius-20: 20px;
+  --shape-radius-24: 24px;
+  --shape-radius-28: 28px;
+  --shape-radius-32: 32px;
+  --shape-radius-36: 36px;
+  --shape-radius-40: 40px;
+  --shape-radius-full: 1000px;
+
+  /* Schemes */
+  --color-schemes-primary: #863dfb;
+  --color-schemes-on-primary: #ffffff;
+  --color-schemes-secondary: #003bc4;
+  --color-schemes-on-secondary: #ffffff;
+  --color-schemes-secondary-container: #2e5fff;
+  --color-schemes-on-secondary-container: #ffffff;
+  --color-schemes-error: #ba1a1a;
+  --color-schemes-on-error: #ffffff;
+  --color-schemes-brand: #863dfb;
+
+  /* Surface */
+  --color-surface-background: #f4f4f5;
+  --color-surface-surface: #f4f4f5;
+  --color-surface-on-surface: #09090b;
+  --color-surface-on-surface-variant: #3f3f46;
+  --color-surface-outline: #d4d4d8;
+  --color-surface-outline-variant: #e4e4e7;
+  --color-surface-surface-container-lowest: #ffffff;
+  --color-surface-inverse-surface: #09090b;
+  --color-surface-inverse-on-surface: #ffffff;
+
+  /* Figma `Corner/*` 别名（与上方面板半径一致，便于对照设计稿命名） */
+  --shape-corner-none: var(--shape-radius-0);
+  --shape-corner-extra-small-h24: var(--shape-radius-4);
+  --shape-corner-medium-small-h32: var(--shape-radius-6);
+  --shape-corner-small-h40: var(--shape-radius-8);
+  --shape-corner-medium-h48: var(--shape-radius-12);
+  --shape-corner-large-h56: var(--shape-radius-16);
+  --shape-corner-extra-large: var(--shape-radius-20);
+  --shape-corner-full: var(--shape-radius-full);
+
+  /* Typeface（Figma Typeface · Baseline）— 需在 HTML 中加载字体文件 */
+  --font-family-plain: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-family-brand: "Nohemi", "Manrope", ui-sans-serif, sans-serif;
+
+  /* Typescale 节选（Figma 样式名与 design.md §3.2 一致） */
+  --type-label-medium-size: 12px;
+  --type-label-medium-leading: 17px;
+  --type-label-medium-tracking: 0.2px;
+  --type-label-medium-weight: 500;
+
+  --type-label-medium-prominent-size: 12px;
+  --type-label-medium-prominent-leading: 17px;
+  --type-label-medium-prominent-tracking: 0.2px;
+  --type-label-medium-prominent-weight: 600;
+
+  --type-label-large-size: 14px;
+  --type-label-large-leading: 20px;
+  --type-label-large-tracking: 0.1px;
+  --type-label-large-weight: 500;
+
+  --type-label-large-prominent-size: 14px;
+  --type-label-large-prominent-leading: 20px;
+  --type-label-large-prominent-tracking: 0.1px;
+  --type-label-large-prominent-weight: 600;
+
+  --type-title-medium-size: 16px;
+  --type-title-medium-leading: 24px;
+  --type-title-medium-tracking: 0.15px;
+  --type-title-medium-weight: 600;
+
+  --type-body-medium-size: 14px;
+  --type-body-medium-leading: 20px;
+  --type-body-medium-tracking: 0.1px;
+  --type-body-medium-weight: 600;
+
+  /* 间距：阶梯代号 s0…s10（非像素名）；与 Figma `space/s*` 对齐 */
+  --space-s0: 0;
+  --space-s1: 4px;
+  --space-s2: 8px;
+  --space-s3: 12px;
+  --space-s4: 16px;
+  --space-s5: 20px;
+  --space-s6: 24px;
+  --space-s7: 32px;
+  --space-s8: 40px;
+  --space-s9: 48px;
+  --space-s10: 64px;
+}
+
+/* —— Medeo dark：跟随系统深色 —— */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-schemes-primary: #863dfb;
+    --color-schemes-on-primary: #ffffff;
+    --color-schemes-secondary-container: #738bff;
+    --color-schemes-error: #ffb4ab;
+    --color-schemes-brand: #863dfb;
+
+    --color-surface-background: #17141a;
+    --color-surface-surface: #17141a;
+    --color-surface-on-surface: #e5e3e8;
+    --color-surface-on-surface-variant: #a49daf;
+    --color-surface-outline: #413d48;
+    --color-surface-outline-variant: #3c3842;
+    --color-surface-surface-container-lowest: #2d2932;
+    --color-surface-inverse-surface: #e0ccff;
+    --color-surface-inverse-on-surface: #313031;
+  }
+}
+
+/* —— 强制深色（例如用户开关；浅色 OS 也需生效） —— */
+:root[data-theme="dark"] {
+  --color-schemes-primary: #863dfb;
+  --color-schemes-on-primary: #ffffff;
+  --color-schemes-secondary-container: #738bff;
+  --color-schemes-error: #ffb4ab;
+  --color-schemes-brand: #863dfb;
+
+  --color-surface-background: #17141a;
+  --color-surface-surface: #17141a;
+  --color-surface-on-surface: #e5e3e8;
+  --color-surface-on-surface-variant: #a49daf;
+  --color-surface-outline: #413d48;
+  --color-surface-outline-variant: #3c3842;
+  --color-surface-surface-container-lowest: #2d2932;
+  --color-surface-inverse-surface: #e0ccff;
+  --color-surface-inverse-on-surface: #313031;
+}
+
+/* —— 强制浅色（深色 OS 下也保持浅色） —— */
+:root[data-theme="light"] {
+  --color-schemes-primary: #863dfb;
+  --color-schemes-on-primary: #ffffff;
+  --color-schemes-secondary: #003bc4;
+  --color-schemes-on-secondary: #ffffff;
+  --color-schemes-secondary-container: #2e5fff;
+  --color-schemes-on-secondary-container: #ffffff;
+  --color-schemes-error: #ba1a1a;
+  --color-schemes-on-error: #ffffff;
+  --color-schemes-brand: #863dfb;
+
+  --color-surface-background: #f4f4f5;
+  --color-surface-surface: #f4f4f5;
+  --color-surface-on-surface: #09090b;
+  --color-surface-on-surface-variant: #3f3f46;
+  --color-surface-outline: #d4d4d8;
+  --color-surface-outline-variant: #e4e4e7;
+  --color-surface-surface-container-lowest: #ffffff;
+  --color-surface-inverse-surface: #09090b;
+  --color-surface-inverse-on-surface: #ffffff;
+}
+
+/* 可选：字阶组合类 — 新页面/C2P 优先用此类或 `--type-*` + `--font-family-*`，避免手写 px 字号 */
+.o2x-type-label-medium {
+  font-family: var(--font-family-plain);
+  font-size: var(--type-label-medium-size);
+  line-height: var(--type-label-medium-leading);
+  letter-spacing: var(--type-label-medium-tracking);
+  font-weight: var(--type-label-medium-weight);
+}
+
+.o2x-type-label-large {
+  font-family: var(--font-family-plain);
+  font-size: var(--type-label-large-size);
+  line-height: var(--type-label-large-leading);
+  letter-spacing: var(--type-label-large-tracking);
+  font-weight: var(--type-label-large-weight);
+}
+
+.o2x-type-title-medium {
+  font-family: var(--font-family-plain);
+  font-size: var(--type-title-medium-size);
+  line-height: var(--type-title-medium-leading);
+  letter-spacing: var(--type-title-medium-tracking);
+  font-weight: var(--type-title-medium-weight);
+}

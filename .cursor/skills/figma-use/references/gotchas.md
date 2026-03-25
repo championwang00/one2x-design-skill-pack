@@ -8,6 +8,7 @@
 - Paint, color, and variable binding pitfalls
 - Page context and plugin lifecycle pitfalls
 - Auto Layout and sizing order pitfalls (including HUG/FILL interactions)
+- `layoutAlignItems` + TEXT in headless `use_figma` (object is not extensible)
 - Variant layout and geometry pitfalls
 - Variable scopes and mode pitfalls
 - Node cleanup and empty-fill pitfalls
@@ -509,6 +510,23 @@ child.layoutSizingHorizontal = 'FILL'
 // For horizontal layout, stretch height:
 child.layoutSizingVertical = 'FILL'
 ```
+
+## `layoutAlignItems` + `TEXT` children in headless `use_figma` may throw `object is not extensible`
+
+In some **MCP / headless `use_figma`** runs, setting **`layoutAlignItems`** on an auto-layout **Frame** that **directly contains `TEXT` nodes** (or certain mixes of `TEXT` + `INSTANCE` children) has triggered:
+
+```txt
+TypeError: object is not extensible
+```
+
+**Mitigations (One2X table layouts validated in practice):**
+
+- Prefer **`counterAxisAlignItems: 'CENTER'`** on **horizontal** row frames to vertically align **checkbox wrappers** and **cell stacks** (cross axis = vertical).
+- For **right-aligned numeric columns**, use **`primaryAxisAlignItems: 'MAX'`** on the cell **Frame** and **`textAlignHorizontal = 'RIGHT'`** on the **Text** node.
+- **Do not** put a **library `INSTANCE`** (e.g. Checkboxes) directly as a child of a problematic horizontal auto-layout row; **wrap** it in a neutral **Frame** first.
+- Avoid **`primaryAxisSizingMode` + `counterAxisSizingMode` both `FIXED`** on tiny horizontal cell frames that only wrap a single **Text** if you hit extensibility errors; relax one axis to **`AUTO`** or adjust structure.
+
+See also **[one2x-figma-workflow](../../one2x-figma-workflow/SKILL.md)** § 表格 / 列表式界面.
 
 ## Variable collection mode limits are plan-dependent
 

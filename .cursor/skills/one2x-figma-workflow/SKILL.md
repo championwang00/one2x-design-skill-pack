@@ -94,6 +94,27 @@ description: >-
 - **API 形态**（与矩形填色一致）：`text.fills = [{ type: 'SOLID', color: {…}, boundVariables: { color: createVariableAlias(importedVar) } }]`；**勿**对 `text` 使用已废弃的 `setBoundVariable('fills', 0, 'color', …)` 路径。
 - **实例内部**（`INSTANCE` 子树）的 `TEXT` **不要**在消费稿里改，避免与主库组件漂移；若需变量色，应在 **📖One2X 主库**里改对应组件/文字样式。
 
+## 表格 / 列表式界面：Auto Layout 对齐（与 `long-table.html` 一致）
+
+搭 **侧栏 + 工具栏 + 数据表 + 分页** 时，除 **`figma-use`** 的 Auto Layout 规则外，消费稿里建议：
+
+| 目标 | 做法 |
+|------|------|
+| **表头 / 数据行垂直居中**（相对行高） | 在行 `FRAME`（`layoutMode: HORIZONTAL`）上设 **`counterAxisAlignItems: 'CENTER'`**，而不是在含多列子级的父级上滥用 **`layoutAlignItems`**（见下节 MCP 注意）。 |
+| **进度、百分比等数字列** | 单元格 `FRAME`：**`primaryAxisAlignItems: 'MAX'`**；内层 **`TEXT`**：**`textAlignHorizontal = 'RIGHT'`**（对齐网页 `text-align: right` / `.cell--num`）。 |
+| **选框列** | **`Checkboxes` 实例不要**直接作为横向 Auto Layout 行的**唯一**子类型组合里的首子（易与插件/MCP 环境冲突）；外包一层 **`FRAME`**（如 44×40），内用 **`layoutMode: 'HORIZONTAL'`** + **`primaryAxisAlignItems` / `counterAxisAlignItems`: `'CENTER'`** 居中复选框。 |
+| **页头标题区与右侧按钮、工具栏内 Field 与辅助文案** | 横向容器上 **`counterAxisAlignItems: 'CENTER'`**，使交叉轴（竖直方向）对齐。 |
+| **分页条** | 每个页码/箭头为 **等宽等高**（如 **36×36**），父级 **`Pager`** **`itemSpacing`** 用 **`space/s*`** 对应的数值；父级高度与按钮一致，避免出现异常拉伸或换行错位。 |
+| **小列单元格（仅包一段文字）** | 避免在简单横向 **`FRAME`** 上同时 **`primaryAxisSizingMode` + `counterAxisSizingMode` 均为 `FIXED`** 且子级仅为 `TEXT` 的脆弱组合（部分环境下会报 **`object is not extensible`**）；优先 **`AUTO`** 一轴或仅用 padding + 文本对齐。 |
+
+### 图层面板命名
+
+将默认名 **`Frame`** 改为 **`Table · head row`、Data row 01、表头 · 进度、Pager · page 1** 等语义化名称，**不会**破坏变量绑定与样式；便于评审与 Dev Mode。
+
+### `use_figma`（MCP）下：`layoutAlignItems` 慎用
+
+在 **headless `use_figma`** 中，对部分父级设置 **`layoutAlignItems`**（与 **`TEXT` 子级或特定 Auto Layout 组合**）曾触发 **`TypeError: object is not extensible`**。排障时优先用 **`counterAxisAlignItems`** 做行内垂直对齐、用子级 **`TEXT` 的 `textAlignHorizontal`** 做左右对齐，并参考 **`figma-use`** [gotchas](../figma-use/references/gotchas.md) 中 **「layoutAlignItems 与 TEXT」** 一条。
+
 ## Agent 执行要点
 
 - **写 Figma 前**：在目标文件中用 **`search_design_system`**（`fileKey` 同上）查已有 **组件、变量、样式**，优先 **importComponentByKeyAsync** / **importVariableByKeyAsync**，与 **`figma-generate-design`** 流程一致。

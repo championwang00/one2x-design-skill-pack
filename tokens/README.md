@@ -23,9 +23,9 @@
 
 | Figma（`Shape`） | CSS |
 |-------------------|-----|
-| **`Corner/0`、`Corner/4` … `Corner/40`、`Corner/6`、`Corner/Full`** | `var(--shape-radius-0)` … `var(--shape-radius-full)`（名中数字 **= 半径 px**） |
+| **`Radius/0`、`Radius/4` … `Radius/40`、`Radius/6`、`Radius/Full`** | `var(--shape-radius-0)` … `var(--shape-radius-full)`（名中数字 **= 半径 px**） |
 
-稿内仅 **`Corner/*`** 这一组；**`Radius/*`** 不使用。
+稿内圆角变量分组为 **`Radius/*`**（**`Shape`** 集合）。历史 **`Corner/*`** 已废弃；CSS **`--shape-corner-*`** 仍为旧名/高度档对照别名，见 `tokens.css`。
 
 ## 字族与字阶（Typescale 节选）
 
@@ -59,7 +59,7 @@
 
 ### 消费稿里 Auto Layout 要绑 `space/s*` 时（库发布）
 
-`importVariableByKeyAsync` **只能拉取「已发布到团队库」的变量**。若主库 **`Shape`** 集合里虽有 `space/s0`…`space/s10`，但**发布库时未包含间距变量**，其它文件里会出现 **间距无法 import、只能手写 px** 的现象。请在 📖One2X 主库 **发布库** 时把 **`Shape`** 中的 **`space/s*`** 一并纳入（与 `Corner/*` 同级），消费稿即可对 `padding*`、`itemSpacing` 等使用 **`setBoundVariable`** 绑定 FLOAT 变量。可用插件侧 `figma.teamLibrary.getVariablesInLibraryCollectionAsync(Shape 集合 key)` 核对发布结果里是否出现 `space/s*`。
+`importVariableByKeyAsync` **只能拉取「已发布到团队库」的变量**。若主库 **`Shape`** 集合里虽有 `space/s0`…`space/s10`，但**发布库时未包含间距变量**，其它文件里会出现 **间距无法 import、只能手写 px** 的现象。请在 📖One2X 主库 **发布库** 时把 **`Shape`** 中的 **`space/s*`** 一并纳入（与 **`Radius/*`** 同级），消费稿即可对 `padding*`、`itemSpacing` 等使用 **`setBoundVariable`** 绑定 FLOAT 变量。可用插件侧 `figma.teamLibrary.getVariablesInLibraryCollectionAsync(Shape 集合 key)` 核对发布结果里是否出现 `space/s*`。
 
 ## 全量 Figma 变量
 

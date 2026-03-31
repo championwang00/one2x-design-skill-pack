@@ -100,7 +100,7 @@ Git 仓库地址：
 
 - **前端实现**：以 `design.md` + `tokens/tokens.css` 为准。
 - **颜色 / 字阶 / 字族**：`--color-*`、`--type-*`、`--font-family-*`。
-- **圆角**：`--shape-radius-*`；Figma **`Shape`** · **`Corner/{px}`**（名字里的数字 **= 半径 px**）。
+- **圆角**：`--shape-radius-*`；Figma **`Shape`** · **`Radius/{px}`**（名字里的数字 **= 半径 px**）。
 - **间距**：`--space-s0` … `--space-s10`；Figma **`Shape`** · **`space/s0`…`space/s10`**（**`s`** = 阶梯档，**≠** 像素；勿与圆角「名=px」混用）。详见 **`design.md` §2.4–§2.5**。
 - **主行动按钮**：默认遵循 `design.md` §1.1。
 - **涉及 Figma MCP**：需启用 Figma MCP，并确保账号可访问 **📖One2X Design System** 文件。

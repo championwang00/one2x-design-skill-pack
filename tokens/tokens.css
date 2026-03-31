@@ -7,7 +7,7 @@
  *
  * 命名：Figma `Schemes/Primary` → `--color-schemes-primary`
  * 字阶：Figma `label/medium` → `--type-label-medium-*`（size / leading / tracking / weight）
- * 间距（与圆角命名规则不同）：Figma **`space/s0`…`space/s10`**（**s** = 阶梯档，**非** px）；CSS **`--space-s0`…`--space-s10`**。圆角 **`Corner/{px}`** 则名与像素一致。
+ * 间距（与圆角命名规则不同）：Figma **`space/s0`…`space/s10`**（**s** = 阶梯档，**非** px）；CSS **`--space-s0`…`--space-s10`**。圆角 Figma **`Radius/{px}`** 则名与像素一致（作用域分类名仍为 Corner radius）。
  */
 
 /* —— Medeo light（默认） —— */
@@ -49,7 +49,7 @@
   --color-surface-inverse-surface: #09090b;
   --color-surface-inverse-on-surface: #ffffff;
 
-  /* Figma `Corner/*` 别名（与上方面板半径一致，便于对照设计稿命名） */
+  /* 历史：旧高度档 / 旧 `Corner/*` 对照用别名（新稿 Figma 圆角分组为 `Radius/*`，对齐 `--shape-radius-*`） */
   --shape-corner-none: var(--shape-radius-0);
   --shape-corner-extra-small-h24: var(--shape-radius-4);
   --shape-corner-medium-small-h32: var(--shape-radius-6);

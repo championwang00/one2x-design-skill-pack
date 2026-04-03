@@ -88,6 +88,53 @@ description: >-
 
 **组件内文字**（如 `Field`、`Button` 内 label）由 **主库组件定义** 承载，不在消费稿逐层绑 Typescale。
 
+### Typescale 档位与使用场景（One2X 当前字阶）
+
+以下为当前主库（`📖One2X Design System`）可用文本样式的推荐语义。优先按语义选样式，不按视觉“看起来差不多”临时挑字号。
+
+| 层级 | 当前档位 | 推荐使用场景（Medeo） | 不建议 |
+|------|----------|------------------------|--------|
+| `display/*` | `display/large`、`display/medium`、`display/small` | 营销/活动页 Hero 主标题、品牌 KV 区块标题、超强视觉入口文案 | 普通弹窗标题、表单标题、正文段落 |
+| `headline/*` | `headline/large`、`headline/medium`、`headline/small` | 页面主标题、大章节开场标题、内容区一级分组标题 | 按钮文案、长段正文、辅助注释 |
+| `title/*` | `title/large`、`title/medium`、`title/small` | Dialog/Drawer 标题、卡片标题、列表分组标题 | 营销 Hero 大标题、超小注释文本 |
+| `body/*` | `body/large`、`body/medium`、`body/small`、`body/extra small` | 正文说明、帮助文案、长描述、元信息/时间戳（extra small） | 主 CTA 文案、主导航标签 |
+| `label/*` | `label/Extra Large`、`label/large`、`label/medium`、`label/small` | Button、Tab、Chip、输入标签、紧凑控件文案 | 段落正文、营销大标题 |
+
+`prominent` 变体用于同语义下的强调，不用于替代层级：
+
+| 变体 | 何时用 | 何时不用 |
+|------|--------|----------|
+| `label/large - prominent` | 主行动按钮（Primary CTA）、需要第一优先级识别的操作 | 同一区域所有按钮都用，导致强调失效 |
+| `label/medium - prominent` | 紧凑空间中的关键操作（如次级工具条主操作） | 纯展示标签、一般辅助信息 |
+| `label/Extra Large prominent` | 超大按钮场景下仍需最高强调 | 不是交互主路径的文案 |
+
+快速决策：
+
+1. 品牌叙事优先 → `display/*`；信息结构优先 → `headline/*` 或 `title/*`。  
+2. 阅读内容 → `body/*`；交互识别 → `label/*`。  
+3. 仅当“同层需要更高优先级”时使用 `prominent`。
+
+### Medeo 常见页面映射示例（可直接套用）
+
+| 场景 | 推荐字阶 | 备注 |
+|------|----------|------|
+| 营销落地页 Hero 主标题 | `display/large`（或 `display/medium`） | 品牌叙事入口；避免与业务页主标题混用 |
+| 活动页区块开场标题 | `headline/large` | 比 `display` 收敛，仍保留强层级 |
+| 工作台页面主标题（如 Projects / Templates） | `headline/medium` | 页面信息结构的一级标题 |
+| Dialog 标题（如 Share / Export / Notification） | `title/medium` | 通用弹窗主标题默认档 |
+| Card/Panel 标题（如 Library panel 小区块） | `title/small` 或 `title/medium` | 复杂卡片用 `title/medium`，紧凑块用 `title/small` |
+| 表格正文 / 列表项主文案 | `body/medium` | 默认阅读层；长描述可升级 `body/large` |
+| 辅助说明 / 次要注释 / 时间戳 | `body/small` 或 `body/extra small` | 元信息优先 `body/extra small` |
+| 主按钮文案（Primary CTA） | `label/large - prominent` | 与 `Schemes/Primary` 搭配使用 |
+| 次要按钮 / Tab / 输入标签 | `label/large` | 作为默认交互文案档位 |
+| 紧凑工具条按钮 / 小 Chip | `label/medium`（关键操作用 `label/medium - prominent`） | 在密集区域保持可读与层级 |
+
+执行约束：
+
+- 同一页面内，同一语义角色固定同一档位，避免局部“看着调”。
+- `prominent` 只给关键操作，避免全局滥用导致主次失效。
+- 组件内部文字（Button/Field 等）优先沿用库内样式，不在实例里逐个手改。
+
 ### 消费稿「字色」与 Color 变量：对稿可见性（可选但推荐）
 
 - **字阶**仍由 **Text style** 解决；**字色**若要在面板里明确显示为 **库变量**（与 `design.md` / `tokens.css` 的 `--color-*` 对齐），对独立 `TEXT` 图层在应用样式后**再**把 **`fills[0]`**（`SOLID`）绑到 **`Surface/On Surface`** 或 **`Surface/On Surface Variant`** 等（按语义：`title/*` / 正文主色 → `On Surface`，次要说明、辅助行 → `On Surface Variant`，主色强调 → `Schemes/Primary`）。

@@ -222,41 +222,23 @@ Figma 本地变量按 **Collection** 组织；下列与稿内 **Variables** 面�
 
 **`Shape`** 集合中同时包含 **`Radius/*`**（本节）与 **`space/s*`**（§2.5）。**命名规则与间距不同**：圆角 **名中数字 = 半径 px**；间距 **名中 `s0`…`s10` = 阶梯档，≠ px**（见 §2.5 表）。
 
-**网页侧（CSS）**以 **半径像素值** 命名；主梯度 **4px 步进** 至 **40**，另含 **`--shape-radius-6`** 与 Figma **`Radius/6`** 对齐。名称**不**与组件高度（H24、H40 等）绑定，避免同心嵌套时产生误导。
+Figma（**`Shape`** · **Baseline**）圆角变量分组名为 **`Radius/*`**；Web 侧以 **`--shape-radius-*`** 对齐。Figma 变量作用域分类仍为 **Corner radius**（面板/作用域名，与分组前缀 `Radius` 不同）。名称**不**与组件高度（H24、H40 等）绑定，避免同心嵌套时产生误导。
 
-| CSS 变量 | 半径 |
-|----------|------|
-| `--shape-radius-0` | 0 |
-| `--shape-radius-4` | 4px |
-| `--shape-radius-6` | 6px（与 `Radius/6` 一致） |
-| `--shape-radius-8` | 8px |
-| `--shape-radius-12` | 12px |
-| `--shape-radius-16` | 16px |
-| `--shape-radius-20` | 20px |
-| `--shape-radius-24` | 24px |
-| `--shape-radius-28` | 28px |
-| `--shape-radius-32` | 32px |
-| `--shape-radius-36` | 36px |
-| `--shape-radius-40` | 40px |
-| `--shape-radius-full` | 全圆角（胶囊，见 `tokens/tokens.css`） |
-
-**Figma（`Shape` · Baseline）** 圆角变量分组名为 **`Radius/*`**。变量名为 **半径像素**（或 **`Radius/Full`** = 胶囊）；Figma 变量作用域分类仍为 **Corner radius**（面板/作用域名，与分组前缀 `Radius` 不同）。WEB **Code syntax** 为 `var(--shape-radius-…)`，与上表一致。
-
-| Figma 变量 | 半径 |
-|-------------|------|
-| `Radius/0` | 0 |
-| `Radius/4` | 4px |
-| `Radius/6` | 6px（保留原档，非 4 步进） |
-| `Radius/8` | 8px |
-| `Radius/12` | 12px |
-| `Radius/16` | 16px |
-| `Radius/20` | 20px |
-| `Radius/24` | 24px |
-| `Radius/28` | 28px |
-| `Radius/32` | 32px |
-| `Radius/36` | 36px |
-| `Radius/40` | 40px |
-| `Radius/Full` | 全圆角（与 `tokens.css` 中 `1000px` 一致） |
+| Figma 变量 | CSS 变量 | 半径 |
+|------------|----------|------|
+| `Radius/0` | `--shape-radius-0` | 0 |
+| `Radius/4` | `--shape-radius-4` | 4px |
+| `Radius/6` | `--shape-radius-6` | 6px（保留原档，非 4 步进） |
+| `Radius/8` | `--shape-radius-8` | 8px |
+| `Radius/12` | `--shape-radius-12` | 12px |
+| `Radius/16` | `--shape-radius-16` | 16px |
+| `Radius/20` | `--shape-radius-20` | 20px |
+| `Radius/24` | `--shape-radius-24` | 24px |
+| `Radius/28` | `--shape-radius-28` | 28px |
+| `Radius/32` | `--shape-radius-32` | 32px |
+| `Radius/36` | `--shape-radius-36` | 36px |
+| `Radius/40` | `--shape-radius-40` | 40px |
+| `Radius/Full` | `--shape-radius-full` | 全圆角（胶囊；`tokens.css` 中为 `1000px`） |
 
 **历史**：此前稿内曾用 **`Corner/*`** 前缀（与上表同一套 px / Full）；已统一为 **`Radius/*`**。旧高度档名对照仍见 **`tokens.css`** 里 **`--shape-corner-*`** 别名。另见旧稿中的 `dimensions/radius/rounded-sm` 等，以节点绑定为准。
 
@@ -330,6 +312,45 @@ Figma 本地变量按 **Collection** 组织；下列与稿内 **Variables** 面�
 
 **展示/营销标题**：部分模块使用 **Nohemi**（如 `headline-small`）。**Typescale** 共 **88** 个变量（Baseline / mobile）；上表为常用节选。
 
+### 3.3 字阶语义与场景映射（Medeo）
+
+以下映射用于统一设计与实现选型。优先按语义选字阶，不按“视觉看起来接近”临时改字号。
+
+| 层级 | 当前档位（主库） | 推荐场景 | 不建议 |
+|------|------------------|----------|--------|
+| `display/*` | `display/large`、`display/medium`、`display/small` | 营销页 Hero 主标题、活动 KV、品牌叙事入口 | 常规业务弹窗标题、表单标题、正文段落 |
+| `headline/*` | `headline/large`、`headline/medium`、`headline/small` | 页面主标题、章节开场标题、内容区一级分组标题 | 按钮文案、长段正文 |
+| `title/*` | `title/large`、`title/medium`、`title/small` | Dialog/Drawer 标题、Card/Panel 标题、列表分组标题 | Hero 大标题、超小注释文本 |
+| `body/*` | `body/large`、`body/medium`、`body/small`、`body/extra small` | 正文、说明、帮助文案、元信息/时间戳（extra small） | 主 CTA 文案、主导航标签 |
+| `label/*` | `label/Extra Large`、`label/large`、`label/medium`、`label/small` | Button、Tab、Chip、Field label、紧凑工具条文案 | 段落正文、营销大标题 |
+
+`prominent` 仅用于同层强调，不替代层级：
+
+- `label/large - prominent`：主行动（Primary CTA）。
+- `label/medium - prominent`：紧凑空间中的关键操作。
+- `label/Extra Large prominent`：超大按钮场景下的最高强调。
+
+### 3.4 Medeo 常见页面举例（可直接套用）
+
+| 场景 | 推荐字阶 | 备注 |
+|------|----------|------|
+| 营销落地页 Hero 主标题 | `display/large`（或 `display/medium`） | 品牌叙事优先 |
+| 活动页区块开场标题 | `headline/large` | 比 `display` 收敛，仍保持强层级 |
+| 工作台页面主标题（Projects / Templates） | `headline/medium` | 信息结构一级标题 |
+| Dialog 标题（Share / Export / Notification） | `title/medium` | 通用弹窗默认档 |
+| Card/Panel 标题（Library 等） | `title/small` 或 `title/medium` | 按信息密度选择 |
+| 表格正文 / 列表项主文案 | `body/medium` | 默认阅读层 |
+| 辅助说明 / 时间戳 / 元信息 | `body/small` 或 `body/extra small` | 低层级信息 |
+| 主按钮文案（Primary CTA） | `label/large - prominent` | 与 `Schemes/Primary` 搭配 |
+| 次要按钮 / Tab / 输入标签 | `label/large` | 默认交互文案 |
+| 紧凑工具条按钮 / 小 Chip | `label/medium`（关键操作用 `label/medium - prominent`） | 密集区域的平衡选择 |
+
+执行约束：
+
+1. 同一页面内，同一语义角色固定同一档位，避免局部“看着调”。  
+2. `prominent` 仅给关键操作，避免全局滥用导致主次失效。  
+3. 组件内部文字优先沿用库内样式，不在实例里逐个手改。  
+
 **网页实现（必读）**：新建页面时 **`font-family`** 须为 **`var(--font-family-plain)`** 或 **`var(--font-family-brand)`**；**字号 / 行高 / 字间距 / 字重** 须来自 **`tokens.css`** 里对应 **`--type-*`**（或直接使用 **`.o2x-type-*`** 组合类），**禁止**随意写 `font-size: 14px` 等魔法数字。页面需 **加载 Manrope、Nohemi**（如 Google Fonts），否则变量仍会回退到系统字体。
 
 ---
@@ -367,10 +388,13 @@ Figma 本地变量按 **Collection** 组织；下列与稿内 **Variables** 面�
 
 ## 6. 代码映射建议
 
-- **单一数据源**：实现以 **`tokens/tokens.css`** 为准 — **`--color-*`**、**`--shape-radius-*`**、**`--type-*`**、**`--space-s*`**、**`--font-family-*`**。
-- **新页面/C2P 清单**：① 引入 `tokens.css`；② **`body`** 或根节点设 **`font-family: var(--font-family-plain)`**；③ 标题/正文用 **`--type-*`** 或 **`.o2x-type-*`**；④ **`gap` / `padding` / `margin`** 用 **`var(--space-s*)`**（阶梯档，见 §2.5）；⑤ 圆角用 **`var(--shape-radius-12)`** 等（与 Figma **`Radius/12`**，**12 = 12px**）；⑥ **主行动按钮**用 **`--color-schemes-primary` + `--color-schemes-on-primary`**（§1.1）。
-- **Tailwind / shadcn**：把 `tokens.css` 变量挂入 `theme.extend`（`colors`、`spacing`、`fontSize`、`borderRadius` 等）。
-- **变更来源**：以 **Figma** 为准；`tokens.css` 与 `design.md` 随大版本同步。
+本节不再重复维护另一份映射表。**实现侧单一数据源**为 **`tokens/tokens.css`**；Figma 命名与取值以 **§2.4 圆角**、**§2.5 间距**、**§2.8 网页侧变量**为准。
+
+- **当前有效命名**：Figma 圆角为 **`Radius/*`**，间距为 **`space/s*`**；Web 分别对应 **`--shape-radius-*`**、**`--space-s*`**。
+- **历史名仅作兼容说明**：**`Corner/*`**、**`spacing/*`**、**`--shape-corner-*`** 均不作为新稿或新实现命名依据。
+- **新页面 / C2P 落地**：引入 `tokens.css`；字族与字阶使用 **`--font-family-*`**、**`--type-*`** 或 **`.o2x-type-*`**；`gap` / `padding` / `margin` 用 **`var(--space-s*)`**；圆角用 **`var(--shape-radius-*)`**；主行动按钮用 **`--color-schemes-primary`** + **`--color-schemes-on-primary`**（§1.1）。
+- **工程接入**：Tailwind / shadcn 可将 `tokens.css` 变量挂入 `theme.extend`（`colors`、`spacing`、`fontSize`、`borderRadius` 等）。
+- **变更来源**：以 Figma 与 `tokens.css` 同步结果为准；`design.md` 负责说明，不再单独衍生第二套配置。
 
 ---
 
@@ -378,6 +402,8 @@ Figma 本地变量按 **Collection** 组织；下列与稿内 **Variables** 面�
 
 | 日期 | 说明 |
 |------|------|
+| 2026-04-03 | Typography 增补 **§3.3 字阶语义与场景映射**、**§3.4 Medeo 常见页面举例**，统一 `display/headline/title/body/label` 与 `prominent` 使用边界，避免 skill 与正文口径漂移 |
+| 2026-03-31 | 精简 **§6 代码映射建议**：去除与 §2.4 / §2.5 / `tokens.css` 重复的映射表描述，明确 **`tokens/tokens.css`** 为实现侧单一数据源；历史名仅作兼容说明 |
 | 2026-03-25 | 基于 Figma MCP：`get_variable_defs`（Share、Button 节点）、`search_design_system`、`get_design_context`（VideoShareDialog）与组件描述整理 |
 | 2026-03-25 | 补充整文件入口链接说明；用 `use_figma` 枚举全部 Page 页签写入「Figma 文件结构」表 |
 | 2026-03-25 | 增补 §2.0、Shape 圆角全表、§3.1 Typeface；**Design scale** 与 **fileKey** 强调；恢复误覆盖的正文 |

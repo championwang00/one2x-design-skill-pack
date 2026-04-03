@@ -39,6 +39,25 @@ description: >-
 6. **可选**：**Figma MCP** 的 `get_design_context` / `get_variable_defs` / `search_design_system`（`fileKey`: `wHNBqjzSQZM8a4DlyBIDqW`）。
 7. **动效**（有则执行）：阅读 **[web-animation-design](../web-animation-design/SKILL.md)**；需要细节时见同目录 **[PRACTICAL-TIPS.md](../web-animation-design/PRACTICAL-TIPS.md)**。Review 动效问题时按该 skill 要求使用 **Before / After 表格**输出。动效不替代 Token：例如 `transition` 的 `color` / `background-color` 仍用 **`var(--color-…)`**。
 
+## Typography 使用语义（实现侧速查）
+
+对齐 One2X 当前字阶时，按语义选层级，不按“看起来接近”手动改字号：
+
+- `display/*`：营销/品牌级大标题（Hero、活动 KV）；不要用于常规业务弹窗与表单。
+- `headline/*`：页面或章节级标题（信息结构层）；不要用于按钮文本。
+- `title/*`：组件和区块标题（Dialog、Card、List Section）；是日常业务界面主力标题层。
+- `body/*`：阅读内容（正文、说明、元信息）；不要承担主操作强调。
+- `label/*`：交互标签（Button、Tab、Chip、Field label）；不要用于正文段落。
+- `*-prominent`：同语义加权（主 CTA/关键操作）；避免整屏普遍使用导致层级失真。
+
+### Medeo 组件/页面快速映射
+
+- 营销 Hero：`display/large` 或 `display/medium`。
+- 页面主标题：`headline/medium`（强章节可用 `headline/large`）。
+- Dialog/Drawer 标题：`title/medium`；小区块标题：`title/small`。
+- 正文与说明：`body/medium`；辅助注释/时间戳：`body/small` 或 `body/extra small`。
+- 交互文案默认：`label/large`；主 CTA：`label/large - prominent`；紧凑工具条：`label/medium`。
+
 ## Out of scope
 
 - 不替代产品 PRD 或无障碍专项审计；a11y 在遵循设计系统基础上按平台规范补强。

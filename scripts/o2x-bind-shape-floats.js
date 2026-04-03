@@ -1,6 +1,6 @@
 /**
  * One2X 主库：把可匹配的数值绑定到 Shape 变量（Radius/*、space/s*）。
- * 用途：在 Figma「开发」→ 你自己的插件 / MCP use_figma 里粘贴运行；或把逻辑拷进一次性插件。
+ * 用途：在 Figma「开发」→ 你自己的插件里粘贴运行；或把逻辑拷进一次性插件。也可用 MCP use_figma 单次小块。
  *
  * 约定：
  * - 圆角：本地变量名 Radius/0 … Radius/40、Radius/Full（≥500px 视为 Full）
@@ -10,13 +10,20 @@
  * - 进度：figma.root sharedPluginData namespace `one2x_ds` key `bindShapeFloats` JSON `{pi,si}`
  * - 跑完全文后 key 被清空。要重来：setSharedPluginData(ns, key, '') 或 RESET=true
  *
- * MCP：每次建议 CHUNK=40–50、MAX_INNER=1，避免网关超时；多跑几次直到 fileDone。
+ * 一次性跑完（推荐）：设 RUN_UNTIL_DONE = true，在 Figma 桌面端开发插件里 Run 一次；内部循环调用 run() 直到 fileDone。
+ * 每轮之间会 await YIELD_MS，减轻长时间阻塞感；卡顿时可把 YIELD_MS 调到 1–5 或略减小 CHUNK。
+ *
+ * MCP：单次 HTTP 易 504 / 超时，只适合小块续跑或抽查；主流程不要用 MCP 当「整文件循环」。
  */
 var NS = 'one2x_ds';
 var CUR = 'bindShapeFloats';
 var CHUNK = 50;
 var MAX_INNER = 1;
 var RESET = false;
+/** 为 true 时：反复执行 run() 直到整文件完成（适合本地插件一次 Run）。默认 false 与旧行为一致。 */
+var RUN_UNTIL_DONE = false;
+/** 每完成一轮 run() 后的等待（毫秒），让 UI 喘口气；0 表示仅让出一次微任务。 */
+var YIELD_MS = 0;
 
 var PX_TO_SPACE = {
   0: 'space/s0',
@@ -209,4 +216,40 @@ async function run() {
   };
 }
 
+async function runUntilDone() {
+  var total = { r: 0, s: 0, re: 0, se: 0, skip: 0, nodes: 0, chunkPasses: 0, rounds: 0 };
+  var lastRes = null;
+  while (true) {
+    var res = await run();
+    lastRes = res;
+    total.rounds++;
+    if (res.chunkStats) {
+      total.r += res.chunkStats.r;
+      total.s += res.chunkStats.s;
+      total.re += res.chunkStats.re;
+      total.se += res.chunkStats.se;
+      total.skip += res.chunkStats.skip;
+      total.nodes += res.chunkStats.nodesThisCall;
+      total.chunkPasses += res.chunkStats.chunkPasses;
+    }
+    if (res.fileDone) {
+      return {
+        fileDone: true,
+        runUntilDone: true,
+        lastPage: res.lastPage,
+        message: res.message,
+        pages: res.pages,
+        totalStats: total,
+        lastRound: res,
+      };
+    }
+    await new Promise(function (resolve) {
+      setTimeout(resolve, YIELD_MS);
+    });
+  }
+}
+
+if (RUN_UNTIL_DONE) {
+  return await runUntilDone();
+}
 return await run();

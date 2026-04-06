@@ -37,7 +37,7 @@ description: >-
 
 ## 与 `design.md`、设计系统的关系
 
-- **要用设计系统**：Workflow 不是「只学 Plugin API」；**[`design.md`](../../../design.md)** 就是把 One2X 设计系统写清楚的**唯一正文**（Design scale、色板/字阶/形状、组件节选、§6 对稿清单）。在 Figma 里建稿时，Agent 仍须按此文约束变量名、模式与组件选用。
+- **要用设计系统**：Workflow 不是「只学 Plugin API」；**[`design.md`](../../../design.md)** 就是把 One2X 设计系统写清楚的**唯一正文**（Design scale、色板/字阶/形状、组件节选、§10 对稿清单）。在 Figma 里建稿时，Agent 仍须按此文约束变量名、模式与组件选用。
 - **和 `one2x-design-system` 的差别**：两者**共用同一份** `design.md` + `tokens/`；**`one2x-design-system`** 面向**写前端代码**时的对齐，**本 skill** 面向 **`use_figma` 写回 Figma** 时的对齐。不是两套规范，是**同一规范的两条落地路径**。
 - **Figma 文件 vs 文档**：📖One2X 文件里的变量/组件是**源**；`design.md` 是团队与 Agent 的**可读摘要与规则**；`tokens.css` 是**Web 落盘**。改 Figma 时以库里真实变量为准，但若与 `design.md` 冲突，应视为需同步或单独说明的例外。
 
@@ -46,7 +46,7 @@ description: >-
 | 项 | 值 |
 |----|-----|
 | **Figma 文件** | `fileKey`: **`wHNBqjzSQZM8a4DlyBIDqW`**（📖One2X Design System） |
-| **规范全文** | 工作区根目录 [`design.md`](../../../design.md)（含 **Design scale**、Token、组件节选） |
+| **规范全文** | 工作区根目录 [`design.md`](../../../design.md)（含 **Design scale**、Token、组件节选；**附录 C** 为 Figma 稿命名/图层/Property 与 Figma2code 最佳实践） |
 | **网页 Token 落盘** | [`tokens/tokens.css`](../../../tokens/tokens.css)、[`tokens/README.md`](../../../tokens/README.md) |
 | **仅实现代码、不写 Figma** | 用 **[one2x-design-system](../one2x-design-system/SKILL.md)**，不必走本 workflow |
 
@@ -74,7 +74,7 @@ description: >-
 
 - 主库 **`Shape`** 集合（`VariableCollection` key：`4cd8a4e9257f11c5a4e270e284ac654d1e799545`）在**本地**含 **`space/s0`…`space/s10`** 与 **`Radius/*`**（圆角，名=px）；**已发布到团队库**的同一集合在消费稿中 **可能只包含部分变量**（例如仅 **`Radius/*`** 若干项而无 **`space/s*`**）。**未出现在发布列表里的 `space/s*`** 无法 `importVariableByKeyAsync`，Auto Layout 的 **padding / itemSpacing** 也就**不能**在消费稿里绑变量，直至主库发布流程把间距变量纳入库。
 - **核对**：在消费稿用 **`await figma.teamLibrary.getVariablesInLibraryCollectionAsync('4cd8a4e9257f11c5a4e270e284ac654d1e799545')`**，检查返回数组里是否有 **`space/s*`** 名称。
-- **圆角**：消费稿侧 **`importVariableByKeyAsync`** 使用的 **key 与主库一致**。团队库面板里**展示名**可能仍是旧式高度档标签，与主库 **`Radius/{px}`** 分组名不同，**以变量 key / 解析值为准**（见 **`design.md`** §2.4）。
+- **圆角**：消费稿侧 **`importVariableByKeyAsync`** 使用的 **key 与主库一致**。团队库面板里**展示名**可能仍是旧式高度档标签，与主库 **`Radius/{px}`** 分组名不同，**以变量 key / 解析值为准**（见 **`design.md`** §4.4）。
 - **绑定 API**：`paddingLeft` / `itemSpacing` / `topLeftRadius` 等见 **`figma-use`** [api-reference](../figma-use/references/api-reference.md) 的 **`setBoundVariable`** 列表（FLOAT 变量）。
 
 ## 字阶（Typescale）：用库「文字样式」承接变量
@@ -166,7 +166,7 @@ description: >-
 
 - **写 Figma 前**：在目标文件中用 **`search_design_system`**（`fileKey` 同上）查已有 **组件、变量、样式**，优先 **importComponentByKeyAsync** / **importVariableByKeyAsync**，与 **`figma-generate-design`** 流程一致。
 - **尺度**：Medeo 界面以 **Medeo light / Medeo dark** + **Typescale Baseline（及 mobile）** + **Shape Baseline** 为准；不要用个人调色替代 **`Schemes/*` / `Surface/*`**。
-- **与代码双向**：若用户从代码同步到 Figma，映射关系见 `design.md` §6；若从 Figma 生成代码，收敛到 **`one2x-design-system`** 与 `tokens.css` 命名。
+- **与代码双向**：若用户从代码同步到 Figma，映射关系见 `design.md` §10；若从 Figma 生成代码，收敛到 **`one2x-design-system`** 与 `tokens.css` 命名。
 - **失败重试**：`use_figma` 原子性失败见 `figma-use`；修正脚本前 **不要**堆叠未经校验的大段脚本。
 
 ## 同事安装本打包

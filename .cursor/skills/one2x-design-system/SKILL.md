@@ -33,7 +33,7 @@ description: >-
    - 若仓库有 **`tokens/tokens.css`**，**颜色**一律 **`var(--color-…)`**；**字号/行高/字间距**一律 **`var(--type-…)`**（及 **`--font-family-*`**）；**间距** **`--space-s*`**、**圆角** **`--shape-radius-*`**（或项目中等效 token 名）。  
    - **禁止**：裸 hex、任意 `font-size: 14px` / `margin: 12px` 等与 token 无关的魔法数，除非 **`design.md` 写明特例**。  
    - 与 **`design.md` § Design scale「团队约定」**、**`one2x-figma-workflow`** 中「设计稿全变量」**对表**：设计侧用 Figma 变量 + Text style，代码侧用 **`tokens.css`**。
-3. **组件语义（代码侧也要「组件化」）**：优先使用 **与设计系统对齐的 UI 原语**（项目里已有的 Button、Field、封装好的区块），**不要**为每个页面手写一整块无复用的「假组件」。按钮层级（Filled vs Outlined vs IconButton）、菜单 **0 Density**、列表项变体以 Figma 为准；**全页最核心的主行动按钮**：**Filled**，背景 **`Schemes/Primary`**（`--color-schemes-primary`），文字/图标 **`Schemes/On Primary`**（`--color-schemes-on-primary`）— 见 `design.md` **§1.1**。
+3. **组件语义（代码侧也要「组件化」）**：优先使用 **与设计系统对齐的 UI 原语**（项目里已有的 Button、Field、封装好的区块），**不要**为每个页面手写一整块无复用的「假组件」。按钮层级（Filled vs Outlined vs IconButton）、菜单 **0 Density**、列表项变体以 Figma 为准；**全页最核心的主行动按钮**：**Filled**，背景 **`Schemes/Primary`**（`--color-schemes-primary`），文字/图标 **`Schemes/On Primary`**（`--color-schemes-on-primary`）— 见 `design.md` **§3.1**。
 4. **实现**：映射到 **`tokens/tokens.css`** 已有变量；禁止无约定地硬编码与设计冲突的值。
 5. **Figma 为源**：冲突时以 **Figma** 为准，并提醒更新 **`design.md`** 与 **`tokens.css`**。
 6. **可选**：**Figma MCP** 的 `get_design_context` / `get_variable_defs` / `search_design_system`（`fileKey`: `wHNBqjzSQZM8a4DlyBIDqW`）。

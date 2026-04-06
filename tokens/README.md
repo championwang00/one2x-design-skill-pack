@@ -17,7 +17,7 @@
 | `Surface/On Surface` | `--color-surface-on-surface` |
 | … | 见 `tokens.css` |
 
-**主 CTA（Filled）**：`background: var(--color-schemes-primary)`，`color: var(--color-schemes-on-primary)`。详见根目录 **`design.md` §1.1**。
+**主 CTA（Filled）**：`background: var(--color-schemes-primary)`，`color: var(--color-schemes-on-primary)`。详见根目录 **`design.md` §3.1**。
 
 ## 圆角
 

@@ -101,8 +101,8 @@ Git 仓库地址：
 - **前端实现**：以 `design.md` + `tokens/tokens.css` 为准。
 - **颜色 / 字阶 / 字族**：`--color-*`、`--type-*`、`--font-family-*`。
 - **圆角**：`--shape-radius-*`；Figma **`Shape`** · **`Radius/{px}`**（名字里的数字 **= 半径 px**）。
-- **间距**：`--space-s0` … `--space-s10`；Figma **`Shape`** · **`space/s0`…`space/s10`**（**`s`** = 阶梯档，**≠** 像素；勿与圆角「名=px」混用）。详见 **`design.md` §2.4–§2.5**。
-- **主行动按钮**：默认遵循 `design.md` §1.1。
+- **间距**：`--space-s0` … `--space-s10`；Figma **`Shape`** · **`space/s0`…`space/s10`**（**`s`** = 阶梯档，**≠** 像素；勿与圆角「名=px」混用）。详见 **`design.md` §4.4–§4.5**。
+- **主行动按钮**：默认遵循 `design.md` §3.1。
 - **涉及 Figma MCP**：需启用 Figma MCP，并确保账号可访问 **📖One2X Design System** 文件。
 
 ## 适用场景
@@ -151,4 +151,4 @@ Git 仓库地址：
 
 - macOS 默认磁盘上 **`DESIGN.md` 与 `design.md` 视为同一文件**，请只维护 `design.md`。
 - `.cursor/skills/README.md` 更偏 **skill 分工、Token 命名摘要、安装与排错**；同事首次接触时，优先看本 README，再按需打开该文件。
-- 完整 Token 表与 Figma 对照：**`design.md`**（**Design scale**、**§2**）。
+- 完整 Token 表与 Figma 对照：**`design.md`**（**Design scale**、**§4 Token**）。

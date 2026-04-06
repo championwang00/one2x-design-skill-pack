@@ -21,14 +21,14 @@
 | **web-animation-design** | 过渡、动效、缓动、时长、`prefers-reduced-motion`；**与 one2x-design-system 配套**，涉及动效时一并加载。 |
 | **one2x-figma-workflow** | 用 MCP **在 Figma 里建稿/改稿**：固定 **`fileKey` = `wHNBqjzSQZM8a4DlyBIDqW`**，并叠加官方 skill + **`design.md`**。 |
 
-### Token 命名（与 `design.md` §2 一致，避免混用）
+### Token 命名（与 `design.md` §4 一致，避免混用）
 
 | 类别 | Figma（均在 **`Shape` · Baseline**） | Web（`tokens.css`） | 含义 |
 |------|--------------------------------------|---------------------|------|
 | 圆角 | **`Radius/{px}`**、**`Radius/Full`** | **`--shape-radius-{px}`**、**`full`** | 名中数字 **= 半径像素** |
-| 间距 | **`space/s0`…`space/s10`** | **`--space-s0`…`--space-s10`** | **`s`** = 阶梯档，**≠** px；查表见 **`design.md` §2.5** |
+| 间距 | **`space/s0`…`space/s10`** | **`--space-s0`…`--space-s10`** | **`s`** = 阶梯档，**≠** px；查表见 **`design.md` §4.5** |
 
-新稿优先 **`--shape-radius-*`**、**`--space-s*`**。`tokens.css` 中 **`--shape-corner-*`** 仅为与旧 Figma 名对照的别名；**`--space-0` 式命名**已替换为 **`--space-s0`…**（见 §2.5）。
+新稿优先 **`--shape-radius-*`**、**`--space-s*`**。`tokens.css` 中 **`--shape-corner-*`** 仅为与旧 Figma 名对照的别名；**`--space-0` 式命名**已替换为 **`--space-s0`…**（见 §4.5）。
 
 ---
 
@@ -58,7 +58,7 @@
 
 ## 4. 更新与同步
 
-- Figma 大版本后：对照 Variables 面板或 **`use_figma`** 枚举 **`Color` / `Shape` / `Typescale` 等**；**`Shape`** 内含 **`Radius/*`**（圆角）与 **`space/s*`**（**勿**再单独建第二套圆角集合或离散的 **`spacing`** 集合）。同步 **`design.md`** §2.0、§2.4–§2.5 与 **`tokens/tokens.css`**。  
+- Figma 大版本后：对照 Variables 面板或 **`use_figma`** 枚举 **`Color` / `Shape` / `Typescale` 等**；**`Shape`** 内含 **`Radius/*`**（圆角）与 **`space/s*`**（**勿**再单独建第二套圆角集合或离散的 **`spacing`** 集合）。同步 **`design.md`** §4.0、§4.4–§4.5 与 **`tokens/tokens.css`**。  
 - 官方 skill 更新：从 [mcp-server-guide/skills](https://github.com/figma/mcp-server-guide/tree/main/skills) 覆盖 `figma-use`、`figma-generate-design`。
 
 ---

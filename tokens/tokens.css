@@ -2,7 +2,7 @@
  * One2X — Color、Shape、字阶、间距
  * Figma: wHNBqjzSQZM8a4DlyBIDqW
  * - Color / Shape：见各集合 Mode
- * - Typescale / Typeface：节选见 design.md §3；本文件为网页落盘
+ * - Typescale / Typeface：节选见 design.md §5；本文件为网页落盘
  * - 字族：页面需引入 Manrope、Nohemi（如 Google Fonts），再使用 --font-family-*
  *
  * 命名：Figma `Schemes/Primary` → `--color-schemes-primary`
@@ -63,7 +63,7 @@
   --font-family-plain: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-family-brand: "Nohemi", "Manrope", ui-sans-serif, sans-serif;
 
-  /* Typescale 节选（Figma 样式名与 design.md §3.2 一致） */
+  /* Typescale 节选（Figma 样式名与 design.md §5.2 一致） */
   --type-label-medium-size: 12px;
   --type-label-medium-leading: 17px;
   --type-label-medium-tracking: 0.2px;

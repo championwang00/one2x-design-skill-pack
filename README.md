@@ -12,6 +12,7 @@
 |------|------|
 | `design.md` | One2X 设计系统唯一正文规范。 |
 | `tokens/` | Web 侧设计 Token（颜色、字阶、间距、圆角）。 |
+| `.cursor/skills/one2x-design-stack/` | 默认总入口：按任务类型加载下面这些 skill。 |
 | `.cursor/skills/one2x-design-system/` | 前端页面实现 / Review 入口。 |
 | `.cursor/skills/web-animation-design/` | 动效、过渡、缓动、可访问性补充。 |
 | `.cursor/skills/one2x-figma-workflow/` | 在 Figma 里用 MCP 建稿 / 改稿入口。 |
@@ -53,6 +54,7 @@ Git 仓库地址：
 
 - `design.md`
 - `tokens/`
+- `.cursor/skills/one2x-design-stack/`
 - `.cursor/skills/figma-use/`
 - `.cursor/skills/figma-generate-design/`
 - `.cursor/skills/one2x-design-system/`
@@ -67,29 +69,30 @@ Git 仓库地址：
 
 | 你要做什么 | 建议说法 |
 |------|------|
-| 写页面 / 改页面 | “按 One2X design system 实现这个页面” |
-| 页面有动效 | “按 One2X design system 实现，并参考 web-animation-design 处理动效” |
-| 在 Figma 里改稿 | “用 one2x-figma-workflow 在 Figma 里改这个页面” |
-| 写 `use_figma` 脚本 | “先按 figma-use 的规则，再帮我写这个 use_figma 脚本” |
+| 写页面 / 改页面 | “用 one2x-design-stack 实现这个页面” |
+| 页面有动效 | “用 one2x-design-stack 实现这个页面，动效也按 One2X 处理” |
+| 在 Figma 里改稿 | “用 one2x-design-stack 在 Figma 里改这个页面” |
+| 写 `use_figma` 脚本 | “用 one2x-design-stack，先按 figma-use 的规则，再帮我写这个 use_figma 脚本” |
 
 可直接复制这些示例：
 
 ```text
-按 One2X design system 实现这个页面，遵循 design.md 和 tokens/tokens.css。
+用 one2x-design-stack 实现这个页面，遵循 design.md 和 tokens/tokens.css。
 ```
 
 ```text
-按 One2X design system 实现这个页面；如果涉及 hover、过渡、入场出场，请同时参考 web-animation-design。
+用 one2x-design-stack 实现这个页面；如果涉及 hover、过渡、入场出场，请同时参考 web-animation-design。
 ```
 
 ```text
-用 one2x-figma-workflow 在 Figma 里改这个页面，保持 One2X 的变量、Text style 和组件用法。
+用 one2x-design-stack 在 Figma 里改这个页面，保持 One2X 的变量、Text style 和组件用法。
 ```
 
 ### 3. 在什么场景用哪个 skill
 
 | 场景 | 使用 |
 |------|------|
+| 不想判断该用哪个 skill | `one2x-design-stack` |
 | 写 One2X / Medeo 前端页面 | `one2x-design-system` |
 | 页面里涉及动效、过渡、hover、入场出场 | `one2x-design-system` + `web-animation-design` |
 | 用 MCP 在 Figma 里改稿、建稿、绑变量、拼整页 | `one2x-figma-workflow` |
@@ -101,7 +104,7 @@ Git 仓库地址：
 - **前端实现**：以 `design.md` + `tokens/tokens.css` 为准。
 - **颜色 / 字阶 / 字族**：`--color-*`、`--type-*`、`--font-family-*`。
 - **圆角**：`--shape-radius-*`；Figma **`Shape`** · **`Radius/{px}`**（名字里的数字 **= 半径 px**）。
-- **间距**：`--space-s0` … `--space-s10`；Figma **`Shape`** · **`space/s0`…`space/s10`**（**`s`** = 阶梯档，**≠** 像素；勿与圆角「名=px」混用）。详见 **`design.md` §4.4–§4.5**。
+- **间距**：`--space-s0` … `--space-s10`；Figma **`Shape`** · **`Space/s0`…`Space/s10`**（**`s`** = 阶梯档，**≠** 像素；勿与圆角「名=px」混用）。详见 **`design.md` §4.4–§4.5**。
 - **主行动按钮**：默认遵循 `design.md` §3.1。
 - **涉及 Figma MCP**：需启用 Figma MCP，并确保账号可访问 **📖One2X Design System** 文件。
 

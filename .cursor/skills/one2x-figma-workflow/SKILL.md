@@ -23,6 +23,7 @@ description: >-
 | **文字样式已挂，但「填充」上仍不显示 Color 变量**（对稿 / 检查时像「裸色」） | 字色往往写在 **文字样式** 或 **样式内嵌色** 上，图层 `fills` 未再绑 **库 Variable**；组件内文字同理由主库组件定义。 | 在 **消费稿** 中，对**非组件实例内**的 `TEXT`：在 **`setTextStyleIdAsync` 之后**，对 **`fills` 里的 `SOLID`** 使用 **`boundVariables: { color: figma.variables.createVariableAlias(await importVariableByKeyAsync(...)) }`**（与形状填色同一套 API），语义色按 **`Surface/On Surface`、`Surface/On Surface Variant`、`Schemes/Primary`** 选用。**不要**在消费稿里改 `Button`/`Field` 等内部文字（实例内 `TEXT` 跳过）。 |
 | Untitled 里曾出现本地 `One2X · Color` | 脚本为演示绑定而 **临时复制**语义色，**会与主库双源漂移** | 已改为 **只引用库变量**；原则见下节「团队约定」。 |
 | Auto Layout 看起来用了正确间距 / 圆角，但右侧面板没有变量 | 只把数值调成 8、12、16、999 等，并不等于绑定了设计系统变量；组件库后续改 token 时不会联动。 | 对 **`padding*`、`itemSpacing`** 绑定 **`Shape/Space/s*`**，对 **四角半径**绑定 **`Shape/Radius/*`**；`999` / 胶囊统一收敛到 **`Radius/Full`**。写完后用脚本统计 boundVariables，不能只靠截图判断。 |
+| 圆角变量绑了，但看起来不像 One2X | 漏了 Figma 的 **corner smoothing**；`Radius/*` 只管半径，不管 corner-shape。 | 非 0 圆角节点默认设置 **`cornerSmoothing = 0.6`**，对应 One2X 默认 **superellipse**。若组件必须是标准 pill / 圆弧，图层描述标注 **`corner-shape: round`**。 |
 | 为什么要 **组件化** | 交互状态、密度、无障碍与 **M3 语义** 都封装在 **Button / Field / …** 里，手绘矩形 **不可维护** | 界面结构 **一律库组件实例** 拼装；新物种先在主库演进或走变体，不在业务稿里发明新按钮。 |
 
 ## 团队约定：设计稿里「全变量 + 全组件」
@@ -77,6 +78,7 @@ description: >-
 - **核对**：在消费稿用 **`await figma.teamLibrary.getVariablesInLibraryCollectionAsync('4cd8a4e9257f11c5a4e270e284ac654d1e799545')`**，检查返回数组里是否有 **`Space/s*`** 名称。
 - **必须绑定**：消费稿侧 **`importVariableByKeyAsync`** 使用的 **key 与主库一致**。`paddingLeft` / `paddingRight` / `paddingTop` / `paddingBottom` / `itemSpacing` 绑定 **`Space/s*`**；`topLeftRadius` / `topRightRadius` / `bottomLeftRadius` / `bottomRightRadius` 绑定 **`Radius/*`**。团队库面板里**展示名**可能仍是旧式高度档标签，与主库 **`Radius/{px}`** 分组名不同，**以变量 key / 解析值为准**（见 **`design.md`** §4.4）。
 - **收敛临时值**：6px → `Radius/6` 或 `Space/s2`（按属性语义判断）；10/11px → 就近收敛到 `Space/s3`；999px / 胶囊 → `Radius/Full`。不要长期保留 `10px`、`14px`、`999px` 这类看起来接近但没有变量的值。
+- **Corner smoothing**：除 `design.md` C.7 明确标注 `corner-shape: round` 的标准圆弧 / pill 例外外，非 0 圆角节点设置 **`cornerSmoothing = 0.6`**，与 One2X 默认 superellipse 渲染一致。
 - **绑定 API**：`paddingLeft` / `itemSpacing` / `topLeftRadius` 等见 **`figma-use`** [api-reference](../figma-use/references/api-reference.md) 的 **`setBoundVariable`** 列表（FLOAT 变量）。
 
 ### Shape 绑定检查（组件写入后必做）
@@ -93,6 +95,8 @@ let autoProps = 0;
 let boundAutoProps = 0;
 let radiusProps = 0;
 let boundRadiusProps = 0;
+let smoothedRadiusNodes = 0;
+let roundedNodes = 0;
 const unboundSamples = [];
 
 for (const node of [root, ...root.findAll(() => true)]) {
@@ -114,13 +118,23 @@ for (const node of [root, ...root.findAll(() => true)]) {
         else if (node[prop] !== 0) unboundSamples.push(`${node.id}:${node.name}:${prop}=${node[prop]}`);
       }
     }
+
+    if ('cornerSmoothing' in node) {
+      const hasRadius = ['topLeftRadius', 'topRightRadius', 'bottomLeftRadius', 'bottomRightRadius']
+        .some((prop) => typeof node[prop] === 'number' && node[prop] > 0);
+      if (hasRadius) {
+        roundedNodes++;
+        if (Math.abs(node.cornerSmoothing - 0.6) <= 0.01) smoothedRadiusNodes++;
+        else unboundSamples.push(`${node.id}:${node.name}:cornerSmoothing=${node.cornerSmoothing}`);
+      }
+    }
   }
 }
 
-return { autoProps, boundAutoProps, radiusProps, boundRadiusProps, unboundSamples };
+return { autoProps, boundAutoProps, radiusProps, boundRadiusProps, roundedNodes, smoothedRadiusNodes, unboundSamples };
 ```
 
-验收标准：对新建的 One2X 组件，`autoProps === boundAutoProps` 且 `radiusProps === boundRadiusProps`；若遇到实例内部不能改，应回到源组件绑定，不要在消费稿里硬改实例子层。
+验收标准：对新建的 One2X 组件，`autoProps === boundAutoProps`、`radiusProps === boundRadiusProps`，且 `roundedNodes === smoothedRadiusNodes`；若遇到实例内部不能改，应回到源组件绑定，不要在消费稿里硬改实例子层。
 
 ## 字阶（Typescale）：用库「文字样式」承接变量
 

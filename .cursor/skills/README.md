@@ -17,6 +17,7 @@
 
 | 目录 | 用途 |
 |------|------|
+| **one2x-design-stack** | **默认总入口**：按任务类型顺序加载 One2X 规范、Figma MCP、整页生成与动效 skill。 |
 | **one2x-design-system** | 写代码、对稿、Review：读根目录 **`design.md`**，对齐 Token / 字体 / 组件；不强制改 Figma。 |
 | **web-animation-design** | 过渡、动效、缓动、时长、`prefers-reduced-motion`；**与 one2x-design-system 配套**，涉及动效时一并加载。 |
 | **one2x-figma-workflow** | 用 MCP **在 Figma 里建稿/改稿**：固定 **`fileKey` = `wHNBqjzSQZM8a4DlyBIDqW`**，并叠加官方 skill + **`design.md`**。 |
@@ -26,7 +27,7 @@
 | 类别 | Figma（均在 **`Shape` · Baseline**） | Web（`tokens.css`） | 含义 |
 |------|--------------------------------------|---------------------|------|
 | 圆角 | **`Radius/{px}`**、**`Radius/Full`** | **`--shape-radius-{px}`**、**`full`** | 名中数字 **= 半径像素** |
-| 间距 | **`space/s0`…`space/s10`** | **`--space-s0`…`--space-s10`** | **`s`** = 阶梯档，**≠** px；查表见 **`design.md` §4.5** |
+| 间距 | **`Space/s0`…`Space/s10`** | **`--space-s0`…`--space-s10`** | **`s`** = 阶梯档，**≠** px；查表见 **`design.md` §4.5** |
 
 新稿优先 **`--shape-radius-*`**、**`--space-s*`**。`tokens.css` 中 **`--shape-corner-*`** 仅为与旧 Figma 名对照的别名；**`--space-0` 式命名**已替换为 **`--space-s0`…**（见 §4.5）。
 
@@ -38,6 +39,7 @@
 |------|------|
 | `design.md` | 规范全文（链接、`fileKey`、Design scale、Token、组件）。 |
 | `tokens/` | Web 与 Figma 对齐时用（`tokens.css`、`README.md`）。 |
+| `.cursor/skills/one2x-design-stack/` | One2X 默认总入口；同事优先调用这个。 |
 | `.cursor/skills/figma-use/` | 官方，必带（若用 `use_figma`）。 |
 | `.cursor/skills/figma-generate-design/` | 经常整屏搭进 Figma 时带。 |
 | `.cursor/skills/one2x-design-system/` | One2X 规范入口。 |
@@ -50,7 +52,7 @@
 
 ## 3. 安装步骤（目标仓库）
 
-1. 将上表中的 **`.cursor/skills/` 子目录** 合并到对方项目的 `.cursor/skills/`。  
+1. 将上表中的 **`.cursor/skills/` 子目录** 合并到对方项目的 `.cursor/skills/`；如果只想记一个入口，优先用 **`one2x-design-stack`**。  
 2. 将 **`design.md`**、`tokens/` 放到对方仓库根目录（或约定路径；若改路径，需调整 skill 内指向 `design.md` 的相对链接）。  
 3. **只维护 `design.md`（小写）**：在 macOS 默认磁盘上 **`DESIGN.md` 与 `design.md` 同一文件**，另存别名会覆盖正文。
 
@@ -58,7 +60,7 @@
 
 ## 4. 更新与同步
 
-- Figma 大版本后：对照 Variables 面板或 **`use_figma`** 枚举 **`Color` / `Shape` / `Typescale` 等**；**`Shape`** 内含 **`Radius/*`**（圆角）与 **`space/s*`**（**勿**再单独建第二套圆角集合或离散的 **`spacing`** 集合）。同步 **`design.md`** §4.0、§4.4–§4.5 与 **`tokens/tokens.css`**。  
+- Figma 大版本后：对照 Variables 面板或 **`use_figma`** 枚举 **`Color` / `Shape` / `Typescale` 等**；**`Shape`** 内含 **`Radius/*`**（圆角）与 **`Space/s*`**（**勿**再单独建第二套圆角集合或离散的 **`spacing`** 集合）。同步 **`design.md`** §4.0、§4.4–§4.5 与 **`tokens/tokens.css`**。
 - 官方 skill 更新：从 [mcp-server-guide/skills](https://github.com/figma/mcp-server-guide/tree/main/skills) 覆盖 `figma-use`、`figma-generate-design`。
 
 ---

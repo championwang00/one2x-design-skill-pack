@@ -22,6 +22,7 @@ description: >-
 | 颜色绑了变量，字阶看起来「没绑变量」 | Figma 里 **Typescale 多通过「文字样式」落在样式定义上**，单个 Text 上 `fontSize` 等 **不宜**当成与填色同级的 `setBoundVariable` 用法（见 **`figma-use`** api-reference） | 消费稿对独立文案图层：**`importStyleByKeyAsync` + `setTextStyleIdAsync`**，使用 **`title/medium`、`label/large`** 等主库样式，即与 Typescale 一致。 |
 | **文字样式已挂，但「填充」上仍不显示 Color 变量**（对稿 / 检查时像「裸色」） | 字色往往写在 **文字样式** 或 **样式内嵌色** 上，图层 `fills` 未再绑 **库 Variable**；组件内文字同理由主库组件定义。 | 在 **消费稿** 中，对**非组件实例内**的 `TEXT`：在 **`setTextStyleIdAsync` 之后**，对 **`fills` 里的 `SOLID`** 使用 **`boundVariables: { color: figma.variables.createVariableAlias(await importVariableByKeyAsync(...)) }`**（与形状填色同一套 API），语义色按 **`Surface/On Surface`、`Surface/On Surface Variant`、`Schemes/Primary`** 选用。**不要**在消费稿里改 `Button`/`Field` 等内部文字（实例内 `TEXT` 跳过）。 |
 | Untitled 里曾出现本地 `One2X · Color` | 脚本为演示绑定而 **临时复制**语义色，**会与主库双源漂移** | 已改为 **只引用库变量**；原则见下节「团队约定」。 |
+| Auto Layout 看起来用了正确间距 / 圆角，但右侧面板没有变量 | 只把数值调成 8、12、16、999 等，并不等于绑定了设计系统变量；组件库后续改 token 时不会联动。 | 对 **`padding*`、`itemSpacing`** 绑定 **`Shape/Space/s*`**，对 **四角半径**绑定 **`Shape/Radius/*`**；`999` / 胶囊统一收敛到 **`Radius/Full`**。写完后用脚本统计 boundVariables，不能只靠截图判断。 |
 | 为什么要 **组件化** | 交互状态、密度、无障碍与 **M3 语义** 都封装在 **Button / Field / …** 里，手绘矩形 **不可维护** | 界面结构 **一律库组件实例** 拼装；新物种先在主库演进或走变体，不在业务稿里发明新按钮。 |
 
 ## 团队约定：设计稿里「全变量 + 全组件」
@@ -31,7 +32,7 @@ description: >-
 1. **变量**  
    - **Color**：填色/描边绑 **📖One2X 库变量**（`importVariableByKeyAsync` 或 UI 启用库后绑定）。  
    - **Typescale**：通过 **Text style** 体现；独立 `TEXT` 图层必须挂 **`title/*`、`label/*`** 等主库样式，不长期用手写 `fontSize`。  
-   - **Shape**（同一集合）：圆角绑 **`Radius/*`**（名=px），间距绑 **`space/s*`**（与 **`--space-s*`** 对齐，**s**=阶梯≠px），或 **与变量一致的 Auto layout**，避免任意 px。  
+   - **Shape**（同一集合）：圆角必须绑 **`Radius/*`**（名=px），间距必须绑 **`Space/s*`**（与 **`--space-s*`** 对齐，**s**=阶梯≠px）。只把 Auto Layout 数值调成 token 值还不够；消费稿组件也要在右侧面板里能看到变量绑定。  
 2. **组件**：凡属于设计系统已覆盖的控件，**禁止**用普通 Frame/Rectangle **冒充**；用 **`search_design_system`** 取 **Button、Field、Checkboxes** 等 **实例**。  
 3. **主库文件** `wHNBqjzSQZM8a4DlyBIDqW` 内作稿：直接用本地变量与样式，无需 `import`。
 
@@ -70,12 +71,56 @@ description: >-
 
 **主库文件**（`fileKey`: `wHNBqjzSQZM8a4DlyBIDqW`）内作稿：直接用本地变量即可，无需 import。
 
-### Shape：`Radius/*` 与 `space/s*`（库发布 ≠ 主库本地全量）
+### Shape：`Radius/*` 与 `Space/s*`（库发布 ≠ 主库本地全量）
 
-- 主库 **`Shape`** 集合（`VariableCollection` key：`4cd8a4e9257f11c5a4e270e284ac654d1e799545`）在**本地**含 **`space/s0`…`space/s10`** 与 **`Radius/*`**（圆角，名=px）；**已发布到团队库**的同一集合在消费稿中 **可能只包含部分变量**（例如仅 **`Radius/*`** 若干项而无 **`space/s*`**）。**未出现在发布列表里的 `space/s*`** 无法 `importVariableByKeyAsync`，Auto Layout 的 **padding / itemSpacing** 也就**不能**在消费稿里绑变量，直至主库发布流程把间距变量纳入库。
-- **核对**：在消费稿用 **`await figma.teamLibrary.getVariablesInLibraryCollectionAsync('4cd8a4e9257f11c5a4e270e284ac654d1e799545')`**，检查返回数组里是否有 **`space/s*`** 名称。
-- **圆角**：消费稿侧 **`importVariableByKeyAsync`** 使用的 **key 与主库一致**。团队库面板里**展示名**可能仍是旧式高度档标签，与主库 **`Radius/{px}`** 分组名不同，**以变量 key / 解析值为准**（见 **`design.md`** §4.4）。
+- 主库 **`Shape`** 集合（`VariableCollection` key：`4cd8a4e9257f11c5a4e270e284ac654d1e799545`）在**本地**含 **`Space/s0`…`Space/s10`** 与 **`Radius/*`**（圆角，名=px）；**已发布到团队库**的同一集合在消费稿中 **可能只包含部分变量**（例如仅 **`Radius/*`** 若干项而无 **`Space/s*`**）。**未出现在发布列表里的 `Space/s*`** 无法 `importVariableByKeyAsync`，Auto Layout 的 **padding / itemSpacing** 也就**不能**在消费稿里绑变量，直至主库发布流程把间距变量纳入库。
+- **核对**：在消费稿用 **`await figma.teamLibrary.getVariablesInLibraryCollectionAsync('4cd8a4e9257f11c5a4e270e284ac654d1e799545')`**，检查返回数组里是否有 **`Space/s*`** 名称。
+- **必须绑定**：消费稿侧 **`importVariableByKeyAsync`** 使用的 **key 与主库一致**。`paddingLeft` / `paddingRight` / `paddingTop` / `paddingBottom` / `itemSpacing` 绑定 **`Space/s*`**；`topLeftRadius` / `topRightRadius` / `bottomLeftRadius` / `bottomRightRadius` 绑定 **`Radius/*`**。团队库面板里**展示名**可能仍是旧式高度档标签，与主库 **`Radius/{px}`** 分组名不同，**以变量 key / 解析值为准**（见 **`design.md`** §4.4）。
+- **收敛临时值**：6px → `Radius/6` 或 `Space/s2`（按属性语义判断）；10/11px → 就近收敛到 `Space/s3`；999px / 胶囊 → `Radius/Full`。不要长期保留 `10px`、`14px`、`999px` 这类看起来接近但没有变量的值。
 - **绑定 API**：`paddingLeft` / `itemSpacing` / `topLeftRadius` 等见 **`figma-use`** [api-reference](../figma-use/references/api-reference.md) 的 **`setBoundVariable`** 列表（FLOAT 变量）。
+
+### Shape 绑定检查（组件写入后必做）
+
+每次用 `use_figma` 新建或更新 One2X 组件后，必须跑一次结构检查，不只看截图：
+
+```js
+function boundName(node, prop) {
+  const bound = node.boundVariables && node.boundVariables[prop];
+  return bound ? bound.id || JSON.stringify(bound) : null;
+}
+
+let autoProps = 0;
+let boundAutoProps = 0;
+let radiusProps = 0;
+let boundRadiusProps = 0;
+const unboundSamples = [];
+
+for (const node of [root, ...root.findAll(() => true)]) {
+  if ('layoutMode' in node && node.layoutMode !== 'NONE') {
+    for (const prop of ['paddingTop', 'paddingBottom', 'paddingLeft', 'paddingRight', 'itemSpacing']) {
+      if (typeof node[prop] === 'number') {
+        autoProps++;
+        if (boundName(node, prop)) boundAutoProps++;
+        else unboundSamples.push(`${node.id}:${node.name}:${prop}=${node[prop]}`);
+      }
+    }
+  }
+
+  if (['FRAME', 'COMPONENT', 'COMPONENT_SET', 'RECTANGLE'].includes(node.type)) {
+    for (const prop of ['topLeftRadius', 'topRightRadius', 'bottomLeftRadius', 'bottomRightRadius']) {
+      if (typeof node[prop] === 'number') {
+        radiusProps++;
+        if (boundName(node, prop)) boundRadiusProps++;
+        else if (node[prop] !== 0) unboundSamples.push(`${node.id}:${node.name}:${prop}=${node[prop]}`);
+      }
+    }
+  }
+}
+
+return { autoProps, boundAutoProps, radiusProps, boundRadiusProps, unboundSamples };
+```
+
+验收标准：对新建的 One2X 组件，`autoProps === boundAutoProps` 且 `radiusProps === boundRadiusProps`；若遇到实例内部不能改，应回到源组件绑定，不要在消费稿里硬改实例子层。
 
 ## 字阶（Typescale）：用库「文字样式」承接变量
 
@@ -151,7 +196,7 @@ description: >-
 | **进度、百分比等数字列** | 单元格 `FRAME`：**`primaryAxisAlignItems: 'MAX'`**；内层 **`TEXT`**：**`textAlignHorizontal = 'RIGHT'`**（对齐网页 `text-align: right` / `.cell--num`）。 |
 | **选框列** | **`Checkboxes` 实例不要**直接作为横向 Auto Layout 行的**唯一**子类型组合里的首子（易与插件/MCP 环境冲突）；外包一层 **`FRAME`**（如 44×40），内用 **`layoutMode: 'HORIZONTAL'`** + **`primaryAxisAlignItems` / `counterAxisAlignItems`: `'CENTER'`** 居中复选框。 |
 | **页头标题区与右侧按钮、工具栏内 Field 与辅助文案** | 横向容器上 **`counterAxisAlignItems: 'CENTER'`**，使交叉轴（竖直方向）对齐。 |
-| **分页条** | 每个页码/箭头为 **等宽等高**（如 **36×36**），父级 **`Pager`** **`itemSpacing`** 用 **`space/s*`** 对应的数值；父级高度与按钮一致，避免出现异常拉伸或换行错位。 |
+| **分页条** | 每个页码/箭头为 **等宽等高**（如 **36×36**），父级 **`Pager`** **`itemSpacing`** 用 **`Space/s*`** 对应的数值；父级高度与按钮一致，避免出现异常拉伸或换行错位。 |
 | **小列单元格（仅包一段文字）** | 避免在简单横向 **`FRAME`** 上同时 **`primaryAxisSizingMode` + `counterAxisSizingMode` 均为 `FIXED`** 且子级仅为 `TEXT` 的脆弱组合（部分环境下会报 **`object is not extensible`**）；优先 **`AUTO`** 一轴或仅用 padding + 文本对齐。 |
 
 ### 图层面板命名

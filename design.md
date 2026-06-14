@@ -49,7 +49,7 @@ Medeo / One2X 产品界面建立在 **Material Design 3** 的组件语义之上�
 - **双字族**：正文与 UI 用 **Manrope（Plain）**；品牌展示标题用 **Nohemi（Brand）**，与 Typescale 绑定。
 - **品牌紫**：主 CTA 与关键焦点使用 `**Schemes/Primary`** + `**Schemes/On Primary`**，每屏主任务区通常只保留 **一个** 最高优先级 Primary（见 §3.1）。
 - **变量驱动**：颜色、字阶、圆角、间距均来自 Figma **📖One2X** 变量；Web 以 `**tokens/tokens.css`** 的 `**--color-*`、`--type-*`、`--space-s*`、`--shape-radius-*`** 为准。
-- **圆角 vs 间距命名**：圆角 `**Radius/{数字}`** = 半径 **px**；间距 `**space/s0`…`s10`** = **阶梯档**，不等于数字本身即 px（见 §4.4–§4.5）。
+- **圆角 vs 间距命名**：圆角 `**Radius/{数字}`** = 半径 **px**；间距 `**Space/s0`…`s10`** = **阶梯档**，不等于数字本身即 px（见 §4.4–§4.5）。
 - **多模式 Color**：Medeo 产品以 **Medeo light / Medeo dark** 为主；Mebox 为另一套 Color 模式；实现时跟随主题与 `tokens.css`。
 - **工程纪律**：避免裸 hex、魔法数字字号与间距；列表与表单优先 **库组件实例**（Figma）与 **token**（代码）。
 
@@ -66,7 +66,7 @@ Medeo / One2X 产品界面建立在 **Material Design 3** 的组件语义之上�
 | 字族  | `Typeface`                     | **Manrope（Plain）**、**Nohemi（Brand）**                                                                                                               |
 | 字阶  | `Typescale`（Baseline / mobile） | 响应式对齐两套模式                                                                                                                                          |
 | 形状  | `Shape`（Baseline）              | `**Radius/*`** 按**半径 px** 命名（`Radius/0`、`Radius/4` … `Radius/40`、`Radius/6`、`Radius/Full`），见 §4.4                                                  |
-| 间距  | `**Shape`** 集合内 `**space/s*`** | **阶梯代号** `space/s0`…`space/s10`（**非**像素名），见 §4.5                                                                                                   |
+| 间距  | `**Shape`** 集合内 `**Space/s*`** | **阶梯代号** `Space/s0`…`Space/s10`（**非**像素名），见 §4.5                                                                                                   |
 | 组件  | `Components`、Medeo 各页          | 优先 **库内组件实例**，见 §6                                                                                                                                 |
 
 
@@ -117,7 +117,7 @@ Figma 本地变量按 **Collection** 组织；下列与稿内 **Variables** 面�
 | **Color**     | Medeo light、Medeo dark、Mebox light、Mebox dark | **320** | COLOR **319** + STRING **1**                                    |
 | **Typeface**  | Baseline、Wireframe                            | **5**   | STRING **5**                                                    |
 | **Typescale** | Baseline、mobile                               | **88**  | FLOAT **51** + STRING **37**                                    |
-| **Shape**     | Baseline                                      | **24**  | FLOAT **24**（`**Radius/*`** 圆角 + `**space/s*`** 间距，见 §4.4–§4.5） |
+| **Shape**     | Baseline                                      | **24**  | FLOAT **24**（`**Radius/*`** 圆角 + `**Space/s*`** 间距，见 §4.4–§4.5） |
 
 
 - **Medeo 界面**以 **Medeo light / Medeo dark** 为准；Mebox 为另一套 Color 模式。
@@ -168,7 +168,7 @@ Figma 本地变量按 **Collection** 组织；下列与稿内 **Variables** 面�
 
 ### 4.4 圆角（Shape 集合）
 
-`**Shape`** 集合中同时包含 `**Radius/*`**（本节）与 `**space/s***`（§4.5）。**命名规则与间距不同**：圆角 **名中数字 = 半径 px**；间距 **名中 `s0`…`s10` = 阶梯档，≠ px**（见 §4.5 表）。
+`**Shape`** 集合中同时包含 `**Radius/*`**（本节）与 `**Space/s***`（§4.5）。**命名规则与间距不同**：圆角 **名中数字 = 半径 px**；间距 **名中 `s0`…`s10` = 阶梯档，≠ px**（见 §4.5 表）。
 
 Figma（`**Shape`** · **Baseline**）圆角变量分组名为 `**Radius/*`**；Web 侧以 `**--shape-radius-*`** 对齐。Figma 变量作用域分类仍为 Corner radius（面板/作用域名，与分组前缀 `Radius` 不同）。名称**不**与组件高度（H24、H40 等）绑定，避免同心嵌套时产生误导。
 
@@ -192,26 +192,26 @@ Figma（`**Shape`** · **Baseline**）圆角变量分组名为 `**Radius/*`**；
 
 **历史**：此前稿内曾用 `**Corner/*`** 前缀（与上表同一套 px / Full）；已统一为 `**Radius/*`**。旧高度档名对照仍见 `**tokens.css**` 里 `**--shape-corner-***` 别名。另见旧稿中的 `dimensions/radius/rounded-sm` 等，以节点绑定为准。
 
-### 4.5 间距（`Shape` 集合内的 `space/s*`）
+### 4.5 间距（`Shape` 集合内的 `Space/s*`）
 
 与 **§4.4 圆角**刻意区分：**圆角**用 `**Radius/{px}`**，名字里的数字 就是 像素；间距用 阶梯代号 `**s0`…`s10`**，名字 **不是** 像素，避免把档名误认为 px（例如旧 `**spacing/4` = 16px**，与「4px」无关）。
 
-变量与圆角同在 `**Shape`** 集合（**Baseline**），面板中 `**space/`** 分组；WEB **Code syntax** 为 `**var(--space-s0)`** … `**var(--space-s10)`**。
+变量与圆角同在 `**Shape`** 集合（**Baseline**），面板中 `**Space/`** 分组；网页侧对应 token 为 `**--space-s0`** … `**--space-s10`**。
 
 
 | Figma（阶梯）   | 实际值  | 网页侧 CSS           |
 | ----------- | ---- | ----------------- |
-| `space/s0`  | 0    | `**--space-s0**`  |
-| `space/s1`  | 4px  | `**--space-s1**`  |
-| `space/s2`  | 8px  | `**--space-s2**`  |
-| `space/s3`  | 12px | `**--space-s3**`  |
-| `space/s4`  | 16px | `**--space-s4**`  |
-| `space/s5`  | 20px | `**--space-s5**`  |
-| `space/s6`  | 24px | `**--space-s6**`  |
-| `space/s7`  | 32px | `**--space-s7**`  |
-| `space/s8`  | 40px | `**--space-s8**`  |
-| `space/s9`  | 48px | `**--space-s9**`  |
-| `space/s10` | 64px | `**--space-s10**` |
+| `Space/s0`  | 0    | `**--space-s0**`  |
+| `Space/s1`  | 4px  | `**--space-s1**`  |
+| `Space/s2`  | 8px  | `**--space-s2**`  |
+| `Space/s3`  | 12px | `**--space-s3**`  |
+| `Space/s4`  | 16px | `**--space-s4**`  |
+| `Space/s5`  | 20px | `**--space-s5**`  |
+| `Space/s6`  | 24px | `**--space-s6**`  |
+| `Space/s7`  | 32px | `**--space-s7**`  |
+| `Space/s8`  | 40px | `**--space-s8**`  |
+| `Space/s9`  | 48px | `**--space-s9**`  |
+| `Space/s10` | 64px | `**--space-s10**` |
 
 
 新页面的 `**gap` / `padding` / `margin**` 应优先用 `**var(--space-s*)**`，避免裸写 `16px`。
@@ -221,7 +221,7 @@ Figma（`**Shape`** · **Baseline**）圆角变量分组名为 `**Radius/*`**；
 - **颜色**：Figma `**Color`** 共 **320** 项；网页 `**--color-*`**；**浅色 `:root`**，**深色** `prefers-color-scheme: dark` 或 `data-theme`。
 - **圆角**：Figma `**Shape`** · `**Radius/*`**；网页 `**--shape-radius-***`。`tokens.css` 中 `**--shape-corner-***` 仅为与旧高度档/旧 `**Corner/***` 名对照的别名，新稿以 `**Radius/{px}**` 与 `**--shape-radius-{px}**` 为准（§4.4）。
 - **字阶 / 字族**：`**--font-family-*`**、`**--type-*`**，或组合类 `**.o2x-type-***`（见 `tokens.css`）。
-- **间距**：Figma `**Shape`** · `**space/s*`**；网页 `**--space-s***`（§4.5）；**勿**与 `**Radius/{px}`** 的「名=像素」规则混用。
+- **间距**：Figma `**Shape`** · `**Space/s*`**；网页 `**--space-s***`（§4.5）；**勿**与 `**Radius/{px}`** 的「名=像素」规则混用。
 
 全文变量表见 `**tokens/tokens.css`**、`**tokens/README.md**`。
 
@@ -330,7 +330,7 @@ Figma（`**Shape`** · **Baseline**）圆角变量分组名为 `**Radius/*`**；
 
 ### 7.1 间距与节奏
 
-- **基础阶梯**：`space/s0`…`s10` 对应 0 → 64px 的离散档（见 §4.5）；**优先 4 的倍数**与 `**var(--space-s*)`**，与 Auto layout `gap` / `padding` 一致。
+- **基础阶梯**：`Space/s0`…`s10` 对应 0 → 64px 的离散档（见 §4.5）；**优先 4 的倍数**与 `**var(--space-s*)`**，与 Auto layout `gap` / `padding` 一致。
 - **主信息区**：业务页常用 `**s4`–`s6`** 作为卡片内边距与区块间距起点；大留白用 `**s7`+**。
 
 ### 7.2 栅格与容器
@@ -370,7 +370,7 @@ Figma（`**Shape`** · **Baseline**）圆角变量分组名为 `**Radius/*`**；
 
 本节不再重复维护另一份映射表。**实现侧单一数据源**为 `**tokens/tokens.css`**；Figma 命名与取值以 §4.4 圆角、**§4.5 间距**、**§4.6 网页侧变量**为准。
 
-- **当前有效命名**：Figma 圆角为 `**Radius/*`**，间距为 `**space/s*`**；Web 分别对应 `**--shape-radius-***`、`**--space-s***`。
+- **当前有效命名**：Figma 圆角为 `**Radius/*`**，间距为 `**Space/s*`**；Web 分别对应 `**--shape-radius-***`、`**--space-s***`。
 - **历史名仅作兼容说明**：`**Corner/*`**、`**spacing/*`**、`**--shape-corner-***` 均不作为新稿或新实现命名依据。
 - **新页面 / C2P 落地**：引入 `tokens.css`；字族与字阶使用 `**--font-family-*`**、`**--type-*`** 或 `**.o2x-type-***`；`gap` / `padding` / `margin` 用 `**var(--space-s*)**`；圆角用 `**var(--shape-radius-*)**`；主行动按钮用 `**--color-schemes-primary**` + `**--color-schemes-on-primary**`（§3.1）。
 - **工程接入**：Tailwind / shadcn 可将 `tokens.css` 变量挂入 `theme.extend`（`colors`、`spacing`、`fontSize`、`borderRadius` 等）。
@@ -393,7 +393,7 @@ Figma（`**Shape`** · **Baseline**）圆角变量分组名为 `**Radius/*`**；
 
 - **不要**在代码中写裸 **hex**（除非稿与 token 明确尚未覆盖的临时情况，且应回写 token）。
 - **不要**用 `**Schemes/Secondary Container`** 充当主品牌 CTA 色（§4.2）。
-- **不要**把 `**Radius/*` 的 px 命名规则**与 `**space/s*`** 阶梯混淆（§4.4–§4.5）。
+- **不要**把 `**Radius/*` 的 px 命名规则**与 `**Space/s*`** 阶梯混淆（§4.4–§4.5）。
 - **不要**在同一屏放多个同等视觉权重的 Primary Filled 主按钮（§3.1）。
 - **不要**用 `**Inverse Surface`** 替代 Primary 表达品牌主行动，除非稿面明确要求。
 - **不要**在超大 Figma 文件上对全文件 `**findAll`** 触发 MCP 过载（见文首 MCP 说明）。
@@ -422,7 +422,7 @@ Figma（`**Shape`** · **Baseline**）圆角变量分组名为 `**Radius/*`**；
 | 主 CTA 背景 | `Schemes/Primary` → `--color-schemes-primary`                    |
 | CTA 上文字  | `Schemes/On Primary` → `--color-schemes-on-primary`              |
 | 圆角（示例）   | `Radius/12` → `var(--shape-radius-12)`                           |
-| 间距（示例）   | `space/s4` → `var(--space-s4)`                                   |
+| 间距（示例）   | `Space/s4` → `var(--space-s4)`                                   |
 | 正文字体     | `var(--font-family-plain)`，字阶来自 `--type-*` 或 `.o2x-type-*`       |
 
 
@@ -436,7 +436,7 @@ Figma（`**Shape`** · **Baseline**）圆角变量分组名为 `**Radius/*`**；
 
 1. 颜色与间距是否均可映射到 `**--color-*`** 与 `**--space-s*`**？
 2. 是否只有一个「主层级」的 Primary CTA（§3.1）？
-3. 圆角是否用了 `**--shape-radius-***`，且未与 `space/s*` 混用规则？
+3. 圆角是否用了 `**--shape-radius-***`，且未与 `Space/s*` 混用规则？
 4. 字阶是否落在 **§5.3** 的语义档位，而非临时 `font-size`？
 5. Figma 侧是否优先 **实例化库组件**，而非手绘 Frame？
 
@@ -774,4 +774,5 @@ Figma（`**Shape`** · **Baseline**）圆角变量分组名为 `**Radius/*`**；
 | 2026-03-31 | `**Shape`** 圆角变量：Figma 分组前缀改为 `**Radius/***`（替代 `**Corner/***`）；`design.md`、`tokens/*`、skills 与圆角表同步；Figma 作用域名 **Corner radius** 不变             |
 | 2026-03-25 | **Figma `spacing`** 集合：`**spacing/0`…`spacing/16**`（11 项）与 `**--space-***` 对齐；Design scale、`tokens/README` 同步                                    |
 | 2026-03-25 | `**spacing/***` 并入 `**Shape**` 集合（原独立 `**spacing**` 集合已删）；Design scale、`tokens/README`、`tokens.css` 头注释同步                                        |
-| 2026-03-25 | **间距命名**：Figma `**space/s0`…`space/s10`**、CSS `**--space-s0`…`--space-s10`**（s = 阶梯，≠ px）；与圆角 `**{px}**` 名规则区分；`tokens.css`、示例页、skills 同步        |
+| 2026-03-25 | **间距命名**：Figma `**Space/s0`…`Space/s10`**、CSS `**--space-s0`…`--space-s10`**（s = 阶梯，≠ px）；与圆角 `**{px}**` 名规则区分；`tokens.css`、示例页、skills 同步        |
+| 2026-04-13 | **Shape 间距变量**：主库命名以 `**Space/s0`…`Space/s10`** 为准；移除 Shape 变量上的 **Code Syntax**，文档改为说明 Figma 命名与 Web token 对应，而不再把 Code Syntax 视为规范的一部分 |

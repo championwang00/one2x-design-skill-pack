@@ -7,7 +7,7 @@
  *
  * 命名：Figma `Schemes/Primary` → `--color-schemes-primary`
  * 字阶：Figma `label/medium` → `--type-label-medium-*`（size / leading / tracking / weight）
- * 间距（与圆角命名规则不同）：Figma **`space/s0`…`space/s10`**（**s** = 阶梯档，**非** px）；CSS **`--space-s0`…`--space-s10`**。圆角 Figma **`Radius/{px}`** 则名与像素一致（作用域分类名仍为 Corner radius）。
+ * 间距（与圆角命名规则不同）：Figma **`Space/s0`…`Space/s10`**（**s** = 阶梯档，**非** px）；CSS **`--space-s0`…`--space-s10`**。圆角 Figma **`Radius/{px}`** 则名与像素一致（作用域分类名仍为 Corner radius）。
  */
 
 /* —— Medeo light（默认） —— */
@@ -94,7 +94,7 @@
   --type-body-medium-tracking: 0.1px;
   --type-body-medium-weight: 600;
 
-  /* 间距：阶梯代号 s0…s10（非像素名）；与 Figma `space/s*` 对齐 */
+  /* 间距：阶梯代号 s0…s10（非像素名）；与 Figma `Space/s*` 对齐 */
   --space-s0: 0;
   --space-s1: 4px;
   --space-s2: 8px;

@@ -46,6 +46,36 @@ Every animation decision starts with these questions:
 3. **Is this a hover/color transition?** → Use `ease`
 4. **Will users see this 100+ times daily?** → Don't animate it
 
+## Text And Number Transitions
+
+When implementing React text transitions where the displayed string changes in place, prefer [`calligraph`](https://calligraph.raphaelsalaja.com/) before writing custom character animation logic.
+
+Use `calligraph` for:
+
+- Text label changes where shared characters should move smoothly to their new positions.
+- Numeric transitions, counters, prices, balances, formatted currency, and slot-like values.
+- Small product UI moments where continuity matters more than spectacle.
+
+Default package:
+
+```bash
+npm install calligraph
+```
+
+Basic usage:
+
+```tsx
+import { Calligraph } from "calligraph";
+
+<Calligraph>{value}</Calligraph>
+```
+
+Notes:
+
+- `calligraph` is React-focused and powered by Motion. Check that the target project uses React 18+ and `motion` 11+ before adopting it.
+- Keep transitions fast and purposeful. For high-frequency product UI, avoid turning every value update into a decorative animation.
+- Still honor reduced-motion requirements. If the surrounding project has a reduced-motion pattern, make sure text transitions follow it.
+
 ## The Easing Blueprint
 
 ### ease-out (Most Common)

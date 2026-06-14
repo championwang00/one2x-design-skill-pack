@@ -1,0 +1,16 @@
+---
+description: Keep One2X skill updates synced across Cursor and Codex installs
+globs: .cursor/skills/one2x-*/SKILL.md
+alwaysApply: false
+---
+
+# One2X Skill Sync
+
+When updating any project One2X skill under `.cursor/skills/one2x-*`, also check and update the matching local Codex skill under `~/.codex/skills/one2x-*`.
+
+Keep intentional path differences intact:
+
+- Project Cursor skills may reference workspace files such as `../../../design.md`.
+- Codex skills may reference shared resources such as `../one2x-design-resources/design.md`.
+
+After editing, verify the important guidance exists in both copies.

@@ -32,9 +32,13 @@ Load:
 
 Rules:
 
+- When a Figma URL or selected Figma node is the implementation source, follow the mandatory Figma-to-code workflow in `one2x-design-system`; do not implement from the screenshot alone.
+- Fetch both structured design context and a screenshot before editing code. Fetch variable definitions for token-sensitive work and inspect the target repository's existing components and tokens before creating anything.
+- Build a short evidence map from Figma component/style/variable names to existing project components and `tokens.css` variables. Unmapped values are exceptions to resolve, not permission to hardcode.
 - Use `tokens/tokens.css` names for color, typography, spacing, radius, and font family.
 - Avoid naked hex, arbitrary `font-size`, arbitrary spacing, and non-token radius values.
 - Use existing project components before creating new UI primitives.
+- Validate the rendered result against the same Figma node at the target viewport before completion.
 
 ### Figma MCP Write Or Edit
 
@@ -51,10 +55,12 @@ Rules:
 
 - Never call `use_figma` before loading `figma-use`.
 - Reuse published One2X variables, text styles, and components. Do not create duplicate local `One2X · Color` or `Shape` collections in consumer files.
+- Bind all `fills`, `strokes`, and text fills to published One2X `Color` variables. Low-emphasis strokes default to `Surface/On Surface Variant` at `0.5px`; use `Schemes/*` for primary, error, and other semantic roles; use palette variables only when no semantic variable exists.
 - Bind `padding*` and `itemSpacing` to `Shape/Space/s*`.
 - Bind `topLeftRadius`, `topRightRadius`, `bottomLeftRadius`, and `bottomRightRadius` to `Shape/Radius/*`.
+- Any rounded element must keep a concentric relationship with adjacent inner/outer rounded elements: `inner radius = outer radius - gap/padding`.
 - Set `cornerSmoothing = 0.6` for non-zero rounded nodes to match One2X's default corner-shape / superellipse rendering. If a component needs standard round corners instead, annotate `corner-shape: round`.
-- After writing Figma components, run the Shape binding check from `one2x-figma-workflow`.
+- After writing Figma components, run the Color and Shape binding checks from `one2x-figma-workflow`.
 
 ### Design Token Or Skill Pack Maintenance
 
@@ -86,6 +92,6 @@ These should route here:
 
 ## Completion Checks
 
-- For code: no naked color, spacing, radius, typography, or font tokens unless an explicit exception exists.
-- For Figma: required sibling skills were loaded before tool calls, DS variables/components were reused, Shape bindings were verified, and rounded nodes use One2X corner smoothing.
+- For code: design context and screenshot were captured when Figma was the source; Figma variables/styles/components were mapped to project tokens/components; no naked color, spacing, radius, typography, or font tokens remain unless an explicit exception exists; the rendered result was visually compared with the reference.
+- For Figma: required sibling skills were loaded before tool calls, DS variables/components were reused, Color bindings and Shape bindings were verified, and rounded nodes use One2X corner smoothing.
 - For docs: installation and usage instructions still point users to this stack as the default entry.

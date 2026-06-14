@@ -21,9 +21,12 @@ description: >-
 | 消费稿里一开始只有「手画矩形 + 纯文本」 | 快速搭结构时最容易这样画，**还没接到设计系统** | 用 **`search_design_system` + `importComponent…`** 换成 **库组件**；颜色用 **`importVariableByKeyAsync`** 绑 **Color**，不要在本文件复制一整套变量。 |
 | 颜色绑了变量，字阶看起来「没绑变量」 | Figma 里 **Typescale 多通过「文字样式」落在样式定义上**，单个 Text 上 `fontSize` 等 **不宜**当成与填色同级的 `setBoundVariable` 用法（见 **`figma-use`** api-reference） | 消费稿对独立文案图层：**`importStyleByKeyAsync` + `setTextStyleIdAsync`**，使用 **`title/medium`、`label/large`** 等主库样式，即与 Typescale 一致。 |
 | **文字样式已挂，但「填充」上仍不显示 Color 变量**（对稿 / 检查时像「裸色」） | 字色往往写在 **文字样式** 或 **样式内嵌色** 上，图层 `fills` 未再绑 **库 Variable**；组件内文字同理由主库组件定义。 | 在 **消费稿** 中，对**非组件实例内**的 `TEXT`：在 **`setTextStyleIdAsync` 之后**，对 **`fills` 里的 `SOLID`** 使用 **`boundVariables: { color: figma.variables.createVariableAlias(await importVariableByKeyAsync(...)) }`**（与形状填色同一套 API），语义色按 **`Surface/On Surface`、`Surface/On Surface Variant`、`Schemes/Primary`** 选用。**不要**在消费稿里改 `Button`/`Field` 等内部文字（实例内 `TEXT` 跳过）。 |
+| Figma 里看起来颜色对了，但右侧面板没有变量 | 只写了 hardcoded RGB，后续主题或 token 改动不会联动。 | **所有 `fills`、`strokes`、TEXT fills 都必须绑 One2X Color 变量**。表面、文本、边框优先 `Surface/*`；主色、错误等语义状态用 `Schemes/*`；没有语义色时才用 palette。写完跑 Color 绑定检查。 |
 | Untitled 里曾出现本地 `One2X · Color` | 脚本为演示绑定而 **临时复制**语义色，**会与主库双源漂移** | 已改为 **只引用库变量**；原则见下节「团队约定」。 |
 | Auto Layout 看起来用了正确间距 / 圆角，但右侧面板没有变量 | 只把数值调成 8、12、16、999 等，并不等于绑定了设计系统变量；组件库后续改 token 时不会联动。 | 对 **`padding*`、`itemSpacing`** 绑定 **`Shape/Space/s*`**，对 **四角半径**绑定 **`Shape/Radius/*`**；`999` / 胶囊统一收敛到 **`Radius/Full`**。写完后用脚本统计 boundVariables，不能只靠截图判断。 |
 | 圆角变量绑了，但看起来不像 One2X | 漏了 Figma 的 **corner smoothing**；`Radius/*` 只管半径，不管 corner-shape。 | 非 0 圆角节点默认设置 **`cornerSmoothing = 0.6`**，对应 One2X 默认 **superellipse**。若组件必须是标准 pill / 圆弧，图层描述标注 **`corner-shape: round`**。 |
+| 圆角元素看起来彼此“顶”或角落间距不均 | 内层、外层圆角没有按同心关系计算，或把同一个 radius 直接套给所有层级。 | 任何圆角元素都检查内外层同心关系：**`inner radius = outer radius - gap/padding`**；多层逐层算，贴近外层圆角的图片、媒体框、按钮组、输入框都要检查。 |
+| 描边太重或变量层级不统一 | 默认用了 1px / Outline Variant，或只写了硬编码 stroke。 | 低强调容器、卡片、输入框、列表分隔和图标容器默认 **`Surface/On Surface Variant` + `0.5px`**，`strokeAlign: inside`，并把 `strokes` paint 绑定到 One2X Color 变量。 |
 | 为什么要 **组件化** | 交互状态、密度、无障碍与 **M3 语义** 都封装在 **Button / Field / …** 里，手绘矩形 **不可维护** | 界面结构 **一律库组件实例** 拼装；新物种先在主库演进或走变体，不在业务稿里发明新按钮。 |
 
 ## 团队约定：设计稿里「全变量 + 全组件」
@@ -31,9 +34,9 @@ description: >-
 与 **[`design.md`](../../../design.md) § Design scale 下「团队约定」** 一致，Agent 在 Figma 侧执行时默认：
 
 1. **变量**  
-   - **Color**：填色/描边绑 **📖One2X 库变量**（`importVariableByKeyAsync` 或 UI 启用库后绑定）。  
+   - **Color**：填色/描边/文字填充绑 **📖One2X 库变量**（`importVariableByKeyAsync` 或 UI 启用库后绑定）。不要只写 hardcoded RGB。低强调描边默认用 **`Surface/On Surface Variant`**，不要把 `Outline Variant` / 1px 当默认。  
    - **Typescale**：通过 **Text style** 体现；独立 `TEXT` 图层必须挂 **`title/*`、`label/*`** 等主库样式，不长期用手写 `fontSize`。  
-   - **Shape**（同一集合）：圆角必须绑 **`Radius/*`**（名=px），间距必须绑 **`Space/s*`**（与 **`--space-s*`** 对齐，**s**=阶梯≠px）。只把 Auto Layout 数值调成 token 值还不够；消费稿组件也要在右侧面板里能看到变量绑定。  
+   - **Shape**（同一集合）：圆角必须绑 **`Radius/*`**（名=px），间距必须绑 **`Space/s*`**（与 **`--space-s*`** 对齐，**s**=阶梯≠px）。只把 Auto Layout 数值调成 token 值还不够；消费稿组件也要在右侧面板里能看到变量绑定。圆角还要检查同心关系，不能只看单个半径值。  
 2. **组件**：凡属于设计系统已覆盖的控件，**禁止**用普通 Frame/Rectangle **冒充**；用 **`search_design_system`** 取 **Button、Field、Checkboxes** 等 **实例**。  
 3. **主库文件** `wHNBqjzSQZM8a4DlyBIDqW` 内作稿：直接用本地变量与样式，无需 `import`。
 
@@ -79,6 +82,8 @@ description: >-
 - **必须绑定**：消费稿侧 **`importVariableByKeyAsync`** 使用的 **key 与主库一致**。`paddingLeft` / `paddingRight` / `paddingTop` / `paddingBottom` / `itemSpacing` 绑定 **`Space/s*`**；`topLeftRadius` / `topRightRadius` / `bottomLeftRadius` / `bottomRightRadius` 绑定 **`Radius/*`**。团队库面板里**展示名**可能仍是旧式高度档标签，与主库 **`Radius/{px}`** 分组名不同，**以变量 key / 解析值为准**（见 **`design.md`** §4.4）。
 - **收敛临时值**：6px → `Radius/6` 或 `Space/s2`（按属性语义判断）；10/11px → 就近收敛到 `Space/s3`；999px / 胶囊 → `Radius/Full`。不要长期保留 `10px`、`14px`、`999px` 这类看起来接近但没有变量的值。
 - **Corner smoothing**：除 `design.md` C.7 明确标注 `corner-shape: round` 的标准圆弧 / pill 例外外，非 0 圆角节点设置 **`cornerSmoothing = 0.6`**，与 One2X 默认 superellipse 渲染一致。
+- **同心圆角**：任何圆角元素都要检查与内层、外层相邻圆角元素的关系。内层 radius 按 **`outer radius - gap/padding`** 计算；padding 大于 radius 时内层归零。不要把外层 radius 直接传给所有子元素。
+- **默认描边**：低强调容器、卡片、输入框、列表分隔和图标容器优先用 **`Surface/On Surface Variant`** 作为 stroke color，`strokeWeight = 0.5`，`strokeAlign = 'INSIDE'`。只有设计稿明确、禁用态、分隔层级或可见性问题时才改用 `Outline` / `Outline Variant` / 1px。
 - **绑定 API**：`paddingLeft` / `itemSpacing` / `topLeftRadius` 等见 **`figma-use`** [api-reference](../figma-use/references/api-reference.md) 的 **`setBoundVariable`** 列表（FLOAT 变量）。
 
 ### Shape 绑定检查（组件写入后必做）
@@ -135,6 +140,38 @@ return { autoProps, boundAutoProps, radiusProps, boundRadiusProps, roundedNodes,
 ```
 
 验收标准：对新建的 One2X 组件，`autoProps === boundAutoProps`、`radiusProps === boundRadiusProps`，且 `roundedNodes === smoothedRadiusNodes`；若遇到实例内部不能改，应回到源组件绑定，不要在消费稿里硬改实例子层。
+
+### Color 绑定检查（组件写入后必做）
+
+每次写入 One2X 组件后，所有 `SOLID` paint 都必须有 Color variable：
+
+```js
+let solidPaints = 0;
+let boundSolidPaints = 0;
+const unboundSamples = [];
+
+function checkPaints(node, prop) {
+  if (!(prop in node) || !Array.isArray(node[prop])) return;
+  for (const paint of node[prop]) {
+    if (!paint || paint.type !== 'SOLID') continue;
+    solidPaints++;
+    if (paint.boundVariables && paint.boundVariables.color) {
+      boundSolidPaints++;
+    } else {
+      unboundSamples.push(`${node.id}:${node.name}:${prop}`);
+    }
+  }
+}
+
+for (const node of [root, ...root.findAll(() => true)]) {
+  checkPaints(node, 'fills');
+  checkPaints(node, 'strokes');
+}
+
+return { solidPaints, boundSolidPaints, unboundSamples };
+```
+
+验收标准：`solidPaints === boundSolidPaints`。若截图看起来正确但这里没通过，仍然不算完成。
 
 ## 字阶（Typescale）：用库「文字样式」承接变量
 

@@ -1,10 +1,10 @@
 /**
- * One2X 主库：把可匹配的数值绑定到 Shape 变量（Radius/*、space/s*）。
+ * One2X 主库：把可匹配的数值绑定到 Shape 变量（Radius/*、Space/s*）。
  * 用途：在 Figma「开发」→ 你自己的插件里粘贴运行；或把逻辑拷进一次性插件。也可用 MCP use_figma 单次小块。
  *
  * 约定：
  * - 圆角：本地变量名 Radius/0 … Radius/40、Radius/Full（≥500px 视为 Full）
- * - 间距：space/s0…s10 对应 0,4,8,12,16,20,24,32,40,48,64
+ * - 间距：Space/s0…s10 对应 0,4,8,12,16,20,24,32,40,48,64
  * - 绑定字段：padding*、itemSpacing、counterAxisSpacing（仅 number）、四角 radius
  * - 已绑定的属性跳过；单节点异常跳过并计数
  * - 进度：figma.root sharedPluginData namespace `one2x_ds` key `bindShapeFloats` JSON `{pi,si}`
@@ -26,17 +26,17 @@ var RUN_UNTIL_DONE = false;
 var YIELD_MS = 0;
 
 var PX_TO_SPACE = {
-  0: 'space/s0',
-  4: 'space/s1',
-  8: 'space/s2',
-  12: 'space/s3',
-  16: 'space/s4',
-  20: 'space/s5',
-  24: 'space/s6',
-  32: 'space/s7',
-  40: 'space/s8',
-  48: 'space/s9',
-  64: 'space/s10',
+  0: 'Space/s0',
+  4: 'Space/s1',
+  8: 'Space/s2',
+  12: 'Space/s3',
+  16: 'Space/s4',
+  20: 'Space/s5',
+  24: 'Space/s6',
+  32: 'Space/s7',
+  40: 'Space/s8',
+  48: 'Space/s9',
+  64: 'Space/s10',
 };
 
 async function loadMaps() {
@@ -51,7 +51,7 @@ async function loadMaps() {
   for (var j = 0; j < shape.variableIds.length; j++) {
     var v = await figma.variables.getVariableByIdAsync(shape.variableIds[j]);
     if (!v || v.resolvedType !== 'FLOAT') continue;
-    if (v.name.indexOf('space/') === 0) spaceByName[v.name] = v;
+    if (v.name.indexOf('Space/') === 0) spaceByName[v.name] = v;
     if (v.name.indexOf('Radius/') === 0) radiusByName[v.name] = v;
   }
   return { spaceByName: spaceByName, radiusByName: radiusByName };

@@ -26,6 +26,7 @@
 | Component Set | Component Set 名称、Property / Value、内部图层 |
 | Component（独立） | Component 名称、Property、内部图层 |
 | Component（Variant） | 自动提升到所属 Component Set；显示整组名称、Property / Value、内部图层 |
+| Instance | 实例语义名、存在时的子图层；实例不修改远程主组件 Property |
 | Frame / Group / Text / Shape 等普通节点 | 当前节点名称、存在时的子图层 |
 | 混合选择 | 合并所有适用能力；每类能力显示影响对象数 |
 
@@ -38,6 +39,7 @@
 - 对象名称。
 - Section 名称。
 - Component Property / Value。
+- Instance Label 语义名称。
 - 内部图层。
 
 主操作仍为“分析命名”。分析结果沿用可逐条编辑的预览列表，统一应用并支持撤销最近一次批量操作。
@@ -74,6 +76,27 @@ Figma 为 BOOLEAN、TEXT、INSTANCE_SWAP、SLOT Property 的内部 key 添加 `#
 4. 生成整组 Property / Value 变更计划。
 5. 检查每个 Variant 组合在改名后仍唯一。
 
+### Instance Names From Label Content
+
+当选中或批量扫描到 Component Instance 时，插件用实例中实际显示的 Label 文案生成语义前缀，再与主组件名组合。该规则只修改实例图层名称，不修改主组件或 Property 定义。
+
+提取优先级：
+
+1. 实例上发生 override 的 TEXT Component Property；Property 名优先匹配 `labelText`、`label`、`text`、`title`、`name`。
+2. 实例内发生 override 且可见的 TextNode，优先匹配图层名 `labelText`、`label`、`text`、`title`、`name`。
+3. 实例内第一个非空、可见、长度不超过 40 个字符的 TextNode。
+4. 无可用文案时，保留主组件默认名或使用现有实例规则。
+
+组合规则：
+
+- 英文文案规范成 camelCase 后作为前缀：`Confirm publish` + `Button` → `confirmPublishButton`。
+- 中文及其他非拉丁文字暂时保留原文，不调用网络翻译：`确认发布` + `Button` → `确认发布Button`。
+- 去除换行、首尾空格和标点；连续空白折叠为一个空格。
+- Label 已包含组件类型时不重复拼接：`Confirm button` + `Button` → `confirmButton`，而不是 `confirmButtonButton`。
+- 主组件名含分组路径时只取末级可见名称，例如 `Actions/Button` 使用 `Button`。
+- 同级实例生成同名时沿用唯一后缀规则：`confirmButton`、`confirmButton2`。
+- Label 为空、仅符号、过长或不可可靠读取时不自动改名，并在预览中解释回退原因。
+
 ## Architecture
 
 现有 `code.js` 同时负责选择解析、分析、应用和撤销，`ui.html` 同时负责固定配置与结果渲染。本次按职责拆分：
@@ -84,6 +107,7 @@ Figma 为 BOOLEAN、TEXT、INSTANCE_SWAP、SLOT Property 的内部 key 添加 `#
 
 - `normalizePropertyName(name, type)`。
 - `normalizeVariantValue(value, propertyName)`。
+- `normalizeInstanceName(label, mainComponentName)`。
 - `planComponentPropertyRenames(componentModel)`。
 - Property / Value 冲突检测。
 
@@ -129,6 +153,7 @@ Figma 节点到纯模型的转换留在主线程适配层，确保上下文规�
 负责所有 Figma 写操作：
 
 - 解析当前选区并定位 Component Set。
+- 读取 Instance 的 TEXT Property override、TextNode override 与主组件名。
 - 调用 `editComponentProperty` 重命名 Property。
 - 重写 Component Set 内 Variant Component 的组合名称以更新 Value。
 - 修改普通节点 `name`。
@@ -171,6 +196,7 @@ UI 继续使用仓库 `tokens/tokens.css`，低强调边框使用 `Surface/On Su
 ## Error Handling
 
 - 选中的 Instance 不直接修改主组件 Property；仅作为普通实例图层命名处理。
+- 无法读取主组件的远程实例仍可使用实例当前组件名；无法得到 Label 时不猜测语义前缀。
 - 选中远程库实例无法编辑主组件时，显示只读提示。
 - Property / Value 归一化冲突时，冲突 proposal 保留在预览但默认禁用应用，并展示原因。
 - Component Set 中存在无法解析的 Variant 名时，不执行 Value 批量改名，只允许安全的 Property 与节点改名。
@@ -186,6 +212,7 @@ UI 继续使用仓库 `tokens/tokens.css`，低强调边框使用 `Surface/On Su
 - 多词 Value camelCase。
 - Property / Value 冲突。
 - Variant 选择提升到 Component Set 并去重。
+- Instance Label 提取优先级、英文 camelCase、中文原文、组件名去重和空 Label 回退。
 - Section、Component、普通图层和混合选择的 capability 计算。
 - 变更计划合并与禁用 capability。
 
@@ -213,3 +240,4 @@ UI 继续使用仓库 `tokens/tokens.css`，低强调边框使用 `Surface/On Su
 - 不修改 TEXT 默认文案、INSTANCE_SWAP 引用或 preferred values。
 - 不追踪远程库主组件并跨文件写入。
 - 不通过 AI 猜测完全不明确的业务语义。
+- 第一版不联网翻译中文 Label；中文实例名前缀保留原文。

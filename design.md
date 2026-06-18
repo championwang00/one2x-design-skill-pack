@@ -47,7 +47,7 @@ Medeo / One2X 产品界面建立在 **Material Design 3** 的组件语义之上�
 **Key characteristics**
 
 - **双字族**：正文与 UI 用 **Manrope（Plain）**；品牌展示标题用 **Nohemi（Brand）**，与 Typescale 绑定。
-- **品牌紫**：主 CTA 与关键焦点使用 `**Schemes/Primary`** + `**Schemes/On Primary`**，每屏主任务区通常只保留 **一个** 最高优先级 Primary（见 §3.1）。
+- **双主色**：常规主按钮用 `**Surface/Inverse Surface`**（黑）+ `**Inverse On Surface`**；只有**最高强调**的那一个用 `**Schemes/Primary`**（紫）+ `**On Primary`**。紫色**非常克制**，每屏通常 0–1 个（见 §3.1）。
 - **变量驱动**：颜色、字阶、圆角、间距均来自 Figma **📖One2X** 变量；Web 以 `**tokens/tokens.css`** 的 `**--color-*`、`--type-*`、`--space-s*`、`--shape-radius-*`** 为准。
 - **圆角 vs 间距命名**：圆角 `**Radius/{数字}`** = 半径 **px**；间距 `**Space/s0`…`s10`** = **阶梯档**，不等于数字本身即 px（见 §4.4–§4.5）。
 - **多模式 Color**：Medeo 产品以 **Medeo light / Medeo dark** 为主；Mebox 为另一套 Color 模式；实现时跟随主题与 `tokens.css`。
@@ -88,20 +88,20 @@ Medeo / One2X 产品界面建立在 **Material Design 3** 的组件语义之上�
 - **强调层级**：主要操作用 **Filled Button**；次要/并列操作用 **Outlined** 或 **IconButton**；成组图标按钮保持同一密度与圆角。
 - **文案与数字**：排版样式中启用 `font-feature-settings: 'zero' 1`（零宽数字等）时与设计稿一致。
 
-### 3.1 品牌强调：Primary 主按钮（核心规则）
+### 3.1 双主色与主按钮（核心规则）
 
-整页以 **Surface / 中性灰阶** 为主时，**品牌感**依赖**少量、高识别**的紫色触点，而不是满屏堆色。
-
-
-| 规则        | 说明                                                                                                      |
-| --------- | ------------------------------------------------------------------------------------------------------- |
-| **何时用**   | 每屏（或每个主任务区）通常只有 **一个** 最核心的 **主行动**（Primary CTA）。                                                       |
-| **样式**    | 使用 **Filled** 按钮，填充色 `**Schemes/Primary`**（品牌紫），**不要**用 `Inverse Surface` 等反色块替代主 CTA 的品牌色，除非稿内明确为特殊场景。 |
-| **文字与图标** | 按钮上文字与图标颜色 `**Schemes/On Primary`**，保证与紫底对比、可读。                                                         |
-| **网页**    | `**background: var(--color-schemes-primary)`**，`**color: var(--color-schemes-on-primary)`**（图标同色）。      |
+One2X 有**两个主色**，按强调层级分工，**紫色要非常克制**。整页以中性灰阶为底，黑色承担日常主行动，紫色只在最需要突出处点睛。
 
 
-**为何重要**：**Primary** 用量少，但**最醒目**，用户由此把「品牌紫」与关键操作绑定；若主按钮误用灰底/反色而不用 Primary，品牌感会明显变弱。
+| 层级        | 填充                                  | 文字 / 图标                              | 用在哪                                                          |
+| --------- | ----------------------------------- | ----------------------------------- | ------------------------------------------------------------ |
+| **默认主按钮** | `Surface/Inverse Surface`（黑）        | `Surface/Inverse On Surface`（白）     | **大多数主要操作**：确认、提交、Copy link 等。这是日常主行动的**默认**承载。              |
+| **最高强调**  | `Schemes/Primary`（品牌紫）              | `Schemes/On Primary`（白）             | 只给**最需要突出**的那一个行动 / 品牌强调点。每屏通常 **0–1 个**。                     |
+
+
+- **先想用黑，再想用紫**：默认主按钮用 `Inverse Surface`（黑）；只有这一个行动需要特别强调时，才升级到 `Primary`（紫）。
+- **网页**：黑色主按钮 `background: var(--color-surface-inverse-surface); color: var(--color-surface-inverse-on-surface)`；紫色强调 `background: var(--color-schemes-primary); color: var(--color-schemes-on-primary)`（图标同色）。
+- **为何重要**：紫色用量越少越醒目；若把紫当默认主按钮色到处用，品牌焦点被稀释，反而读不出层级。**勿**用 `Secondary Container`（蓝）替代这两个主色。
 
 ---
 
@@ -137,34 +137,43 @@ Figma 本地变量按 **Collection** 组织；下列与稿内 **Variables** 面�
 | `Surface/Inverse On Surface`       | 深色按钮上的文字/图标  | `#ffffff` |
 
 
-### 4.2 Schemes（语义色，节选）
+### 4.2 Schemes（语义色，Material 角色契约）
 
+`Schemes/*` 按 Material Design 的 **Role / On Role / Container / On Container** 成对使用。核心规则是：**底色 token 与文字/图标 token 不可跨角色混搭**。
 
-| Token                            | 参考值       | 用途                                     |
-| -------------------------------- | --------- | -------------------------------------- |
-| `Schemes/Primary`                | `#863dfb` | **主色（品牌紫，Medeo light）**——主按钮、关键焦点、品牌强调 |
-| `Schemes/On Primary`             | `#ffffff` | 主色上的图标与文字                              |
-| `Schemes/Secondary Container`    | `#2e5fff` | 次要强调容器（偏蓝，勿与 Primary 混用）               |
-| `Schemes/On Secondary Container` | `#ffffff` | 其上内容                                   |
-| `Schemes/Error`                  | `#ba1a1a` | 错误                                     |
-| `Schemes/On Error`               | `#ffffff` | 错误色上的内容                                |
+| Token 类型 | 用法 | 禁止 |
+| -------- | --- | --- |
+| `Schemes/{Role}` | 高强调色面：Filled 按钮、强状态、关键焦点。 | 不把 `{Role}` 当文字色直接放在 `Surface` 上；不把多个 Role 同时当主层级。 |
+| `Schemes/On {Role}` | 只用于对应 `{Role}` 底色上的文字 / 图标。 | 不放在 `Surface`、`{Role} Container` 或其他角色底色上。 |
+| `Schemes/{Role} Container` | 低强调容器：Tonal 按钮、选中背景、信息性提示块、柔和强调面。 | 不作为主品牌 CTA 色；不与其他角色的 `On *` 搭配。 |
+| `Schemes/On {Role} Container` | 只用于对应 `{Role} Container` 底色上的文字 / 图标。 | 不放在 `{Role}` 高强调底上，也不跨角色使用。 |
 
+| 角色 | 高强调底 + 内容 | 低强调容器 + 内容 | One2X 使用方式 |
+| --- | --- | --- | --- |
+| Primary | `Primary` + `On Primary` | `Primary Container` + `On Primary Container` | 品牌紫。只给最高强调行动 / 品牌焦点，每屏通常 0–1 个。 |
+| Secondary | `Secondary` + `On Secondary` | `Secondary Container` + `On Secondary Container` | 次级强调、信息性强调、选中态；不替代主 CTA。 |
+| Tertiary | `Tertiary` + `On Tertiary` | `Tertiary Container` + `On Tertiary Container` | 第三强调、徽标、少量点缀；不抢主行动层级。 |
+| Error | `Error` + `On Error` | `Error Container` + `On Error Container` | 错误、删除、校验失败、危险提示。 |
 
 > 口语里的「Primalist 紫」一般对应变量 `**Schemes/Primary`**，不是 `Secondary Container` 的蓝。
 
-主行动 **Filled** 按钮：**fill = `Primary`**，**label/icon = `On Primary`**（见 §3.1）。**勿**用 `Secondary Container` 充当主 CTA 的品牌色。
+主行动 **Filled** 按钮（**双主色**，见 §3.1）：**常规**用 `Surface/Inverse Surface`（黑）+ `Inverse On Surface`；**最高强调**那一个才用 `Schemes/Primary`（紫）+ `On Primary`。**勿**用 `Secondary` / `Secondary Container` 充当主品牌色。
 
-### 4.3 State layers（状态蒙层，透明度叠加）
+### 4.3 State layers（状态蒙层）
 
-用于 hover/pressed/focus 等，与设计变量名一致，例如：
+交互态（hover / focus / pressed / dragged）**不是换一个颜色**，而是在底色上**叠一层半透明蒙层**。One2X 的默认做法是**全局统一叠 `Surface/On Surface`**，再用 **Blend Mode** 适配明暗，而**不是**为每个组件单独挑各自的 `On X` 色：
 
-- `State Layers/On Surface/Opacity-08`、`Opacity-12`
-- `State Layers/On Surface Variant/Opacity-08`、`Opacity-00`
-- `State Layers/Inverse On Surface/Opacity-08`、`Opacity-12`
-- `State Layers/On Secondary Container/Opacity-08`、`Opacity-12`
-- `State Layers/On Error Container/Opacity-08`、`Opacity-12`
 
-实现时映射为在基础色上叠加 **8% / 12%** 透明度的前景色，或项目中等效的 `color-mix` / 专用 state token。
+| 模式              | 蒙层色                  | Blend Mode（Figma）                  | 效果      |
+| --------------- | -------------------- | ---------------------------------- | ------- |
+| 浅色（Medeo light） | `Surface/On Surface` | **Plus Darker**（API `LINEAR_BURN`）  | 在底色上变暗 |
+| 深色（Medeo dark）  | `Surface/On Surface` | **Plus Lighter**（API `LINEAR_DODGE`） | 在底色上变亮 |
+
+
+- **透明度档**：hover **8%**、focus / pressed **12%**、dragged **16%**。
+- **特殊表面例外**：反色条、Error 容器等少数表面，才按需改叠对应的 `Inverse On Surface` / `On Error Container` 等；其余一律 `On Surface` + Blend。
+- **变量位置**：仍在 `State Layers/*` 集合（如 `State Layers/On Surface/Opacity-08`、`Opacity-12`、`State Layers/On Surface Variant/*`）。
+- **Web 实现**：在底色上叠一层 `On Surface` 的半透明层，`mix-blend-mode: plus-darker`（浅）/ `plus-lighter`（深）；或用项目中等效的 `color-mix` / 专用 state token。
 
 ### 4.4 圆角（Shape 集合）
 
@@ -292,7 +301,7 @@ Figma（`**Shape`** · **Baseline**）圆角变量分组名为 `**Radius/*`**；
 | Card/Panel 标题（Library 等）                 | `title/small` 或 `title/medium`                   | 按信息密度选择                |
 | 表格正文 / 列表项主文案                            | `body/medium`                                    | 默认阅读层                  |
 | 辅助说明 / 时间戳 / 元信息                         | `body/small` 或 `body/extra small`                | 低层级信息                  |
-| 主按钮文案（Primary CTA）                       | `label/large - prominent`                        | 与 `Schemes/Primary` 搭配 |
+| 主按钮文案（主 CTA）                            | `label/large - prominent`                        | 默认配 `Inverse Surface`；最高强调才配 `Schemes/Primary` |
 | 次要按钮 / Tab / 输入标签                        | `label/large`                                    | 默认交互文案                 |
 | 紧凑工具条按钮 / 小 Chip                         | `label/medium`（关键操作用 `label/medium - prominent`） | 密集区域的平衡选择              |
 
@@ -320,9 +329,21 @@ Figma（`**Shape`** · **Baseline**）圆角变量分组名为 `**Radius/*`**；
 
 **组件描述要点（节选）**：
 
-- **Button**：用于 Dialog、Modal、Form、Card、Toolbar 等处的可点击操作；详见 M3 Buttons。**全页最核心的一个主行动**应使用 **Filled + `Schemes/Primary` + `On Primary`**（§3.1），其余次要操作用 Outlined / Tonal 等，避免多个按钮抢同一品牌色。
+- **Button**：用于 Dialog、Modal、Form、Card、Toolbar 等处的可点击操作；详见 M3 Buttons。**主行动按钮遵守双主色**（§3.1）：常规主按钮用 **Filled + `Surface/Inverse Surface` + `Inverse On Surface`**；只有最高强调的那一个才用 **Filled + `Schemes/Primary` + `On Primary`**，每屏 0–1 个。Tonal / Container 按钮遵守 §4.2 的 Material 配对规则。
 - **IconButton**：紧凑操作；可成组或单独使用。
 - **Outlined IconButton**：中等强调，常与 Filled 搭配表示替代操作。
+
+### 6.1 图标库（Icons · `@one2x/o2x-icons`，核心规则）
+
+**所有图标必须调用 One2X 自有图标库 `@one2x/o2x-icons`**（medeo-fe `packages/o2x-icons`，字体图标，共 260 个）。**不要**临时画 SVG、不要从第三方库（Material Symbols / Lucide / Iconfont / Font Awesome 等）引入、不要用 emoji 占位。
+
+- **代码用法（二选一）**：
+  - **组件**：`import { AddIcon } from '@one2x/o2x-icons'` → `<AddIcon />`（命名 = `componentName`，PascalName + `Icon` 后缀）。
+  - **字体 className**：引入字体后用 `o2x-icons-<ComponentName>`，或字族 `font-family: 'o2x-icons'` + 对应字符（PUA 码位见 `info.json` 的 `encodedCode` / `unicode`）。
+- **找图标**：图标清单与映射在 `packages/o2x-icons/src/fonts/info.json`（`componentName` / `snakeName` / `className` / `encodedCode`），或在可视化预览「图标」区搜索后点选复制组件名。
+- **尺寸**：常用 **18 / 20 / 24px**（随同级文字字号），点击区域参照 §9 与组件规范（如 Share 网格 64×64）。
+- **颜色**：用 `currentColor` 继承所在文本的 `On *` 颜色，**不要**给图标硬编码 hex。
+- **缺图标**：需要新图标时走 Figma 图标同步流程（`packages/o2x-icons` 的 `pnpm sync` / `sync-figma-icons`），由设计在 Figma 补充后再用，**不要**在业务代码里散放一次性 SVG。
 
 ---
 
@@ -340,7 +361,7 @@ Figma（`**Shape`** · **Baseline**）圆角变量分组名为 `**Radius/*`**；
 
 ### 7.3 留白与层级
 
-- **中性表面为主**：大面积 `**Surface/Surface`** / `**Surface Container Lowest`** 形成底色，再用字阶与 Primary 建立层级（见 §1、§3.1）。
+- **中性表面为主**：大面积 `**Surface/Surface`** / `**Surface Container Lowest`** 形成底色，再用字阶与双主色建立层级：默认主行动用黑色 `Inverse Surface`，最高强调才用 `Primary`（见 §1、§3.1）。
 - **避免**：无 token 依据的随意 `margin`、与字阶不一致的临时 `font-size`。
 
 ---
@@ -373,6 +394,7 @@ Figma（`**Shape`** · **Baseline**）圆角变量分组名为 `**Radius/*`**；
 - **当前有效命名**：Figma 圆角为 `**Radius/*`**，间距为 `**Space/s*`**；Web 分别对应 `**--shape-radius-***`、`**--space-s***`。
 - **历史名仅作兼容说明**：`**Corner/*`**、`**spacing/*`**、`**--shape-corner-***` 均不作为新稿或新实现命名依据。
 - **新页面 / C2P 落地**：引入 `tokens.css`；字族与字阶使用 `**--font-family-*`**、`**--type-*`** 或 `**.o2x-type-***`；`gap` / `padding` / `margin` 用 `**var(--space-s*)**`；圆角用 `**var(--shape-radius-*)**`；主行动按钮用 `**--color-schemes-primary**` + `**--color-schemes-on-primary**`（§3.1）。
+- **图标**：统一用 `@one2x/o2x-icons`（组件 `<XxxIcon />` 或字体 className `o2x-icons-<名>`，§6.1），颜色继承 `currentColor`；禁止临时 SVG / 第三方图标库 / emoji 占位。
 - **工程接入**：Tailwind / shadcn 可将 `tokens.css` 变量挂入 `theme.extend`（`colors`、`spacing`、`fontSize`、`borderRadius` 等）。
 - **变更来源**：以 Figma 与 `tokens.css` 同步结果为准；`design.md` 负责说明，不再单独衍生第二套配置。
 
@@ -383,9 +405,10 @@ Figma（`**Shape`** · **Baseline**）圆角变量分组名为 `**Radius/*`**；
 ### Do
 
 - 使用 `**tokens/tokens.css`** 中的 `**--color-*`、`--type-*`、`--space-s*`、`--shape-radius-*`、`--font-*`** 实现颜色、字阶、间距与圆角。
-- 主路径 CTA 使用 `**Schemes/Primary**` + `**On Primary**`（§3.1），与 `**label/large - prominent**` 等字阶搭配。
+- 主路径 CTA 默认用 `**Surface/Inverse Surface**`（黑）+ `**Inverse On Surface**`；**最高强调**那一个才用 `**Schemes/Primary**` + `**On Primary**`（§3.1），并与 `**label/large - prominent**` 字阶搭配。
 - 在 Figma 中绑定 **Color / Typescale / Shape** 变量；组件用 **库实例**。
 - 按 **§5.3 / §5.4** 选择字阶；同一语义角色在同一页面内保持一致。
+- 图标统一调用 `**@one2x/o2x-icons**`（`<XxxIcon />` 或 `o2x-icons-<名>`，颜色用 `currentColor`，§6.1）。
 - 需要零宽数字时启用 `**font-feature-settings: 'zero' 1`**，与稿一致。
 - 查阅 `**tokens/README.md`** 与 `**one2x-design-system**` skill 获取实现细则。
 
@@ -394,8 +417,9 @@ Figma（`**Shape`** · **Baseline**）圆角变量分组名为 `**Radius/*`**；
 - **不要**在代码中写裸 **hex**（除非稿与 token 明确尚未覆盖的临时情况，且应回写 token）。
 - **不要**用 `**Schemes/Secondary Container`** 充当主品牌 CTA 色（§4.2）。
 - **不要**把 `**Radius/*` 的 px 命名规则**与 `**Space/s*`** 阶梯混淆（§4.4–§4.5）。
-- **不要**在同一屏放多个同等视觉权重的 Primary Filled 主按钮（§3.1）。
-- **不要**用 `**Inverse Surface`** 替代 Primary 表达品牌主行动，除非稿面明确要求。
+- **不要**把紫色 `**Schemes/Primary`** 当默认主按钮色到处用：默认主按钮用 `**Inverse Surface`**（黑），紫色只给最高强调，每屏 0–1 个（§3.1）。
+- **不要**在同一屏放多个同等视觉权重的紫色 Primary 主按钮（§3.1）。
+- **不要**临时画 SVG、引第三方图标库（Material Symbols / Lucide / Iconfont 等）或用 emoji 当图标——一律走 `**@one2x/o2x-icons**`（§6.1）。
 - **不要**在超大 Figma 文件上对全文件 `**findAll`** 触发 MCP 过载（见文首 MCP 说明）。
 
 ---
@@ -419,18 +443,21 @@ Figma（`**Shape`** · **Baseline**）圆角变量分组名为 `**Radius/*`**；
 | 卡片/顶层表面  | `Surface/Surface Container Lowest`                               |
 | 主文本      | `Surface/On Surface`                                             |
 | 次要文本     | `Surface/On Surface Variant`                                     |
-| 主 CTA 背景 | `Schemes/Primary` → `--color-schemes-primary`                    |
-| CTA 上文字  | `Schemes/On Primary` → `--color-schemes-on-primary`              |
+| 默认主按钮 · 背景 | `Surface/Inverse Surface` → `--color-surface-inverse-surface`   |
+| 默认主按钮 · 文字 | `Surface/Inverse On Surface` → `--color-surface-inverse-on-surface` |
+| 最高强调 · 背景 | `Schemes/Primary` → `--color-schemes-primary`（克制使用，每屏 0–1 个）    |
+| 最高强调 · 文字 | `Schemes/On Primary` → `--color-schemes-on-primary`             |
 | 圆角（示例）   | `Radius/12` → `var(--shape-radius-12)`                           |
 | 间距（示例）   | `Space/s4` → `var(--space-s4)`                                   |
 | 正文字体     | `var(--font-family-plain)`，字阶来自 `--type-*` 或 `.o2x-type-*`       |
+| 图标       | `@one2x/o2x-icons` → `<XxxIcon />` 或 `o2x-icons-<名>`（颜色 `currentColor`） |
 
 
 ### 13.2 Example prompts
 
-- 「在 Medeo light 下做一个 Dialog：白底容器用 `Surface Container Lowest`，标题 `title/medium`，主按钮 **Filled** + `Schemes/Primary` / `On Primary`，次要操作为 Outlined；`gap` 与 `padding` 全部用 `var(--space-s*)`，圆角用 `var(--shape-radius-12)`。」
-- 「做一列列表项：正文 `body/medium`，元信息 `body/small`，分隔线用 `Surface/Outline`；整页只有一个 Primary 主按钮。」
-- 「营销区块 Hero：`display/large` + `font-family: var(--font-family-brand)`，副标题 `body/large`；下方主 CTA 单独使用 Primary，不要用 Secondary Container 当品牌色。」
+- 「在 Medeo light 下做一个 Dialog：白底容器用 `Surface Container Lowest`，标题 `title/medium`，默认主按钮 **Filled** + `Surface/Inverse Surface` / `Inverse On Surface`，次要操作为 Outlined；`gap` 与 `padding` 全部用 `var(--space-s*)`，圆角用 `var(--shape-radius-12)`。」
+- 「做一列列表项：正文 `body/medium`，元信息 `body/small`，分隔线用 `Surface/Outline`；如果有主操作，默认用 `Inverse Surface` 黑色主按钮，紫色 Primary 每屏最多 0–1 个。」
+- 「营销区块 Hero：`display/large` + `font-family: var(--font-family-brand)`，副标题 `body/large`；只有最高强调 CTA 才使用 `Schemes/Primary` + `On Primary`，不要用 Secondary Container 当品牌色。」
 
 ### 13.3 Iteration checklist
 
@@ -439,6 +466,7 @@ Figma（`**Shape`** · **Baseline**）圆角变量分组名为 `**Radius/*`**；
 3. 圆角是否用了 `**--shape-radius-***`，且未与 `Space/s*` 混用规则？
 4. 字阶是否落在 **§5.3** 的语义档位，而非临时 `font-size`？
 5. Figma 侧是否优先 **实例化库组件**，而非手绘 Frame？
+6. 图标是否全部来自 `**@one2x/o2x-icons**`，无临时 SVG / 第三方图标 / emoji（§6.1）？
 
 ---
 

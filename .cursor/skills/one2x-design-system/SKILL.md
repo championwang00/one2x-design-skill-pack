@@ -63,16 +63,22 @@ description: >-
 ## Agent workflow
 
 1. **优先对齐 Token**：`Surface/*`；**`Shape`** 集合内 **`Radius/*`** / **`--shape-radius-*`**（名=px）、**`Space/s*`** / **`--space-s*`**（**s**=阶梯档，≠px）；字样式 **`--type-*`** 与 **`--font-family-*`**；以及 `State Layers/*`、`Schemes/*`（见 `design.md`、`tokens/tokens.css`）。
-2. **网页 / 静态页（强制）——「颜色与文字都用变量」**  
+2. **网页 / 静态页（强制）——「颜色与文字都用变量」**
    - 若仓库有 **`tokens/tokens.css`**，**颜色**一律 **`var(--color-…)`**；**字号/行高/字间距**一律 **`var(--type-…)`**（及 **`--font-family-*`**）；**间距** **`--space-s*`**、**圆角** **`--shape-radius-*`**（或项目中等效 token 名）。  
    - **禁止**：裸 hex、任意 `font-size: 14px` / `margin: 12px` 等与 token 无关的魔法数，除非 **`design.md` 写明特例**。  
    - 与 **`design.md` § Design scale「团队约定」**、**`one2x-figma-workflow`** 中「设计稿全变量」**对表**：设计侧用 Figma 变量 + Text style，代码侧用 **`tokens.css`**。
+2.1 **Material 颜色角色配对（强制，见 `design.md` §4.2）**：`Schemes/*` 必须按 **Role / On Role / Container / On Container** 成对使用。
+   - **高强调底**：`Schemes/<Role>` 只作为对应角色的高强调色面；其上文字 / 图标只能用 `Schemes/On <Role>`。
+   - **低强调容器**：`Schemes/<Role> Container` 只作为对应角色的柔和容器；其上文字 / 图标只能用 `Schemes/On <Role> Container`。
+   - **禁止跨配对**：不要把 `On Primary` 放在 `Surface`、`Primary Container` 或 `Secondary` 上；不要把 `On Primary Container` 放在 `Primary` 上；其他 Role 同理。
+   - **One2X 双主色**：默认主按钮仍用 `Surface/Inverse Surface` + `Inverse On Surface`；`Schemes/Primary` + `On Primary` 只给最高强调的品牌动作，每屏 0–1 个。`Secondary` / `Secondary Container` 不能替代主品牌 CTA。
 3. **描边（默认）**：低强调容器、卡片、输入框、列表分隔和图标容器的描边，优先用 **`Surface/On Surface Variant`**（代码侧 `--color-surface-on-surface-variant`）+ **`0.5px`**。只有需要更弱层级、禁用态、分隔线层级或设计稿明确指定时，才改用 `Outline` / `Outline Variant` / 1px。
 4. **Figma 组件写入（强制）——「不是只看数值，要看变量绑定」**
    - 写入或更新 One2X 组件时，Auto Layout 的 **`padding*` / `itemSpacing`** 必须绑定 Figma **`Shape/Space/s*`** 变量；四角半径必须绑定 **`Shape/Radius/*`** 变量。  
    - 只把数值设成 8、12、16、999 等，不算完成；右侧面板要能看到变量绑定。胶囊圆角用 **`Radius/Full`**，不要保留裸 `999px`。  
    - 具体 `use_figma` 绑定方式和验收脚本见 **[`one2x-figma-workflow`](../one2x-figma-workflow/SKILL.md)** 的 **Shape 绑定检查**。
-5. **组件语义（代码侧也要「组件化」）**：优先使用 **与设计系统对齐的 UI 原语**（项目里已有的 Button、Field、封装好的区块），**不要**为每个页面手写一整块无复用的「假组件」。按钮层级（Filled vs Outlined vs IconButton）、菜单 **0 Density**、列表项变体以 Figma 为准；**全页最核心的主行动按钮**：**Filled**，背景 **`Schemes/Primary`**（`--color-schemes-primary`），文字/图标 **`Schemes/On Primary`**（`--color-schemes-on-primary`）— 见 `design.md` **§3.1**。
+5. **组件语义（代码侧也要「组件化」）**：优先使用 **与设计系统对齐的 UI 原语**（项目里已有的 Button、Field、封装好的区块），**不要**为每个页面手写一整块无复用的「假组件」。按钮层级（Filled vs Outlined vs IconButton）、菜单 **0 Density**、列表项变体以 Figma 为准；**主行动按钮（双主色，见 `design.md` §3.1）**：**默认**用 **Filled** + **`Surface/Inverse Surface`**（`--color-surface-inverse-surface`）+ **`Inverse On Surface`**（`--color-surface-inverse-on-surface`）的**黑色**主按钮；**只有最高强调**那一个才升级到 **`Schemes/Primary`**（`--color-schemes-primary`）+ **`On Primary`**（紫色，每屏 0–1 个，**非常克制**）。
+5.1 **图标（强制，见 `design.md` §6.1）**：所有图标统一调用 One2X 图标库 **`@one2x/o2x-icons`**（medeo-fe `packages/o2x-icons`，260 个字体图标）——组件 **`<XxxIcon />`** 或字体 className **`o2x-icons-<名>`**，颜色用 **`currentColor`**，常用 **18/20/24px**。**禁止**临时画 SVG、引第三方图标库（Material Symbols / Lucide / Iconfont 等）或用 emoji 占位；缺图标走 `packages/o2x-icons` 的 Figma 同步流程（`pnpm sync`）补充后再用。图标名清单见 `info.json`。
 6. **实现**：映射到 **`tokens/tokens.css`** 已有变量；禁止无约定地硬编码与设计冲突的值。
 7. **冲突处理**：按上方“映射与冲突优先级”裁决；不得用一句“Figma 为源”跳过 One2X 组件与 token 语义。
 8. **Figma MCP（设计稿实现时强制）**：使用 `get_design_context`、`get_screenshot`、`get_variable_defs`、`search_design_system`（One2X `fileKey`: `wHNBqjzSQZM8a4DlyBIDqW`）。只有不以 Figma 为输入的纯代码任务才可跳过。

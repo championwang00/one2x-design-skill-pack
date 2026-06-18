@@ -1,0 +1,13 @@
+{
+  "name": "one2x-skill-editor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "本地可视化编辑 One2X Skill / design.md / tokens，并直接同步回仓库文件。",
+  "type": "module",
+  "bin": {
+    "skill-editor": "server.mjs"
+  },
+  "scripts": {
+    "start": "node server.mjs"
+  }
+}

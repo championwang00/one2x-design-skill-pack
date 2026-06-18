@@ -1,0 +1,2342 @@
+{
+  "AIStyleIcon": {
+    "encodedCode": "\\ea01",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AIStyleIcon",
+    "unicode": "&#59905;",
+    "snakeName": "a_i_style",
+    "pascalName": "AIStyle",
+    "componentName": "AIStyleIcon"
+  },
+  "AccountCircleFillIcon": {
+    "encodedCode": "\\ea02",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AccountCircleFillIcon",
+    "unicode": "&#59906;",
+    "snakeName": "account_circle_fill",
+    "pascalName": "AccountCircleFill",
+    "componentName": "AccountCircleFillIcon"
+  },
+  "AccountCircleIcon": {
+    "encodedCode": "\\ea03",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AccountCircleIcon",
+    "unicode": "&#59907;",
+    "snakeName": "account_circle",
+    "pascalName": "AccountCircle",
+    "componentName": "AccountCircleIcon"
+  },
+  "AddAvatarIcon": {
+    "encodedCode": "\\ea04",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AddAvatarIcon",
+    "unicode": "&#59908;",
+    "snakeName": "add_avatar",
+    "pascalName": "AddAvatar",
+    "componentName": "AddAvatarIcon"
+  },
+  "AddBoxIcon": {
+    "encodedCode": "\\ea05",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AddBoxIcon",
+    "unicode": "&#59909;",
+    "snakeName": "add_box",
+    "pascalName": "AddBox",
+    "componentName": "AddBoxIcon"
+  },
+  "AddCircleIcon": {
+    "encodedCode": "\\ea06",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AddCircleIcon",
+    "unicode": "&#59910;",
+    "snakeName": "add_circle",
+    "pascalName": "AddCircle",
+    "componentName": "AddCircleIcon"
+  },
+  "AddIcon": {
+    "encodedCode": "\\ea07",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AddIcon",
+    "unicode": "&#59911;",
+    "snakeName": "add",
+    "pascalName": "Add",
+    "componentName": "AddIcon"
+  },
+  "AddLinkIcon": {
+    "encodedCode": "\\ea08",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AddLinkIcon",
+    "unicode": "&#59912;",
+    "snakeName": "add_link",
+    "pascalName": "AddLink",
+    "componentName": "AddLinkIcon"
+  },
+  "AddPhotoIcon": {
+    "encodedCode": "\\ea09",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AddPhotoIcon",
+    "unicode": "&#59913;",
+    "snakeName": "add_photo",
+    "pascalName": "AddPhoto",
+    "componentName": "AddPhotoIcon"
+  },
+  "AddToChatIcon": {
+    "encodedCode": "\\ea0a",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AddToChatIcon",
+    "unicode": "&#59914;",
+    "snakeName": "add_to_chat",
+    "pascalName": "AddToChat",
+    "componentName": "AddToChatIcon"
+  },
+  "AiCreateOne2xSpecialIcon": {
+    "encodedCode": "\\ea0b",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AiCreateOne2xSpecialIcon",
+    "unicode": "&#59915;",
+    "snakeName": "ai_create_one2x_special",
+    "pascalName": "AiCreateOne2xSpecial",
+    "componentName": "AiCreateOne2xSpecialIcon"
+  },
+  "AiImageIcon": {
+    "encodedCode": "\\ea0c",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AiImageIcon",
+    "unicode": "&#59916;",
+    "snakeName": "ai_image",
+    "pascalName": "AiImage",
+    "componentName": "AiImageIcon"
+  },
+  "AiVideoIcon": {
+    "encodedCode": "\\ea0d",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AiVideoIcon",
+    "unicode": "&#59917;",
+    "snakeName": "ai_video",
+    "pascalName": "AiVideo",
+    "componentName": "AiVideoIcon"
+  },
+  "AlbumIcon": {
+    "encodedCode": "\\ea0e",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AlbumIcon",
+    "unicode": "&#59918;",
+    "snakeName": "album",
+    "pascalName": "Album",
+    "componentName": "AlbumIcon"
+  },
+  "AndroidWifi3BarAlertIcon": {
+    "encodedCode": "\\ea0f",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AndroidWifi3BarAlertIcon",
+    "unicode": "&#59919;",
+    "snakeName": "android_wifi3_bar_alert",
+    "pascalName": "AndroidWifi3BarAlert",
+    "componentName": "AndroidWifi3BarAlertIcon"
+  },
+  "AndroidWifi3BarIcon": {
+    "encodedCode": "\\ea10",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AndroidWifi3BarIcon",
+    "unicode": "&#59920;",
+    "snakeName": "android_wifi3_bar",
+    "pascalName": "AndroidWifi3Bar",
+    "componentName": "AndroidWifi3BarIcon"
+  },
+  "AnimatedImagesIcon": {
+    "encodedCode": "\\ea11",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AnimatedImagesIcon",
+    "unicode": "&#59921;",
+    "snakeName": "animated_images",
+    "pascalName": "AnimatedImages",
+    "componentName": "AnimatedImagesIcon"
+  },
+  "AnimationIcon": {
+    "encodedCode": "\\ea12",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AnimationIcon",
+    "unicode": "&#59922;",
+    "snakeName": "animation",
+    "pascalName": "Animation",
+    "componentName": "AnimationIcon"
+  },
+  "ApprovalDelegationIcon": {
+    "encodedCode": "\\ea13",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ApprovalDelegationIcon",
+    "unicode": "&#59923;",
+    "snakeName": "approval_delegation",
+    "pascalName": "ApprovalDelegation",
+    "componentName": "ApprovalDelegationIcon"
+  },
+  "ArchiveIcon": {
+    "encodedCode": "\\ea14",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ArchiveIcon",
+    "unicode": "&#59924;",
+    "snakeName": "archive",
+    "pascalName": "Archive",
+    "componentName": "ArchiveIcon"
+  },
+  "ArrowBackIcon": {
+    "encodedCode": "\\ea15",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ArrowBackIcon",
+    "unicode": "&#59925;",
+    "snakeName": "arrow_back",
+    "pascalName": "ArrowBack",
+    "componentName": "ArrowBackIcon"
+  },
+  "ArrowDownwardIcon": {
+    "encodedCode": "\\ea16",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ArrowDownwardIcon",
+    "unicode": "&#59926;",
+    "snakeName": "arrow_downward",
+    "pascalName": "ArrowDownward",
+    "componentName": "ArrowDownwardIcon"
+  },
+  "ArrowDropDownIcon": {
+    "encodedCode": "\\ea17",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ArrowDropDownIcon",
+    "unicode": "&#59927;",
+    "snakeName": "arrow_drop_down",
+    "pascalName": "ArrowDropDown",
+    "componentName": "ArrowDropDownIcon"
+  },
+  "ArrowDropUpIcon": {
+    "encodedCode": "\\ea18",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ArrowDropUpIcon",
+    "unicode": "&#59928;",
+    "snakeName": "arrow_drop_up",
+    "pascalName": "ArrowDropUp",
+    "componentName": "ArrowDropUpIcon"
+  },
+  "ArrowForwardIcon": {
+    "encodedCode": "\\ea19",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ArrowForwardIcon",
+    "unicode": "&#59929;",
+    "snakeName": "arrow_forward",
+    "pascalName": "ArrowForward",
+    "componentName": "ArrowForwardIcon"
+  },
+  "ArrowInsertIcon": {
+    "encodedCode": "\\ea1a",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ArrowInsertIcon",
+    "unicode": "&#59930;",
+    "snakeName": "arrow_insert",
+    "pascalName": "ArrowInsert",
+    "componentName": "ArrowInsertIcon"
+  },
+  "ArrowLeftIcon": {
+    "encodedCode": "\\ea1b",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ArrowLeftIcon",
+    "unicode": "&#59931;",
+    "snakeName": "arrow_left",
+    "pascalName": "ArrowLeft",
+    "componentName": "ArrowLeftIcon"
+  },
+  "ArrowOutwardIcon": {
+    "encodedCode": "\\ea1c",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ArrowOutwardIcon",
+    "unicode": "&#59932;",
+    "snakeName": "arrow_outward",
+    "pascalName": "ArrowOutward",
+    "componentName": "ArrowOutwardIcon"
+  },
+  "ArrowRightAltIcon": {
+    "encodedCode": "\\ea1d",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ArrowRightAltIcon",
+    "unicode": "&#59933;",
+    "snakeName": "arrow_right_alt",
+    "pascalName": "ArrowRightAlt",
+    "componentName": "ArrowRightAltIcon"
+  },
+  "ArrowRightIcon": {
+    "encodedCode": "\\ea1e",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ArrowRightIcon",
+    "unicode": "&#59934;",
+    "snakeName": "arrow_right",
+    "pascalName": "ArrowRight",
+    "componentName": "ArrowRightIcon"
+  },
+  "ArrowUpIcon": {
+    "encodedCode": "\\ea1f",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ArrowUpIcon",
+    "unicode": "&#59935;",
+    "snakeName": "arrow_up",
+    "pascalName": "ArrowUp",
+    "componentName": "ArrowUpIcon"
+  },
+  "ArrowUploadReadyIcon": {
+    "encodedCode": "\\ea20",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ArrowUploadReadyIcon",
+    "unicode": "&#59936;",
+    "snakeName": "arrow_upload_ready",
+    "pascalName": "ArrowUploadReady",
+    "componentName": "ArrowUploadReadyIcon"
+  },
+  "ArticleIcon": {
+    "encodedCode": "\\ea21",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ArticleIcon",
+    "unicode": "&#59937;",
+    "snakeName": "article",
+    "pascalName": "Article",
+    "componentName": "ArticleIcon"
+  },
+  "AspectRatioIcon": {
+    "encodedCode": "\\ea22",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AspectRatioIcon",
+    "unicode": "&#59938;",
+    "snakeName": "aspect_ratio",
+    "pascalName": "AspectRatio",
+    "componentName": "AspectRatioIcon"
+  },
+  "AssetIcon": {
+    "encodedCode": "\\ea23",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AssetIcon",
+    "unicode": "&#59939;",
+    "snakeName": "asset",
+    "pascalName": "Asset",
+    "componentName": "AssetIcon"
+  },
+  "AsteriskIcon": {
+    "encodedCode": "\\ea24",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AsteriskIcon",
+    "unicode": "&#59940;",
+    "snakeName": "asterisk",
+    "pascalName": "Asterisk",
+    "componentName": "AsteriskIcon"
+  },
+  "AttachFileAddIcon": {
+    "encodedCode": "\\ea25",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AttachFileAddIcon",
+    "unicode": "&#59941;",
+    "snakeName": "attach_file_add",
+    "pascalName": "AttachFileAdd",
+    "componentName": "AttachFileAddIcon"
+  },
+  "AttachFileIcon": {
+    "encodedCode": "\\ea26",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AttachFileIcon",
+    "unicode": "&#59942;",
+    "snakeName": "attach_file",
+    "pascalName": "AttachFile",
+    "componentName": "AttachFileIcon"
+  },
+  "AutoDeleteIcon": {
+    "encodedCode": "\\ea27",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AutoDeleteIcon",
+    "unicode": "&#59943;",
+    "snakeName": "auto_delete",
+    "pascalName": "AutoDelete",
+    "componentName": "AutoDeleteIcon"
+  },
+  "AutorenewIcon": {
+    "encodedCode": "\\ea28",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AutorenewIcon",
+    "unicode": "&#59944;",
+    "snakeName": "autorenew",
+    "pascalName": "Autorenew",
+    "componentName": "AutorenewIcon"
+  },
+  "AvgPaceIcon": {
+    "encodedCode": "\\ea29",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AvgPaceIcon",
+    "unicode": "&#59945;",
+    "snakeName": "avg_pace",
+    "pascalName": "AvgPace",
+    "componentName": "AvgPaceIcon"
+  },
+  "AwardStarFillIcon": {
+    "encodedCode": "\\ea2a",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AwardStarFillIcon",
+    "unicode": "&#59946;",
+    "snakeName": "award_star_fill",
+    "pascalName": "AwardStarFill",
+    "componentName": "AwardStarFillIcon"
+  },
+  "AwardStarIcon": {
+    "encodedCode": "\\ea2b",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-AwardStarIcon",
+    "unicode": "&#59947;",
+    "snakeName": "award_star",
+    "pascalName": "AwardStar",
+    "componentName": "AwardStarIcon"
+  },
+  "BeenhereIcon": {
+    "encodedCode": "\\ea2c",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-BeenhereIcon",
+    "unicode": "&#59948;",
+    "snakeName": "beenhere",
+    "pascalName": "Beenhere",
+    "componentName": "BeenhereIcon"
+  },
+  "BlockIcon": {
+    "encodedCode": "\\ea2d",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-BlockIcon",
+    "unicode": "&#59949;",
+    "snakeName": "block",
+    "pascalName": "Block",
+    "componentName": "BlockIcon"
+  },
+  "BoldIcon": {
+    "encodedCode": "\\ea2e",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-BoldIcon",
+    "unicode": "&#59950;",
+    "snakeName": "bold",
+    "pascalName": "Bold",
+    "componentName": "BoldIcon"
+  },
+  "BoldedIcon": {
+    "encodedCode": "\\ea2f",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-BoldedIcon",
+    "unicode": "&#59951;",
+    "snakeName": "bolded",
+    "pascalName": "Bolded",
+    "componentName": "BoldedIcon"
+  },
+  "BoltFillIcon": {
+    "encodedCode": "\\ea30",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-BoltFillIcon",
+    "unicode": "&#59952;",
+    "snakeName": "bolt_fill",
+    "pascalName": "BoltFill",
+    "componentName": "BoltFillIcon"
+  },
+  "BoltIcon": {
+    "encodedCode": "\\ea31",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-BoltIcon",
+    "unicode": "&#59953;",
+    "snakeName": "bolt",
+    "pascalName": "Bolt",
+    "componentName": "BoltIcon"
+  },
+  "Book_4AddIcon": {
+    "encodedCode": "\\ea32",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-Book_4AddIcon",
+    "unicode": "&#59954;",
+    "snakeName": "book_4_add",
+    "pascalName": "Book_4Add",
+    "componentName": "Book_4AddIcon"
+  },
+  "Book_4SparkIcon": {
+    "encodedCode": "\\ea33",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-Book_4SparkIcon",
+    "unicode": "&#59955;",
+    "snakeName": "book_4_spark",
+    "pascalName": "Book_4Spark",
+    "componentName": "Book_4SparkIcon"
+  },
+  "BookmarkFilledIcon": {
+    "encodedCode": "\\ea34",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-BookmarkFilledIcon",
+    "unicode": "&#59956;",
+    "snakeName": "bookmark_filled",
+    "pascalName": "BookmarkFilled",
+    "componentName": "BookmarkFilledIcon"
+  },
+  "BookmarkIcon": {
+    "encodedCode": "\\ea35",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-BookmarkIcon",
+    "unicode": "&#59957;",
+    "snakeName": "bookmark",
+    "pascalName": "Bookmark",
+    "componentName": "BookmarkIcon"
+  },
+  "BugReportIcon": {
+    "encodedCode": "\\ea36",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-BugReportIcon",
+    "unicode": "&#59958;",
+    "snakeName": "bug_report",
+    "pascalName": "BugReport",
+    "componentName": "BugReportIcon"
+  },
+  "CalendarAddOnIcon": {
+    "encodedCode": "\\ea37",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CalendarAddOnIcon",
+    "unicode": "&#59959;",
+    "snakeName": "calendar_add_on",
+    "pascalName": "CalendarAddOn",
+    "componentName": "CalendarAddOnIcon"
+  },
+  "CancelIcon": {
+    "encodedCode": "\\ea38",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CancelIcon",
+    "unicode": "&#59960;",
+    "snakeName": "cancel",
+    "pascalName": "Cancel",
+    "componentName": "CancelIcon"
+  },
+  "ChatAgentIcon": {
+    "encodedCode": "\\ea39",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ChatAgentIcon",
+    "unicode": "&#59961;",
+    "snakeName": "chat_agent",
+    "pascalName": "ChatAgent",
+    "componentName": "ChatAgentIcon"
+  },
+  "ChatBubbleIcon": {
+    "encodedCode": "\\ea3a",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ChatBubbleIcon",
+    "unicode": "&#59962;",
+    "snakeName": "chat_bubble",
+    "pascalName": "ChatBubble",
+    "componentName": "ChatBubbleIcon"
+  },
+  "CheckBoxIcon": {
+    "encodedCode": "\\ea3b",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CheckBoxIcon",
+    "unicode": "&#59963;",
+    "snakeName": "check_box",
+    "pascalName": "CheckBox",
+    "componentName": "CheckBoxIcon"
+  },
+  "CheckBoxOutlineBlankIcon": {
+    "encodedCode": "\\ea3c",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CheckBoxOutlineBlankIcon",
+    "unicode": "&#59964;",
+    "snakeName": "check_box_outline_blank",
+    "pascalName": "CheckBoxOutlineBlank",
+    "componentName": "CheckBoxOutlineBlankIcon"
+  },
+  "CheckCircleIcon": {
+    "encodedCode": "\\ea3d",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CheckCircleIcon",
+    "unicode": "&#59965;",
+    "snakeName": "check_circle",
+    "pascalName": "CheckCircle",
+    "componentName": "CheckCircleIcon"
+  },
+  "CheckIcon": {
+    "encodedCode": "\\ea3e",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CheckIcon",
+    "unicode": "&#59966;",
+    "snakeName": "check",
+    "pascalName": "Check",
+    "componentName": "CheckIcon"
+  },
+  "CheckIndeterminateSmallIcon": {
+    "encodedCode": "\\ea3f",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CheckIndeterminateSmallIcon",
+    "unicode": "&#59967;",
+    "snakeName": "check_indeterminate_small",
+    "pascalName": "CheckIndeterminateSmall",
+    "componentName": "CheckIndeterminateSmallIcon"
+  },
+  "CheckSmallIcon": {
+    "encodedCode": "\\ea40",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CheckSmallIcon",
+    "unicode": "&#59968;",
+    "snakeName": "check_small",
+    "pascalName": "CheckSmall",
+    "componentName": "CheckSmallIcon"
+  },
+  "ChecklistIcon": {
+    "encodedCode": "\\ea41",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ChecklistIcon",
+    "unicode": "&#59969;",
+    "snakeName": "checklist",
+    "pascalName": "Checklist",
+    "componentName": "ChecklistIcon"
+  },
+  "ChevronLeftIcon": {
+    "encodedCode": "\\ea42",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ChevronLeftIcon",
+    "unicode": "&#59970;",
+    "snakeName": "chevron_left",
+    "pascalName": "ChevronLeft",
+    "componentName": "ChevronLeftIcon"
+  },
+  "ChevronRightIcon": {
+    "encodedCode": "\\ea43",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ChevronRightIcon",
+    "unicode": "&#59971;",
+    "snakeName": "chevron_right",
+    "pascalName": "ChevronRight",
+    "componentName": "ChevronRightIcon"
+  },
+  "CircleIcon": {
+    "encodedCode": "\\ea44",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CircleIcon",
+    "unicode": "&#59972;",
+    "snakeName": "circle",
+    "pascalName": "Circle",
+    "componentName": "CircleIcon"
+  },
+  "CloseIcon": {
+    "encodedCode": "\\ea45",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CloseIcon",
+    "unicode": "&#59973;",
+    "snakeName": "close",
+    "pascalName": "Close",
+    "componentName": "CloseIcon"
+  },
+  "CloseSmallIcon": {
+    "encodedCode": "\\ea46",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CloseSmallIcon",
+    "unicode": "&#59974;",
+    "snakeName": "close_small",
+    "pascalName": "CloseSmall",
+    "componentName": "CloseSmallIcon"
+  },
+  "CollapseContentIcon": {
+    "encodedCode": "\\ea47",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CollapseContentIcon",
+    "unicode": "&#59975;",
+    "snakeName": "collapse_content",
+    "pascalName": "CollapseContent",
+    "componentName": "CollapseContentIcon"
+  },
+  "ColorizeIcon": {
+    "encodedCode": "\\ea48",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ColorizeIcon",
+    "unicode": "&#59976;",
+    "snakeName": "colorize",
+    "pascalName": "Colorize",
+    "componentName": "ColorizeIcon"
+  },
+  "CommuteIcon": {
+    "encodedCode": "\\ea49",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CommuteIcon",
+    "unicode": "&#59977;",
+    "snakeName": "commute",
+    "pascalName": "Commute",
+    "componentName": "CommuteIcon"
+  },
+  "ContentCopyIcon": {
+    "encodedCode": "\\ea4a",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ContentCopyIcon",
+    "unicode": "&#59978;",
+    "snakeName": "content_copy",
+    "pascalName": "ContentCopy",
+    "componentName": "ContentCopyIcon"
+  },
+  "ContentCutIcon": {
+    "encodedCode": "\\ea4b",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ContentCutIcon",
+    "unicode": "&#59979;",
+    "snakeName": "content_cut",
+    "pascalName": "ContentCut",
+    "componentName": "ContentCutIcon"
+  },
+  "CreatespaceIcon": {
+    "encodedCode": "\\ea4c",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CreatespaceIcon",
+    "unicode": "&#59980;",
+    "snakeName": "createspace",
+    "pascalName": "Createspace",
+    "componentName": "CreatespaceIcon"
+  },
+  "CreditCardIcon": {
+    "encodedCode": "\\ea4d",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CreditCardIcon",
+    "unicode": "&#59981;",
+    "snakeName": "credit_card",
+    "pascalName": "CreditCard",
+    "componentName": "CreditCardIcon"
+  },
+  "CropIcon": {
+    "encodedCode": "\\ea4e",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CropIcon",
+    "unicode": "&#59982;",
+    "snakeName": "crop",
+    "pascalName": "Crop",
+    "componentName": "CropIcon"
+  },
+  "CropSquareIcon": {
+    "encodedCode": "\\ea4f",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CropSquareIcon",
+    "unicode": "&#59983;",
+    "snakeName": "crop_square",
+    "pascalName": "CropSquare",
+    "componentName": "CropSquareIcon"
+  },
+  "Crop_16_9Icon": {
+    "encodedCode": "\\ea50",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-Crop_16_9Icon",
+    "unicode": "&#59984;",
+    "snakeName": "crop_16_9",
+    "pascalName": "Crop_16_9",
+    "componentName": "Crop_16_9Icon"
+  },
+  "Crop_3_2Icon": {
+    "encodedCode": "\\ea51",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-Crop_3_2Icon",
+    "unicode": "&#59985;",
+    "snakeName": "crop_3_2",
+    "pascalName": "Crop_3_2",
+    "componentName": "Crop_3_2Icon"
+  },
+  "Crop_9_16Icon": {
+    "encodedCode": "\\ea52",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-Crop_9_16Icon",
+    "unicode": "&#59986;",
+    "snakeName": "crop_9_16",
+    "pascalName": "Crop_9_16",
+    "componentName": "Crop_9_16Icon"
+  },
+  "CrownIcon": {
+    "encodedCode": "\\ea53",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CrownIcon",
+    "unicode": "&#59987;",
+    "snakeName": "crown",
+    "pascalName": "Crown",
+    "componentName": "CrownIcon"
+  },
+  "CurrencyExchangeIcon": {
+    "encodedCode": "\\ea54",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-CurrencyExchangeIcon",
+    "unicode": "&#59988;",
+    "snakeName": "currency_exchange",
+    "pascalName": "CurrencyExchange",
+    "componentName": "CurrencyExchangeIcon"
+  },
+  "DarkModeIcon": {
+    "encodedCode": "\\ea55",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-DarkModeIcon",
+    "unicode": "&#59989;",
+    "snakeName": "dark_mode",
+    "pascalName": "DarkMode",
+    "componentName": "DarkModeIcon"
+  },
+  "DashboardIcon": {
+    "encodedCode": "\\ea56",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-DashboardIcon",
+    "unicode": "&#59990;",
+    "snakeName": "dashboard",
+    "pascalName": "Dashboard",
+    "componentName": "DashboardIcon"
+  },
+  "DeleteIcon": {
+    "encodedCode": "\\ea57",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-DeleteIcon",
+    "unicode": "&#59991;",
+    "snakeName": "delete",
+    "pascalName": "Delete",
+    "componentName": "DeleteIcon"
+  },
+  "DeployedCodeIcon": {
+    "encodedCode": "\\ea58",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-DeployedCodeIcon",
+    "unicode": "&#59992;",
+    "snakeName": "deployed_code",
+    "pascalName": "DeployedCode",
+    "componentName": "DeployedCodeIcon"
+  },
+  "DesktopWindowsIcon": {
+    "encodedCode": "\\ea59",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-DesktopWindowsIcon",
+    "unicode": "&#59993;",
+    "snakeName": "desktop_windows",
+    "pascalName": "DesktopWindows",
+    "componentName": "DesktopWindowsIcon"
+  },
+  "DirectionsBusIcon": {
+    "encodedCode": "\\ea5a",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-DirectionsBusIcon",
+    "unicode": "&#59994;",
+    "snakeName": "directions_bus",
+    "pascalName": "DirectionsBus",
+    "componentName": "DirectionsBusIcon"
+  },
+  "DirectionsCarIcon": {
+    "encodedCode": "\\ea5b",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-DirectionsCarIcon",
+    "unicode": "&#59995;",
+    "snakeName": "directions_car",
+    "pascalName": "DirectionsCar",
+    "componentName": "DirectionsCarIcon"
+  },
+  "DirectionsSubwayIcon": {
+    "encodedCode": "\\ea5c",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-DirectionsSubwayIcon",
+    "unicode": "&#59996;",
+    "snakeName": "directions_subway",
+    "pascalName": "DirectionsSubway",
+    "componentName": "DirectionsSubwayIcon"
+  },
+  "DirectionsWalkIcon": {
+    "encodedCode": "\\ea5d",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-DirectionsWalkIcon",
+    "unicode": "&#59997;",
+    "snakeName": "directions_walk",
+    "pascalName": "DirectionsWalk",
+    "componentName": "DirectionsWalkIcon"
+  },
+  "DoNotDisturbOnIcon": {
+    "encodedCode": "\\ea5e",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-DoNotDisturbOnIcon",
+    "unicode": "&#59998;",
+    "snakeName": "do_not_disturb_on",
+    "pascalName": "DoNotDisturbOn",
+    "componentName": "DoNotDisturbOnIcon"
+  },
+  "DockToBottomIcon": {
+    "encodedCode": "\\ea5f",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-DockToBottomIcon",
+    "unicode": "&#59999;",
+    "snakeName": "dock_to_bottom",
+    "pascalName": "DockToBottom",
+    "componentName": "DockToBottomIcon"
+  },
+  "DockToLeftIcon": {
+    "encodedCode": "\\ea60",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-DockToLeftIcon",
+    "unicode": "&#60000;",
+    "snakeName": "dock_to_left",
+    "pascalName": "DockToLeft",
+    "componentName": "DockToLeftIcon"
+  },
+  "DockToRightIcon": {
+    "encodedCode": "\\ea61",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-DockToRightIcon",
+    "unicode": "&#60001;",
+    "snakeName": "dock_to_right",
+    "pascalName": "DockToRight",
+    "componentName": "DockToRightIcon"
+  },
+  "DocsIcon": {
+    "encodedCode": "\\ea62",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-DocsIcon",
+    "unicode": "&#60002;",
+    "snakeName": "docs",
+    "pascalName": "Docs",
+    "componentName": "DocsIcon"
+  },
+  "DotIcon": {
+    "encodedCode": "\\ea63",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-DotIcon",
+    "unicode": "&#60003;",
+    "snakeName": "dot",
+    "pascalName": "Dot",
+    "componentName": "DotIcon"
+  },
+  "DownloadIcon": {
+    "encodedCode": "\\ea64",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-DownloadIcon",
+    "unicode": "&#60004;",
+    "snakeName": "download",
+    "pascalName": "Download",
+    "componentName": "DownloadIcon"
+  },
+  "DriveFolderUploadIcon": {
+    "encodedCode": "\\ea65",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-DriveFolderUploadIcon",
+    "unicode": "&#60005;",
+    "snakeName": "drive_folder_upload",
+    "pascalName": "DriveFolderUpload",
+    "componentName": "DriveFolderUploadIcon"
+  },
+  "EditIcon": {
+    "encodedCode": "\\ea66",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-EditIcon",
+    "unicode": "&#60006;",
+    "snakeName": "edit",
+    "pascalName": "Edit",
+    "componentName": "EditIcon"
+  },
+  "EditNoteIcon": {
+    "encodedCode": "\\ea67",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-EditNoteIcon",
+    "unicode": "&#60007;",
+    "snakeName": "edit_note",
+    "pascalName": "EditNote",
+    "componentName": "EditNoteIcon"
+  },
+  "EmojiObjectsIcon": {
+    "encodedCode": "\\ea68",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-EmojiObjectsIcon",
+    "unicode": "&#60008;",
+    "snakeName": "emoji_objects",
+    "pascalName": "EmojiObjects",
+    "componentName": "EmojiObjectsIcon"
+  },
+  "ErrorFillIcon": {
+    "encodedCode": "\\ea69",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ErrorFillIcon",
+    "unicode": "&#60009;",
+    "snakeName": "error_fill",
+    "pascalName": "ErrorFill",
+    "componentName": "ErrorFillIcon"
+  },
+  "ErrorIcon": {
+    "encodedCode": "\\ea6a",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ErrorIcon",
+    "unicode": "&#60010;",
+    "snakeName": "error",
+    "pascalName": "Error",
+    "componentName": "ErrorIcon"
+  },
+  "ExclamationIcon": {
+    "encodedCode": "\\ea6b",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ExclamationIcon",
+    "unicode": "&#60011;",
+    "snakeName": "exclamation",
+    "pascalName": "Exclamation",
+    "componentName": "ExclamationIcon"
+  },
+  "ExpandContentIcon": {
+    "encodedCode": "\\ea6c",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ExpandContentIcon",
+    "unicode": "&#60012;",
+    "snakeName": "expand_content",
+    "pascalName": "ExpandContent",
+    "componentName": "ExpandContentIcon"
+  },
+  "ExtendIcon": {
+    "encodedCode": "\\ea6d",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ExtendIcon",
+    "unicode": "&#60013;",
+    "snakeName": "extend",
+    "pascalName": "Extend",
+    "componentName": "ExtendIcon"
+  },
+  "FaceIcon": {
+    "encodedCode": "\\ea6e",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-FaceIcon",
+    "unicode": "&#60014;",
+    "snakeName": "face",
+    "pascalName": "Face",
+    "componentName": "FaceIcon"
+  },
+  "FastForwardIcon": {
+    "encodedCode": "\\ea6f",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-FastForwardIcon",
+    "unicode": "&#60015;",
+    "snakeName": "fast_forward",
+    "pascalName": "FastForward",
+    "componentName": "FastForwardIcon"
+  },
+  "FastRewindFilledIcon": {
+    "encodedCode": "\\ea70",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-FastRewindFilledIcon",
+    "unicode": "&#60016;",
+    "snakeName": "fast_rewind_filled",
+    "pascalName": "FastRewindFilled",
+    "componentName": "FastRewindFilledIcon"
+  },
+  "FastRewindIcon": {
+    "encodedCode": "\\ea71",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-FastRewindIcon",
+    "unicode": "&#60017;",
+    "snakeName": "fast_rewind",
+    "pascalName": "FastRewind",
+    "componentName": "FastRewindIcon"
+  },
+  "FavoriteIcon": {
+    "encodedCode": "\\ea72",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-FavoriteIcon",
+    "unicode": "&#60018;",
+    "snakeName": "favorite",
+    "pascalName": "Favorite",
+    "componentName": "FavoriteIcon"
+  },
+  "FeedbackIcon": {
+    "encodedCode": "\\ea73",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-FeedbackIcon",
+    "unicode": "&#60019;",
+    "snakeName": "feedback",
+    "pascalName": "Feedback",
+    "componentName": "FeedbackIcon"
+  },
+  "FemaleIcon": {
+    "encodedCode": "\\ea74",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-FemaleIcon",
+    "unicode": "&#60020;",
+    "snakeName": "female",
+    "pascalName": "Female",
+    "componentName": "FemaleIcon"
+  },
+  "FilterListIcon": {
+    "encodedCode": "\\ea75",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-FilterListIcon",
+    "unicode": "&#60021;",
+    "snakeName": "filter_list",
+    "pascalName": "FilterList",
+    "componentName": "FilterListIcon"
+  },
+  "FolderCopyIcon": {
+    "encodedCode": "\\ea76",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-FolderCopyIcon",
+    "unicode": "&#60022;",
+    "snakeName": "folder_copy",
+    "pascalName": "FolderCopy",
+    "componentName": "FolderCopyIcon"
+  },
+  "FolderFilledIcon": {
+    "encodedCode": "\\ea77",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-FolderFilledIcon",
+    "unicode": "&#60023;",
+    "snakeName": "folder_filled",
+    "pascalName": "FolderFilled",
+    "componentName": "FolderFilledIcon"
+  },
+  "FolderIcon": {
+    "encodedCode": "\\ea78",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-FolderIcon",
+    "unicode": "&#60024;",
+    "snakeName": "folder",
+    "pascalName": "Folder",
+    "componentName": "FolderIcon"
+  },
+  "FontIcon": {
+    "encodedCode": "\\ea79",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-FontIcon",
+    "unicode": "&#60025;",
+    "snakeName": "font",
+    "pascalName": "Font",
+    "componentName": "FontIcon"
+  },
+  "FontOutlineIcon": {
+    "encodedCode": "\\ea7a",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-FontOutlineIcon",
+    "unicode": "&#60026;",
+    "snakeName": "font_outline",
+    "pascalName": "FontOutline",
+    "componentName": "FontOutlineIcon"
+  },
+  "ForwardIcon": {
+    "encodedCode": "\\ea7b",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ForwardIcon",
+    "unicode": "&#60027;",
+    "snakeName": "forward",
+    "pascalName": "Forward",
+    "componentName": "ForwardIcon"
+  },
+  "FullscreenIcon": {
+    "encodedCode": "\\ea7c",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-FullscreenIcon",
+    "unicode": "&#60028;",
+    "snakeName": "fullscreen",
+    "pascalName": "Fullscreen",
+    "componentName": "FullscreenIcon"
+  },
+  "GenerateFillOne2xSpecialIconNewIcon": {
+    "encodedCode": "\\ea7d",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-GenerateFillOne2xSpecialIcon(New)",
+    "unicode": "&#60029;",
+    "snakeName": "generate_fill_one2x_special_icon_new",
+    "pascalName": "GenerateFillOne2xSpecialIconNew",
+    "componentName": "GenerateFillOne2xSpecialIconNewIcon"
+  },
+  "GenerateFillOne2xSpecialIcon": {
+    "encodedCode": "\\ea7e",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-GenerateFillOne2xSpecialIcon",
+    "unicode": "&#60030;",
+    "snakeName": "generate_fill_one2x_special",
+    "pascalName": "GenerateFillOne2xSpecial",
+    "componentName": "GenerateFillOne2xSpecialIcon"
+  },
+  "GenerateFillOne2x_2SpecialIcon": {
+    "encodedCode": "\\ea7f",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-GenerateFillOne2x_2SpecialIcon",
+    "unicode": "&#60031;",
+    "snakeName": "generate_fill_one2x_2_special",
+    "pascalName": "GenerateFillOne2x_2Special",
+    "componentName": "GenerateFillOne2x_2SpecialIcon"
+  },
+  "GeneratePhotoAlternateIcon": {
+    "encodedCode": "\\ea80",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-GeneratePhotoAlternateIcon",
+    "unicode": "&#60032;",
+    "snakeName": "generate_photo_alternate",
+    "pascalName": "GeneratePhotoAlternate",
+    "componentName": "GeneratePhotoAlternateIcon"
+  },
+  "GifIcon": {
+    "encodedCode": "\\ea81",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-GifIcon",
+    "unicode": "&#60033;",
+    "snakeName": "gif",
+    "pascalName": "Gif",
+    "componentName": "GifIcon"
+  },
+  "GmailGroupsIcon": {
+    "encodedCode": "\\ea82",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-GmailGroupsIcon",
+    "unicode": "&#60034;",
+    "snakeName": "gmail_groups",
+    "pascalName": "GmailGroups",
+    "componentName": "GmailGroupsIcon"
+  },
+  "GroupsIcon": {
+    "encodedCode": "\\ea83",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-GroupsIcon",
+    "unicode": "&#60035;",
+    "snakeName": "groups",
+    "pascalName": "Groups",
+    "componentName": "GroupsIcon"
+  },
+  "Help2Icon": {
+    "encodedCode": "\\ea84",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-Help2Icon",
+    "unicode": "&#60036;",
+    "snakeName": "help2",
+    "pascalName": "Help2",
+    "componentName": "Help2Icon"
+  },
+  "HelpCenterIcon": {
+    "encodedCode": "\\ea85",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-HelpCenterIcon",
+    "unicode": "&#60037;",
+    "snakeName": "help_center",
+    "pascalName": "HelpCenter",
+    "componentName": "HelpCenterIcon"
+  },
+  "HelpIcon": {
+    "encodedCode": "\\ea86",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-HelpIcon",
+    "unicode": "&#60038;",
+    "snakeName": "help",
+    "pascalName": "Help",
+    "componentName": "HelpIcon"
+  },
+  "HideIcon": {
+    "encodedCode": "\\ea87",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-HideIcon",
+    "unicode": "&#60039;",
+    "snakeName": "hide",
+    "pascalName": "Hide",
+    "componentName": "HideIcon"
+  },
+  "HistoryIcon": {
+    "encodedCode": "\\ea88",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-HistoryIcon",
+    "unicode": "&#60040;",
+    "snakeName": "history",
+    "pascalName": "History",
+    "componentName": "HistoryIcon"
+  },
+  "ImageBrokenIcon": {
+    "encodedCode": "\\ea89",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ImageBrokenIcon",
+    "unicode": "&#60041;",
+    "snakeName": "image_broken",
+    "pascalName": "ImageBroken",
+    "componentName": "ImageBrokenIcon"
+  },
+  "ImageSearchIcon": {
+    "encodedCode": "\\ea8a",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ImageSearchIcon",
+    "unicode": "&#60042;",
+    "snakeName": "image_search",
+    "pascalName": "ImageSearch",
+    "componentName": "ImageSearchIcon"
+  },
+  "ImportantDevicesIcon": {
+    "encodedCode": "\\ea8b",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ImportantDevicesIcon",
+    "unicode": "&#60043;",
+    "snakeName": "important_devices",
+    "pascalName": "ImportantDevices",
+    "componentName": "ImportantDevicesIcon"
+  },
+  "InboxIcon": {
+    "encodedCode": "\\ea8c",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-InboxIcon",
+    "unicode": "&#60044;",
+    "snakeName": "inbox",
+    "pascalName": "Inbox",
+    "componentName": "InboxIcon"
+  },
+  "IndeterminateCheckBoxIcon": {
+    "encodedCode": "\\ea8d",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-IndeterminateCheckBoxIcon",
+    "unicode": "&#60045;",
+    "snakeName": "indeterminate_check_box",
+    "pascalName": "IndeterminateCheckBox",
+    "componentName": "IndeterminateCheckBoxIcon"
+  },
+  "InfinityIcon": {
+    "encodedCode": "\\ea8e",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-InfinityIcon",
+    "unicode": "&#60046;",
+    "snakeName": "infinity",
+    "pascalName": "Infinity",
+    "componentName": "InfinityIcon"
+  },
+  "InfoIcon": {
+    "encodedCode": "\\ea8f",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-InfoIcon",
+    "unicode": "&#60047;",
+    "snakeName": "info",
+    "pascalName": "Info",
+    "componentName": "InfoIcon"
+  },
+  "KeyboardArrowDownIcon": {
+    "encodedCode": "\\ea90",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-KeyboardArrowDownIcon",
+    "unicode": "&#60048;",
+    "snakeName": "keyboard_arrow_down",
+    "pascalName": "KeyboardArrowDown",
+    "componentName": "KeyboardArrowDownIcon"
+  },
+  "KeyboardArrowUpIcon": {
+    "encodedCode": "\\ea91",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-KeyboardArrowUpIcon",
+    "unicode": "&#60049;",
+    "snakeName": "keyboard_arrow_up",
+    "pascalName": "KeyboardArrowUp",
+    "componentName": "KeyboardArrowUpIcon"
+  },
+  "KeyboardDoubleArrowDownIcon": {
+    "encodedCode": "\\ea92",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-KeyboardDoubleArrowDownIcon",
+    "unicode": "&#60050;",
+    "snakeName": "keyboard_double_arrow_down",
+    "pascalName": "KeyboardDoubleArrowDown",
+    "componentName": "KeyboardDoubleArrowDownIcon"
+  },
+  "KeyboardDoubleArrowUpIcon": {
+    "encodedCode": "\\ea93",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-KeyboardDoubleArrowUpIcon",
+    "unicode": "&#60051;",
+    "snakeName": "keyboard_double_arrow_up",
+    "pascalName": "KeyboardDoubleArrowUp",
+    "componentName": "KeyboardDoubleArrowUpIcon"
+  },
+  "KeyboardIcon": {
+    "encodedCode": "\\ea94",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-KeyboardIcon",
+    "unicode": "&#60052;",
+    "snakeName": "keyboard",
+    "pascalName": "Keyboard",
+    "componentName": "KeyboardIcon"
+  },
+  "KeyboardReturnIcon": {
+    "encodedCode": "\\ea95",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-KeyboardReturnIcon",
+    "unicode": "&#60053;",
+    "snakeName": "keyboard_return",
+    "pascalName": "KeyboardReturn",
+    "componentName": "KeyboardReturnIcon"
+  },
+  "LanguageIcon": {
+    "encodedCode": "\\ea96",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-LanguageIcon",
+    "unicode": "&#60054;",
+    "snakeName": "language",
+    "pascalName": "Language",
+    "componentName": "LanguageIcon"
+  },
+  "LightModeIcon": {
+    "encodedCode": "\\ea97",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-LightModeIcon",
+    "unicode": "&#60055;",
+    "snakeName": "light_mode",
+    "pascalName": "LightMode",
+    "componentName": "LightModeIcon"
+  },
+  "LinkIcon": {
+    "encodedCode": "\\ea98",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-LinkIcon",
+    "unicode": "&#60056;",
+    "snakeName": "link",
+    "pascalName": "Link",
+    "componentName": "LinkIcon"
+  },
+  "ListIcon": {
+    "encodedCode": "\\ea99",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ListIcon",
+    "unicode": "&#60057;",
+    "snakeName": "list",
+    "pascalName": "List",
+    "componentName": "ListIcon"
+  },
+  "LocalTaxiIcon": {
+    "encodedCode": "\\ea9a",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-LocalTaxiIcon",
+    "unicode": "&#60058;",
+    "snakeName": "local_taxi",
+    "pascalName": "LocalTaxi",
+    "componentName": "LocalTaxiIcon"
+  },
+  "LocationOnIcon": {
+    "encodedCode": "\\ea9b",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-LocationOnIcon",
+    "unicode": "&#60059;",
+    "snakeName": "location_on",
+    "pascalName": "LocationOn",
+    "componentName": "LocationOnIcon"
+  },
+  "LogoutIcon": {
+    "encodedCode": "\\ea9c",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-LogoutIcon",
+    "unicode": "&#60060;",
+    "snakeName": "logout",
+    "pascalName": "Logout",
+    "componentName": "LogoutIcon"
+  },
+  "MailIcon": {
+    "encodedCode": "\\ea9d",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-MailIcon",
+    "unicode": "&#60061;",
+    "snakeName": "mail",
+    "pascalName": "Mail",
+    "componentName": "MailIcon"
+  },
+  "MaleIcon": {
+    "encodedCode": "\\ea9e",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-MaleIcon",
+    "unicode": "&#60062;",
+    "snakeName": "male",
+    "pascalName": "Male",
+    "componentName": "MaleIcon"
+  },
+  "MeboxlogoIcon": {
+    "encodedCode": "\\ea9f",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-MeboxlogoIcon",
+    "unicode": "&#60063;",
+    "snakeName": "meboxlogo",
+    "pascalName": "Meboxlogo",
+    "componentName": "MeboxlogoIcon"
+  },
+  "MedeologoIcon": {
+    "encodedCode": "\\eaa0",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-MedeologoIcon",
+    "unicode": "&#60064;",
+    "snakeName": "medeologo",
+    "pascalName": "Medeologo",
+    "componentName": "MedeologoIcon"
+  },
+  "MedeologoRotateIcon": {
+    "encodedCode": "\\eaa1",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-MedeologoRotateIcon",
+    "unicode": "&#60065;",
+    "snakeName": "medeologo_rotate",
+    "pascalName": "MedeologoRotate",
+    "componentName": "MedeologoRotateIcon"
+  },
+  "MenuIcon": {
+    "encodedCode": "\\eaa2",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-MenuIcon",
+    "unicode": "&#60066;",
+    "snakeName": "menu",
+    "pascalName": "Menu",
+    "componentName": "MenuIcon"
+  },
+  "MicIcon": {
+    "encodedCode": "\\eaa3",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-MicIcon",
+    "unicode": "&#60067;",
+    "snakeName": "mic",
+    "pascalName": "Mic",
+    "componentName": "MicIcon"
+  },
+  "MobileCheckIcon": {
+    "encodedCode": "\\eaa4",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-MobileCheckIcon",
+    "unicode": "&#60068;",
+    "snakeName": "mobile_check",
+    "pascalName": "MobileCheck",
+    "componentName": "MobileCheckIcon"
+  },
+  "MobileFriendlyIcon": {
+    "encodedCode": "\\eaa5",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-MobileFriendlyIcon",
+    "unicode": "&#60069;",
+    "snakeName": "mobile_friendly",
+    "pascalName": "MobileFriendly",
+    "componentName": "MobileFriendlyIcon"
+  },
+  "ModelIcon": {
+    "encodedCode": "\\eaa6",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ModelIcon",
+    "unicode": "&#60070;",
+    "snakeName": "model",
+    "pascalName": "Model",
+    "componentName": "ModelIcon"
+  },
+  "MoodIcon": {
+    "encodedCode": "\\eaa7",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-MoodIcon",
+    "unicode": "&#60071;",
+    "snakeName": "mood",
+    "pascalName": "Mood",
+    "componentName": "MoodIcon"
+  },
+  "MoreHorizIcon": {
+    "encodedCode": "\\eaa8",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-MoreHorizIcon",
+    "unicode": "&#60072;",
+    "snakeName": "more_horiz",
+    "pascalName": "MoreHoriz",
+    "componentName": "MoreHorizIcon"
+  },
+  "MoreVertIcon": {
+    "encodedCode": "\\eaa9",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-MoreVertIcon",
+    "unicode": "&#60073;",
+    "snakeName": "more_vert",
+    "pascalName": "MoreVert",
+    "componentName": "MoreVertIcon"
+  },
+  "MoveItemIcon": {
+    "encodedCode": "\\eaaa",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-MoveItemIcon",
+    "unicode": "&#60074;",
+    "snakeName": "move_item",
+    "pascalName": "MoveItem",
+    "componentName": "MoveItemIcon"
+  },
+  "MovieInfoIcon": {
+    "encodedCode": "\\eaab",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-MovieInfoIcon",
+    "unicode": "&#60075;",
+    "snakeName": "movie_info",
+    "pascalName": "MovieInfo",
+    "componentName": "MovieInfoIcon"
+  },
+  "MusicNoteAddIcon": {
+    "encodedCode": "\\eaac",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-MusicNoteAddIcon",
+    "unicode": "&#60076;",
+    "snakeName": "music_note_add",
+    "pascalName": "MusicNoteAdd",
+    "componentName": "MusicNoteAddIcon"
+  },
+  "MusicNoteIcon": {
+    "encodedCode": "\\eaad",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-MusicNoteIcon",
+    "unicode": "&#60077;",
+    "snakeName": "music_note",
+    "pascalName": "MusicNote",
+    "componentName": "MusicNoteIcon"
+  },
+  "NavigateBeforeIcon": {
+    "encodedCode": "\\eaae",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-NavigateBeforeIcon",
+    "unicode": "&#60078;",
+    "snakeName": "navigate_before",
+    "pascalName": "NavigateBefore",
+    "componentName": "NavigateBeforeIcon"
+  },
+  "NavigateNextIcon": {
+    "encodedCode": "\\eaaf",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-NavigateNextIcon",
+    "unicode": "&#60079;",
+    "snakeName": "navigate_next",
+    "pascalName": "NavigateNext",
+    "componentName": "NavigateNextIcon"
+  },
+  "NotificationsIcon": {
+    "encodedCode": "\\eab0",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-NotificationsIcon",
+    "unicode": "&#60080;",
+    "snakeName": "notifications",
+    "pascalName": "Notifications",
+    "componentName": "NotificationsIcon"
+  },
+  "OpenInNewDownIcon": {
+    "encodedCode": "\\eab1",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-OpenInNewDownIcon",
+    "unicode": "&#60081;",
+    "snakeName": "open_in_new_down",
+    "pascalName": "OpenInNewDown",
+    "componentName": "OpenInNewDownIcon"
+  },
+  "OutboxIcon": {
+    "encodedCode": "\\eab2",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-OutboxIcon",
+    "unicode": "&#60082;",
+    "snakeName": "outbox",
+    "pascalName": "Outbox",
+    "componentName": "OutboxIcon"
+  },
+  "PDFIcon": {
+    "encodedCode": "\\eab3",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-PDFIcon",
+    "unicode": "&#60083;",
+    "snakeName": "p_d_f",
+    "pascalName": "PDF",
+    "componentName": "PDFIcon"
+  },
+  "Package_2Icon": {
+    "encodedCode": "\\eab4",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-Package_2Icon",
+    "unicode": "&#60084;",
+    "snakeName": "package_2",
+    "pascalName": "Package_2",
+    "componentName": "Package_2Icon"
+  },
+  "PaletteIcon": {
+    "encodedCode": "\\eab5",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-PaletteIcon",
+    "unicode": "&#60085;",
+    "snakeName": "palette",
+    "pascalName": "Palette",
+    "componentName": "PaletteIcon"
+  },
+  "PanZoomIcon": {
+    "encodedCode": "\\eab6",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-PanZoomIcon",
+    "unicode": "&#60086;",
+    "snakeName": "pan_zoom",
+    "pascalName": "PanZoom",
+    "componentName": "PanZoomIcon"
+  },
+  "PauseIcon": {
+    "encodedCode": "\\eab7",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-PauseIcon",
+    "unicode": "&#60087;",
+    "snakeName": "pause",
+    "pascalName": "Pause",
+    "componentName": "PauseIcon"
+  },
+  "PersonAddIcon": {
+    "encodedCode": "\\eab8",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-PersonAddIcon",
+    "unicode": "&#60088;",
+    "snakeName": "person_add",
+    "pascalName": "PersonAdd",
+    "componentName": "PersonAddIcon"
+  },
+  "PersonIcon": {
+    "encodedCode": "\\eab9",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-PersonIcon",
+    "unicode": "&#60089;",
+    "snakeName": "person",
+    "pascalName": "Person",
+    "componentName": "PersonIcon"
+  },
+  "PhoneticScriptIcon": {
+    "encodedCode": "\\eaba",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-PhoneticScriptIcon",
+    "unicode": "&#60090;",
+    "snakeName": "phonetic_script",
+    "pascalName": "PhoneticScript",
+    "componentName": "PhoneticScriptIcon"
+  },
+  "PhotoCameraIcon": {
+    "encodedCode": "\\eabb",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-PhotoCameraIcon",
+    "unicode": "&#60091;",
+    "snakeName": "photo_camera",
+    "pascalName": "PhotoCamera",
+    "componentName": "PhotoCameraIcon"
+  },
+  "PhotoIcon": {
+    "encodedCode": "\\eabc",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-PhotoIcon",
+    "unicode": "&#60092;",
+    "snakeName": "photo",
+    "pascalName": "Photo",
+    "componentName": "PhotoIcon"
+  },
+  "PicIcon": {
+    "encodedCode": "\\eabd",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-PicIcon",
+    "unicode": "&#60093;",
+    "snakeName": "pic",
+    "pascalName": "Pic",
+    "componentName": "PicIcon"
+  },
+  "PicToVideoOne2xSpecialIcon": {
+    "encodedCode": "\\eabe",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-PicToVideoOne2xSpecialIcon",
+    "unicode": "&#60094;",
+    "snakeName": "pic_to_video_one2x_special",
+    "pascalName": "PicToVideoOne2xSpecial",
+    "componentName": "PicToVideoOne2xSpecialIcon"
+  },
+  "PlayArrowIcon": {
+    "encodedCode": "\\eabf",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-PlayArrowIcon",
+    "unicode": "&#60095;",
+    "snakeName": "play_arrow",
+    "pascalName": "PlayArrow",
+    "componentName": "PlayArrowIcon"
+  },
+  "PlayCirccleIcon": {
+    "encodedCode": "\\eac0",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-PlayCirccleIcon",
+    "unicode": "&#60096;",
+    "snakeName": "play_circcle",
+    "pascalName": "PlayCirccle",
+    "componentName": "PlayCirccleIcon"
+  },
+  "ProgressActivityIcon": {
+    "encodedCode": "\\eac1",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ProgressActivityIcon",
+    "unicode": "&#60097;",
+    "snakeName": "progress_activity",
+    "pascalName": "ProgressActivity",
+    "componentName": "ProgressActivityIcon"
+  },
+  "PurchaseCreditIcon": {
+    "encodedCode": "\\eac2",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-PurchaseCreditIcon",
+    "unicode": "&#60098;",
+    "snakeName": "purchase_credit",
+    "pascalName": "PurchaseCredit",
+    "componentName": "PurchaseCreditIcon"
+  },
+  "QunantityIcon": {
+    "encodedCode": "\\eac3",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-QunantityIcon",
+    "unicode": "&#60099;",
+    "snakeName": "qunantity",
+    "pascalName": "Qunantity",
+    "componentName": "QunantityIcon"
+  },
+  "RadioButtonCheckedIcon": {
+    "encodedCode": "\\eac4",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-RadioButtonCheckedIcon",
+    "unicode": "&#60100;",
+    "snakeName": "radio_button_checked",
+    "pascalName": "RadioButtonChecked",
+    "componentName": "RadioButtonCheckedIcon"
+  },
+  "RadioButtonUncheckedIcon": {
+    "encodedCode": "\\eac5",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-RadioButtonUncheckedIcon",
+    "unicode": "&#60101;",
+    "snakeName": "radio_button_unchecked",
+    "pascalName": "RadioButtonUnchecked",
+    "componentName": "RadioButtonUncheckedIcon"
+  },
+  "RePlayIcon": {
+    "encodedCode": "\\eac6",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-RePlayIcon",
+    "unicode": "&#60102;",
+    "snakeName": "re_play",
+    "pascalName": "RePlay",
+    "componentName": "RePlayIcon"
+  },
+  "ReceiptLongIcon": {
+    "encodedCode": "\\eac7",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ReceiptLongIcon",
+    "unicode": "&#60103;",
+    "snakeName": "receipt_long",
+    "pascalName": "ReceiptLong",
+    "componentName": "ReceiptLongIcon"
+  },
+  "RecipeIcon": {
+    "encodedCode": "\\eac8",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-RecipeIcon",
+    "unicode": "&#60104;",
+    "snakeName": "recipe",
+    "pascalName": "Recipe",
+    "componentName": "RecipeIcon"
+  },
+  "RedeemCodeIcon": {
+    "encodedCode": "\\eac9",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-RedeemCodeIcon",
+    "unicode": "&#60105;",
+    "snakeName": "redeem_code",
+    "pascalName": "RedeemCode",
+    "componentName": "RedeemCodeIcon"
+  },
+  "RedoIcon": {
+    "encodedCode": "\\eaca",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-RedoIcon",
+    "unicode": "&#60106;",
+    "snakeName": "redo",
+    "pascalName": "Redo",
+    "componentName": "RedoIcon"
+  },
+  "RenameIcon": {
+    "encodedCode": "\\eacb",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-RenameIcon",
+    "unicode": "&#60107;",
+    "snakeName": "rename",
+    "pascalName": "Rename",
+    "componentName": "RenameIcon"
+  },
+  "ReplayRestoreIcon": {
+    "encodedCode": "\\eacc",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ReplayRestoreIcon",
+    "unicode": "&#60108;",
+    "snakeName": "replay_restore",
+    "pascalName": "ReplayRestore",
+    "componentName": "ReplayRestoreIcon"
+  },
+  "ResizeIcon": {
+    "encodedCode": "\\eacd",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ResizeIcon",
+    "unicode": "&#60109;",
+    "snakeName": "resize",
+    "pascalName": "Resize",
+    "componentName": "ResizeIcon"
+  },
+  "ScheduleIcon": {
+    "encodedCode": "\\eace",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ScheduleIcon",
+    "unicode": "&#60110;",
+    "snakeName": "schedule",
+    "pascalName": "Schedule",
+    "componentName": "ScheduleIcon"
+  },
+  "Search2Icon": {
+    "encodedCode": "\\eacf",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-Search2Icon",
+    "unicode": "&#60111;",
+    "snakeName": "search2",
+    "pascalName": "Search2",
+    "componentName": "Search2Icon"
+  },
+  "SearchIcon": {
+    "encodedCode": "\\ead0",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SearchIcon",
+    "unicode": "&#60112;",
+    "snakeName": "search",
+    "pascalName": "Search",
+    "componentName": "SearchIcon"
+  },
+  "SelectIcon": {
+    "encodedCode": "\\ead1",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SelectIcon",
+    "unicode": "&#60113;",
+    "snakeName": "select",
+    "pascalName": "Select",
+    "componentName": "SelectIcon"
+  },
+  "SendIcon": {
+    "encodedCode": "\\ead2",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SendIcon",
+    "unicode": "&#60114;",
+    "snakeName": "send",
+    "pascalName": "Send",
+    "componentName": "SendIcon"
+  },
+  "SentimentDissatisfiedIcon": {
+    "encodedCode": "\\ead3",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SentimentDissatisfiedIcon",
+    "unicode": "&#60115;",
+    "snakeName": "sentiment_dissatisfied",
+    "pascalName": "SentimentDissatisfied",
+    "componentName": "SentimentDissatisfiedIcon"
+  },
+  "SettingsFillIcon": {
+    "encodedCode": "\\ead4",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SettingsFillIcon",
+    "unicode": "&#60116;",
+    "snakeName": "settings_fill",
+    "pascalName": "SettingsFill",
+    "componentName": "SettingsFillIcon"
+  },
+  "SettingsIcon": {
+    "encodedCode": "\\ead5",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SettingsIcon",
+    "unicode": "&#60117;",
+    "snakeName": "settings",
+    "pascalName": "Settings",
+    "componentName": "SettingsIcon"
+  },
+  "SettingsLineIcon": {
+    "encodedCode": "\\ead6",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SettingsLineIcon",
+    "unicode": "&#60118;",
+    "snakeName": "settings_line",
+    "pascalName": "SettingsLine",
+    "componentName": "SettingsLineIcon"
+  },
+  "ShareIcon": {
+    "encodedCode": "\\ead7",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ShareIcon",
+    "unicode": "&#60119;",
+    "snakeName": "share",
+    "pascalName": "Share",
+    "componentName": "ShareIcon"
+  },
+  "SkipNextFilledIcon": {
+    "encodedCode": "\\ead8",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SkipNextFilledIcon",
+    "unicode": "&#60120;",
+    "snakeName": "skip_next_filled",
+    "pascalName": "SkipNextFilled",
+    "componentName": "SkipNextFilledIcon"
+  },
+  "SkipNextIcon": {
+    "encodedCode": "\\ead9",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SkipNextIcon",
+    "unicode": "&#60121;",
+    "snakeName": "skip_next",
+    "pascalName": "SkipNext",
+    "componentName": "SkipNextIcon"
+  },
+  "SkipPreviousFilledIcon": {
+    "encodedCode": "\\eada",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SkipPreviousFilledIcon",
+    "unicode": "&#60122;",
+    "snakeName": "skip_previous_filled",
+    "pascalName": "SkipPreviousFilled",
+    "componentName": "SkipPreviousFilledIcon"
+  },
+  "SkipPreviousIcon": {
+    "encodedCode": "\\eadb",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SkipPreviousIcon",
+    "unicode": "&#60123;",
+    "snakeName": "skip_previous",
+    "pascalName": "SkipPrevious",
+    "componentName": "SkipPreviousIcon"
+  },
+  "SmartDisplayIcon": {
+    "encodedCode": "\\eadc",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SmartDisplayIcon",
+    "unicode": "&#60124;",
+    "snakeName": "smart_display",
+    "pascalName": "SmartDisplay",
+    "componentName": "SmartDisplayIcon"
+  },
+  "SmartMatchIcon": {
+    "encodedCode": "\\eadd",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SmartMatchIcon",
+    "unicode": "&#60125;",
+    "snakeName": "smart_match",
+    "pascalName": "SmartMatch",
+    "componentName": "SmartMatchIcon"
+  },
+  "SocialConnectionIcon": {
+    "encodedCode": "\\eade",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SocialConnectionIcon",
+    "unicode": "&#60126;",
+    "snakeName": "social_connection",
+    "pascalName": "SocialConnection",
+    "componentName": "SocialConnectionIcon"
+  },
+  "SpeedShiftIcon": {
+    "encodedCode": "\\eadf",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SpeedShiftIcon",
+    "unicode": "&#60127;",
+    "snakeName": "speed_shift",
+    "pascalName": "SpeedShift",
+    "componentName": "SpeedShiftIcon"
+  },
+  "StarFilledIcon": {
+    "encodedCode": "\\eae0",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-StarFilledIcon",
+    "unicode": "&#60128;",
+    "snakeName": "star_filled",
+    "pascalName": "StarFilled",
+    "componentName": "StarFilledIcon"
+  },
+  "StarIcon": {
+    "encodedCode": "\\eae1",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-StarIcon",
+    "unicode": "&#60129;",
+    "snakeName": "star",
+    "pascalName": "Star",
+    "componentName": "StarIcon"
+  },
+  "StarsIcon": {
+    "encodedCode": "\\eae2",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-StarsIcon",
+    "unicode": "&#60130;",
+    "snakeName": "stars",
+    "pascalName": "Stars",
+    "componentName": "StarsIcon"
+  },
+  "StickerIcon": {
+    "encodedCode": "\\eae3",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-StickerIcon",
+    "unicode": "&#60131;",
+    "snakeName": "sticker",
+    "pascalName": "Sticker",
+    "componentName": "StickerIcon"
+  },
+  "StockIcon": {
+    "encodedCode": "\\eae4",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-StockIcon",
+    "unicode": "&#60132;",
+    "snakeName": "stock",
+    "pascalName": "Stock",
+    "componentName": "StockIcon"
+  },
+  "StopIcon": {
+    "encodedCode": "\\eae5",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-StopIcon",
+    "unicode": "&#60133;",
+    "snakeName": "stop",
+    "pascalName": "Stop",
+    "componentName": "StopIcon"
+  },
+  "StyleIcon": {
+    "encodedCode": "\\eae6",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-StyleIcon",
+    "unicode": "&#60134;",
+    "snakeName": "style",
+    "pascalName": "Style",
+    "componentName": "StyleIcon"
+  },
+  "SubscriptionIcon": {
+    "encodedCode": "\\eae7",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-Subscription",
+    "unicode": "&#60135;",
+    "snakeName": "subscription",
+    "pascalName": "Subscription",
+    "componentName": "SubscriptionIcon"
+  },
+  "SubscriptionsIcon": {
+    "encodedCode": "\\eae8",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SubscriptionsIcon",
+    "unicode": "&#60136;",
+    "snakeName": "subscriptions",
+    "pascalName": "Subscriptions",
+    "componentName": "SubscriptionsIcon"
+  },
+  "SubtitleIcon": {
+    "encodedCode": "\\eae9",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SubtitleIcon",
+    "unicode": "&#60137;",
+    "snakeName": "subtitle",
+    "pascalName": "Subtitle",
+    "componentName": "SubtitleIcon"
+  },
+  "SyncIcon": {
+    "encodedCode": "\\eaea",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-SyncIcon",
+    "unicode": "&#60138;",
+    "snakeName": "sync",
+    "pascalName": "Sync",
+    "componentName": "SyncIcon"
+  },
+  "TargetIcon": {
+    "encodedCode": "\\eaeb",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-TargetIcon",
+    "unicode": "&#60139;",
+    "snakeName": "target",
+    "pascalName": "Target",
+    "componentName": "TargetIcon"
+  },
+  "TastingIcon": {
+    "encodedCode": "\\eaec",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-TastingIcon",
+    "unicode": "&#60140;",
+    "snakeName": "tasting",
+    "pascalName": "Tasting",
+    "componentName": "TastingIcon"
+  },
+  "TextFieldsIcon": {
+    "encodedCode": "\\eaed",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-TextFieldsIcon",
+    "unicode": "&#60141;",
+    "snakeName": "text_fields",
+    "pascalName": "TextFields",
+    "componentName": "TextFieldsIcon"
+  },
+  "TodayIcon": {
+    "encodedCode": "\\eaee",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-TodayIcon",
+    "unicode": "&#60142;",
+    "snakeName": "today",
+    "pascalName": "Today",
+    "componentName": "TodayIcon"
+  },
+  "TrophyIcon": {
+    "encodedCode": "\\eaef",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-TrophyIcon",
+    "unicode": "&#60143;",
+    "snakeName": "trophy",
+    "pascalName": "Trophy",
+    "componentName": "TrophyIcon"
+  },
+  "TuneIcon": {
+    "encodedCode": "\\eaf0",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-TuneIcon",
+    "unicode": "&#60144;",
+    "snakeName": "tune",
+    "pascalName": "Tune",
+    "componentName": "TuneIcon"
+  },
+  "TutorialIcon": {
+    "encodedCode": "\\eaf1",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-TutorialIcon",
+    "unicode": "&#60145;",
+    "snakeName": "tutorial",
+    "pascalName": "Tutorial",
+    "componentName": "TutorialIcon"
+  },
+  "UndoIcon": {
+    "encodedCode": "\\eaf2",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-UndoIcon",
+    "unicode": "&#60146;",
+    "snakeName": "undo",
+    "pascalName": "Undo",
+    "componentName": "UndoIcon"
+  },
+  "UnfoldLessIcon": {
+    "encodedCode": "\\eaf3",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-UnfoldLessIcon",
+    "unicode": "&#60147;",
+    "snakeName": "unfold_less",
+    "pascalName": "UnfoldLess",
+    "componentName": "UnfoldLessIcon"
+  },
+  "UnfoldMoreIcon": {
+    "encodedCode": "\\eaf4",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-UnfoldMoreIcon",
+    "unicode": "&#60148;",
+    "snakeName": "unfold_more",
+    "pascalName": "UnfoldMore",
+    "componentName": "UnfoldMoreIcon"
+  },
+  "UploadFileIcon": {
+    "encodedCode": "\\eaf5",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-UploadFileIcon",
+    "unicode": "&#60149;",
+    "snakeName": "upload_file",
+    "pascalName": "UploadFile",
+    "componentName": "UploadFileIcon"
+  },
+  "UploadIcon": {
+    "encodedCode": "\\eaf6",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-UploadIcon",
+    "unicode": "&#60150;",
+    "snakeName": "upload",
+    "pascalName": "Upload",
+    "componentName": "UploadIcon"
+  },
+  "VideoCameraBackAddIcon": {
+    "encodedCode": "\\eaf7",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-VideoCameraBackAddIcon",
+    "unicode": "&#60151;",
+    "snakeName": "video_camera_back_add",
+    "pascalName": "VideoCameraBackAdd",
+    "componentName": "VideoCameraBackAddIcon"
+  },
+  "VideoSoundIcon": {
+    "encodedCode": "\\eaf8",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-VideoSoundIcon",
+    "unicode": "&#60152;",
+    "snakeName": "video_sound",
+    "pascalName": "VideoSound",
+    "componentName": "VideoSoundIcon"
+  },
+  "VideocamIcon": {
+    "encodedCode": "\\eaf9",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-VideocamIcon",
+    "unicode": "&#60153;",
+    "snakeName": "videocam",
+    "pascalName": "Videocam",
+    "componentName": "VideocamIcon"
+  },
+  "ViewObjectTrackIcon": {
+    "encodedCode": "\\eafa",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-ViewObjectTrackIcon",
+    "unicode": "&#60154;",
+    "snakeName": "view_object_track",
+    "pascalName": "ViewObjectTrack",
+    "componentName": "ViewObjectTrackIcon"
+  },
+  "VirtualAvatarIcon": {
+    "encodedCode": "\\eafb",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-VirtualAvatarIcon",
+    "unicode": "&#60155;",
+    "snakeName": "virtual_avatar",
+    "pascalName": "VirtualAvatar",
+    "componentName": "VirtualAvatarIcon"
+  },
+  "VisibilityIcon": {
+    "encodedCode": "\\eafc",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-VisibilityIcon",
+    "unicode": "&#60156;",
+    "snakeName": "visibility",
+    "pascalName": "Visibility",
+    "componentName": "VisibilityIcon"
+  },
+  "VisibilityOffIcon": {
+    "encodedCode": "\\eafd",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-VisibilityOffIcon",
+    "unicode": "&#60157;",
+    "snakeName": "visibility_off",
+    "pascalName": "VisibilityOff",
+    "componentName": "VisibilityOffIcon"
+  },
+  "VoiceAddIcon": {
+    "encodedCode": "\\eafe",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-VoiceAddIcon",
+    "unicode": "&#60158;",
+    "snakeName": "voice_add",
+    "pascalName": "VoiceAdd",
+    "componentName": "VoiceAddIcon"
+  },
+  "VoiceGenerateIcon": {
+    "encodedCode": "\\eaff",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-VoiceGenerateIcon",
+    "unicode": "&#60159;",
+    "snakeName": "voice_generate",
+    "pascalName": "VoiceGenerate",
+    "componentName": "VoiceGenerateIcon"
+  },
+  "VoiceSelectionIcon": {
+    "encodedCode": "\\eb00",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-VoiceSelectionIcon",
+    "unicode": "&#60160;",
+    "snakeName": "voice_selection",
+    "pascalName": "VoiceSelection",
+    "componentName": "VoiceSelectionIcon"
+  },
+  "VolumeDownAltIcon": {
+    "encodedCode": "\\eb01",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-VolumeDownAltIcon",
+    "unicode": "&#60161;",
+    "snakeName": "volume_down_alt",
+    "pascalName": "VolumeDownAlt",
+    "componentName": "VolumeDownAltIcon"
+  },
+  "VolumeMuteIcon": {
+    "encodedCode": "\\eb02",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-VolumeMuteIcon",
+    "unicode": "&#60162;",
+    "snakeName": "volume_mute",
+    "pascalName": "VolumeMute",
+    "componentName": "VolumeMuteIcon"
+  },
+  "VolumeOffIcon": {
+    "encodedCode": "\\eb03",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-VolumeOffIcon",
+    "unicode": "&#60163;",
+    "snakeName": "volume_off",
+    "pascalName": "VolumeOff",
+    "componentName": "VolumeOffIcon"
+  },
+  "VolumeUpIcon": {
+    "encodedCode": "\\eb04",
+    "prefix": "o2x-icons",
+    "className": "o2x-icons-VolumeUpIcon",
+    "unicode": "&#60164;",
+    "snakeName": "volume_up",
+    "pascalName": "VolumeUp",
+    "componentName": "VolumeUpIcon"
+  }
+}

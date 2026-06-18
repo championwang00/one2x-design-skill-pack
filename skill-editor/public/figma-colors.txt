@@ -1,0 +1,319 @@
+Schemes/Brand|#863dfb|#863dfb
+Schemes/Primary|#863dfb|#863dfb
+Schemes/On Primary|#ffffff|#ffffff
+Schemes/Primary Container|#ddb7ff|#9c48ea
+Schemes/On Primary Container|#2c0051|#ffffff
+Schemes/Secondary|#003bc4|#b8c4ff
+Schemes/On Secondary|#ffffff|#002584
+Schemes/Secondary Container|#2e5fff|#738bff
+Schemes/On Secondary Container|#ffffff|#fffdff
+Schemes/Tertiary|#705d00|#f6d135
+Schemes/On Tertiary|#ffffff|#3b2f00
+Schemes/Tertiary Container|#dbb816|#c9a800
+Schemes/On Tertiary Container|#372d00|#fbf0b8
+Schemes/Error|#ba1a1a|#ffb4ab
+Schemes/On Error|#ffffff|#690005
+Schemes/Error Container|#ffdad6|#93000a
+Schemes/On Error Container|#410002|#ffdad6
+Schemes/Shadow|#000000|#000000
+Schemes/Scrim|#000000|#000000
+Schemes/Inverse Primary|#ddb7ff|#842bd2
+Schemes/Primary Fixed|#ebe0fe|#ebe0fe
+Schemes/On Primary Fixed|#2c0051|#2c0051
+Schemes/Primary Fixed Dim|#ddb7ff|#ddb7ff
+Schemes/On Primary Fixed Variant|#6900b3|#6900b3
+Schemes/Secondary Fixed|#dde1ff|#dde1ff
+Schemes/On Secondary Fixed|#001453|#001453
+Schemes/Secondary Fixed Dim|#b8c4ff|#b8c4ff
+Schemes/On Secondary Fixed Variant|#0037b9|#0037b9
+Schemes/Tertiary Fixed|#ffe171|#ffe171
+Schemes/On Tertiary Fixed|#221b00|#221b00
+Schemes/Tertiary Fixed Dim|#e8c426|#e8c426
+Schemes/On Tertiary Fixed Variant|#554600|#554600
+Surface/Outline|#d4d4d8|#413d48
+Surface/Outline Variant|#e4e4e7|#3c3842
+Surface/On Surface|#09090b|#e5e3e8
+Surface/On Background|#1f1a23|#cac2d6
+Surface/On Surface Variant|#3f3f46|#a49daf
+Surface/Background|#f4f4f5|#161319
+Surface/Surface Dim|#e4e4e7|#0d0a10
+Surface/Surface|#f4f4f5|#17141a
+Surface/Surface Bright|#fafafa|#26222a
+Surface/Surface Container Lowest|#ffffff|#2d2932
+Surface/Surface Container Low|#fafafa|#312e38
+Surface/Surface Container|#f4f4f5|#36333d
+Surface/Surface Container High|#e4e4e7|#3c3842
+Surface/Surface Container Highest|#d4d4d8|#413d48
+Surface/Surface Tint|#842bd2|#ddb7ff
+Surface/Inverse On Surface|#ffffff|#313031
+Surface/Inverse Surface|#09090b|#e0ccff
+State Layers/Primary/Opacity-08|#863dfb14|#aa8aff14
+State Layers/Primary/Opacity-12|#863dfb1f|#aa8aff1f
+State Layers/Primary/Opacity-16|#863dfb29|#aa8aff29
+State Layers/On Primary/Opacity-08|#ffffff14|#381e7214
+State Layers/On Primary/Opacity-12|#ffffff1f|#381e721f
+State Layers/On Primary/Opacity-16|#ffffff29|#381e7229
+State Layers/Primary Container/Opacity-08|#eaddff14|#4f378b14
+State Layers/Primary Container/Opacity-12|#eaddff1f|#4f378b1f
+State Layers/Primary Container/Opacity-16|#eaddff29|#4f378b29
+State Layers/On Primary Container/Opacity-08|#4f378a14|#eaddff14
+State Layers/On Primary Container/Opacity-12|#4f378a1f|#eaddff1f
+State Layers/On Primary Container/Opacity-16|#4f378a29|#eaddff29
+State Layers/Secondary/Opacity-08|#003bc414|#b8c4ff14
+State Layers/Secondary/Opacity-12|#003bc41f|#b8c4ff1f
+State Layers/Secondary/Opacity-16|#003bc429|#b8c4ff29
+State Layers/On Secondary/Opacity-08|#ffffff14|#332d4114
+State Layers/On Secondary/Opacity-12|#ffffff1f|#332d411f
+State Layers/On Secondary/Opacity-16|#ffffff29|#332d4129
+State Layers/Secondary Container/Opacity-08|#2e5fff14|#0045e214
+State Layers/Secondary Container/Opacity-12|#2e5fff1f|#0045e21f
+State Layers/Secondary Container/Opacity-16|#2e5fff29|#0045e229
+State Layers/On Secondary Container/Opacity-08|#4a445914|#e8def814
+State Layers/On Secondary Container/Opacity-12|#4a44591f|#e8def81f
+State Layers/On Secondary Container/Opacity-16|#4a445929|#e8def829
+State Layers/Tertiary/Opacity-08|#705d0014|#f6d13514
+State Layers/Tertiary/Opacity-12|#705d001f|#f6d1351f
+State Layers/Tertiary/Opacity-16|#705d0029|#efb8c829
+State Layers/On Tertiary/Opacity-08|#ffffff14|#3b2f0014
+State Layers/On Tertiary/Opacity-12|#ffffff1f|#3b2f001f
+State Layers/On Tertiary/Opacity-16|#ffffff29|#3b2f0029
+State Layers/Tertiary Container/Opacity-08|#dbb81614|#c9a80014
+State Layers/Tertiary Container/Opacity-12|#dbb8161f|#c9a8001f
+State Layers/Tertiary Container/Opacity-16|#dbb81629|#c9a80029
+State Layers/On Tertiary Container/Opacity-08|#372d0014|#fbf0b814
+State Layers/On Tertiary Container/Opacity-12|#372d001f|#fbf0b81f
+State Layers/On Tertiary Container/Opacity-16|#372d0029|#fbf0b829
+State Layers/Error/Opacity-08|#b3261e14|#f2b8b514
+State Layers/Error/Opacity-12|#b3261e1f|#f2b8b51f
+State Layers/Error/Opacity-16|#b3261e29|#f2b8b529
+State Layers/On Error/Opacity-08|#ffffff14|#60141014
+State Layers/On Error/Opacity-12|#ffffff1f|#6014101f
+State Layers/On Error/Opacity-16|#ffffff29|#60141029
+State Layers/Error Container/Opacity-08|#f9dedc14|#8c1d1814
+State Layers/Error Container/Opacity-12|#f9dedc1f|#8c1d181f
+State Layers/Error Container/Opacity-16|#f9dedc29|#8c1d1829
+State Layers/On Error Container/Opacity-08|#85222114|#f9dedc14
+State Layers/On Error Container/Opacity-12|#8522211f|#f9dedc1f
+State Layers/On Error Container/Opacity-16|#85222129|#f9dedc29
+State Layers/Background/Opacity-00|#f4f4f500|#14121800
+State Layers/Background/Opacity-08|#f4f4f514|#14121814
+State Layers/Background/Opacity-12|#f4f4f51f|#1412181f
+State Layers/Background/Opacity-16|#f4f4f529|#14121829
+State Layers/Background/Opacity-90|#f4f4f5e5|#141218e5
+State Layers/On Background/Opacity-08|#1d1b2014|#e6e0e914
+State Layers/On Background/Opacity-12|#1d1b201f|#e6e0e91f
+State Layers/On Background/Opacity-16|#1d1b2029|#e6e0e929
+State Layers/Surface/Opacity-00|#f4f4f600|#14121800
+State Layers/Surface/Opacity-08|#f4f4f614|#14121814
+State Layers/Surface/Opacity-12|#f4f4f61f|#1412181f
+State Layers/Surface/Opacity-16|#f4f4f629|#14121829
+State Layers/On Surface/Opacity-00|#09090b00|#e5e3e800
+State Layers/On Surface/Opacity-08|#09090b14|#e5e3e814
+State Layers/On Surface/Opacity-12|#09090b1f|#e5e3e81f
+State Layers/On Surface/Opacity-16|#09090b29|#f3f3f729
+State Layers/Surface Variant/Opacity-08|#e7e0ec14|#49454f14
+State Layers/Surface Variant/Opacity-12|#e7e0ec1f|#49454f1f
+State Layers/Surface Variant/Opacity-16|#e7e0ec29|#49454f29
+State Layers/On Surface Variant/Opacity-00|#3f3f4600|#a49daf00
+State Layers/On Surface Variant/Opacity-08|#3f3f4614|#a49daf14
+State Layers/On Surface Variant/Opacity-12|#3f3f461f|#a49daf1f
+State Layers/On Surface Variant/Opacity-16|#3f3f4629|#a49daf29
+State Layers/Outline/Opacity-00|#dbdbe600|#413d4800
+State Layers/Outline/Opacity-08|#dbdbe614|#413d4814
+State Layers/Outline/Opacity-12|#dbdbe61f|#413d481f
+State Layers/Outline/Opacity-16|#dbdbe629|#413d4829
+State Layers/Outline Variant/Opacity-08|#e7e7ef14|#49454f14
+State Layers/Surface Tint/Opacity-08|#6750a414|#d0bcff14
+State Layers/Surface Tint/Opacity-12|#6750a41f|#d0bcff1f
+State Layers/Surface Tint/Opacity-16|#6750a429|#d0bcff29
+State Layers/Shadow/Opacity-08|#00000014|#00000014
+State Layers/Shadow/Opacity-12|#0000001f|#0000001f
+State Layers/Shadow/Opacity-16|#00000029|#00000029
+State Layers/Outline Variant/Opacity-12|#e7e7ef1f|#49454f1f
+State Layers/Outline Variant/Opacity-16|#e7e7ef29|#49454f29
+State Layers/Scrim/Opacity-08|#00000014|#00000014
+State Layers/Inverse Surface/Opacity-08|#322f3514|#e6e0e914
+State Layers/Inverse Surface/Opacity-12|#322f351f|#e6e0e91f
+State Layers/Inverse Surface/Opacity-16|#322f3529|#e6e0e929
+State Layers/Inverse On Surface/Opacity-08|#f5eff714|#322f3514
+State Layers/Inverse On Surface/Opacity-12|#f5eff71f|#322f351f
+State Layers/Inverse On Surface/Opacity-16|#f5eff729|#322f3529
+State Layers/Inverse Primary/Opacity-08|#d0bcff14|#6750a414
+State Layers/Inverse Primary/Opacity-12|#d0bcff1f|#6750a41f
+State Layers/Inverse Primary/Opacity-16|#d0bcff29|#6750a429
+State Layers/Primary Fixed/Opacity-08|#eaddff14|#eaddff14
+State Layers/Primary Fixed/Opacity-12|#eaddff1f|#eaddff1f
+State Layers/Primary Fixed/Opacity-16|#eaddff29|#eaddff29
+State Layers/On Primary Fixed/Opacity-08|#21005d14|#21005d14
+State Layers/On Primary Fixed/Opacity-12|#21005d1f|#21005d1f
+State Layers/On Primary Fixed/Opacity-16|#21005d29|#21005d29
+State Layers/Primary Fixed Dim/Opacity-08|#d0bcff14|#d0bcff14
+State Layers/Primary Fixed Dim/Opacity-12|#d0bcff1f|#d0bcff1f
+State Layers/Primary Fixed Dim/Opacity-16|#d0bcff29|#d0bcff29
+State Layers/On Primary Fixed Variant/Opacity-08|#4f378b14|#4f378b14
+State Layers/On Primary Fixed Variant/Opacity-12|#4f378b1f|#4f378b1f
+State Layers/On Primary Fixed Variant/Opacity-16|#4f378b29|#4f378b29
+State Layers/Secondary Fixed/Opacity-08|#e8def814|#e8def814
+State Layers/Secondary Fixed/Opacity-12|#e8def81f|#e8def81f
+State Layers/Secondary Fixed/Opacity-16|#e8def829|#e8def829
+State Layers/On Secondary Fixed/Opacity-08|#1d192b14|#1d192b14
+State Layers/On Secondary Fixed/Opacity-12|#1d192b1f|#1d192b1f
+State Layers/On Secondary Fixed/Opacity-16|#1d192b29|#1d192b29
+State Layers/Secondary Fixed Dim/Opacity-08|#ccc2dc14|#ccc2dc14
+State Layers/Secondary Fixed Dim/Opacity-12|#ccc2dc1f|#ccc2dc1f
+State Layers/Secondary Fixed Dim/Opacity-16|#ccc2dc29|#ccc2dc29
+State Layers/On Secondary Fixed Variant/Opacity-08|#4a445814|#4a445814
+State Layers/On Secondary Fixed Variant/Opacity-12|#4a44581f|#4a44581f
+State Layers/On Secondary Fixed Variant/Opacity-16|#4a445829|#4a445829
+State Layers/Tertiary Fixed/Opacity-08|#ffd8e414|#ffd8e414
+State Layers/Tertiary Fixed/Opacity-12|#ffd8e41f|#ffd8e41f
+State Layers/Surface Dim/Opacity-00|#ebebef00|#14121800
+State Layers/Tertiary Fixed/Opacity-16|#ffd8e429|#ffd8e429
+State Layers/On Tertiary Fixed/Opacity-08|#31111d14|#31111d14
+State Layers/On Tertiary Fixed/Opacity-12|#31111d1f|#31111d1f
+State Layers/On Tertiary Fixed/Opacity-16|#31111d29|#31111d29
+State Layers/Tertiary Fixed Dim/Opacity-08|#efb8c814|#efb8c814
+State Layers/Tertiary Fixed Dim/Opacity-12|#efb8c81f|#efb8c81f
+State Layers/Tertiary Fixed Dim/Opacity-16|#efb8c829|#efb8c829
+State Layers/On Tertiary Fixed Variant/Opacity-08|#633b4814|#633b4814
+State Layers/On Tertiary Fixed Variant/Opacity-12|#633b481f|#633b481f
+State Layers/On Tertiary Fixed Variant/Opacity-16|#633b4829|#633b4829
+State Layers/Surface Dim/Opacity-08|#ebebef14|#14121814
+State Layers/Surface Dim/Opacity-12|#ebebef1f|#1412181f
+State Layers/Surface Dim/Opacity-16|#ebebef29|#14121829
+State Layers/Surface Bright/Opacity-00|#fef7ff00|#26222a00
+State Layers/Surface Bright/Opacity-08|#fef7ff14|#26222a14
+State Layers/Surface Bright/Opacity-12|#fef7ff1f|#26222a1f
+State Layers/Surface Bright/Opacity-16|#fef7ff29|#26222a29
+State Layers/Surface Container Lowest/Opacity-08|#ffffff14|#2d293214
+State Layers/Surface Container Lowest/Opacity-12|#ffffff1f|#2d29321f
+State Layers/Surface Container Lowest/Opacity-16|#ffffff29|#2d293229
+State Layers/Surface Container Low/Opacity-08|#f7f2fa14|#1d1b2014
+State Layers/Surface Container Low/Opacity-12|#f7f2fa1f|#1d1b201f
+State Layers/Surface Container Low/Opacity-16|#f7f2fa29|#1d1b2029
+State Layers/Scrim/Opacity-12|#0000001f|#0000001f
+State Layers/Scrim/Opacity-16|#00000029|#00000029
+State Layers/Scrim/Opacity-20|#00000033|#00000033
+State Layers/Scrim/Opacity-40|#00000066|#00000066
+State Layers/Surface Container/Opacity-08|#f3edf714|#211f2614
+State Layers/Surface Container High/Opacity-08|#ece6f014|#2b293014
+State Layers/Surface Container High/Opacity-12|#ece6f01f|#2b29301f
+State Layers/Surface Container High/Opacity-16|#ece6f029|#2b293029
+State Layers/Surface Container/Opacity-12|#f3edf71f|#211f261f
+State Layers/Surface Container/Opacity-16|#f3edf729|#211f2629
+State Layers/Surface Container Highest/Opacity-08|#e6e0e914|#36343b14
+State Layers/Surface Container Highest/Opacity-12|#e6e0e91f|#36343b1f
+State Layers/Surface Container Highest/Opacity-16|#e6e0e929|#36343b29
+Surfaces/Surface Tint 5%|#863dfb0d|#aa8aff0d
+Surfaces/Surface Tint 8%|#863dfb14|#aa8aff14
+Surfaces/Surface Tint 11%|#863dfb1c|#aa8aff1c
+Surfaces/Surface Tint 12%|#863dfb1f|#aa8aff1f
+Surfaces/Surface Tint 14%|#842bd224|#ddb7ff24
+Palettes/Primary 100|#ffffff|#ffffff
+Palettes/Primary 99|#fffbff|#fffbff
+Palettes/Primary 98|#fff7fe|#fff7fe
+Palettes/Primary 95|#faecff|#faecff
+Palettes/Primary 90|#f0dbff|#f0dbff
+Palettes/Primary 80|#ddb7ff|#ddb7ff
+Palettes/Primary 70|#ca93ff|#ca93ff
+Palettes/Primary 60|#b76dff|#b76dff
+Palettes/Primary 50|#9e4bed|#9e4bed
+Palettes/Primary 40|#842bd2|#842bd2
+Palettes/Primary 35|#7716c5|#7716c5
+Palettes/Primary 30|#6900b3|#6900b3
+Palettes/Primary 25|#590099|#590099
+Palettes/Primary 20|#490080|#490080
+Palettes/Primary 15|#3a0068|#3a0068
+Palettes/Primary 10|#2c0051|#2c0051
+Palettes/Primary 5|#1d0038|#1d0038
+Palettes/Primary 0|#000000|#000000
+Palettes/Secondary 100|#ffffff|#ffffff
+Palettes/Secondary 99|#fefbff|#fefbff
+Palettes/Secondary 98|#fbf8ff|#fbf8ff
+Palettes/Secondary 95|#efefff|#efefff
+Palettes/Secondary 90|#dde1ff|#dde1ff
+Palettes/Secondary 80|#b8c4ff|#b8c4ff
+Palettes/Secondary 70|#92a6ff|#92a6ff
+Palettes/Secondary 60|#6b89ff|#6b89ff
+Palettes/Secondary 50|#3f69ff|#3f69ff
+Palettes/Secondary 40|#004af1|#004af1
+Palettes/Secondary 35|#0040d5|#0040d5
+Palettes/Secondary 30|#0037b9|#0037b9
+Palettes/Secondary 25|#002e9e|#002e9e
+Palettes/Secondary 20|#002584|#002584
+Palettes/Secondary 15|#001c6b|#001c6b
+Palettes/Secondary 10|#001453|#001453
+Palettes/Secondary 5|#000b3a|#000b3a
+Palettes/Secondary 0|#000000|#000000
+Palettes/Tertiary 100|#ffffff|#ffffff
+Palettes/Tertiary 99|#fffbff|#fffbff
+Palettes/Tertiary 98|#fff8ef|#fff8ef
+Palettes/Tertiary 95|#fff0c4|#fff0c4
+Palettes/Tertiary 90|#fde17b|#fde17b
+Palettes/Tertiary 80|#e8c426|#e8c426
+Palettes/Tertiary 70|#caa900|#caa900
+Palettes/Tertiary 60|#ab8e00|#ab8e00
+Palettes/Tertiary 50|#8d7500|#8d7500
+Palettes/Tertiary 40|#705d00|#705d00
+Palettes/Tertiary 35|#625100|#625100
+Palettes/Tertiary 30|#554600|#554600
+Palettes/Tertiary 25|#473a00|#473a00
+Palettes/Tertiary 20|#3b2f00|#3b2f00
+Palettes/Tertiary 15|#2e2500|#2e2500
+Palettes/Tertiary 10|#221b00|#221b00
+Palettes/Tertiary 5|#161000|#161000
+Palettes/Tertiary 0|#000000|#000000
+Palettes/Error 100|#ffffff|#ffffff
+Palettes/Error 99|#fffbff|#fffbff
+Palettes/Error 98|#fff8f7|#fff8f7
+Palettes/Error 95|#ffedea|#ffedea
+Palettes/Error 90|#ffdad6|#ffdad6
+Palettes/Error 80|#ffb4ab|#ffb4ab
+Palettes/Error 70|#ff897d|#ff897d
+Palettes/Error 60|#ff5449|#ff5449
+Palettes/Error 50|#de3730|#de3730
+Palettes/Error 40|#ba1a1a|#ba1a1a
+Palettes/Error 35|#a80710|#a80710
+Palettes/Error 30|#93000a|#93000a
+Palettes/Error 25|#7e0007|#7e0007
+Palettes/Error 20|#690005|#690005
+Palettes/Error 15|#540003|#540003
+Palettes/Error 10|#410002|#410002
+Palettes/Error 5|#2d0001|#2d0001
+Palettes/Error 0|#000000|#000000
+Palettes/Neutral 100|#ffffff|#ffffff
+Palettes/Neutral 99|#f6f6ff|#fffbff
+Palettes/Neutral 98|#e5e5f6|#fcf8f9
+Palettes/Neutral 95|#d3d3e4|#f4f0f0
+Palettes/Neutral 90|#c2c2d1|#e5e2e2
+Palettes/Neutral 80|#b1b1bf|#c9c6c6
+Palettes/Neutral 70|#a1a1ad|#adaaab
+Palettes/Neutral 60|#91919c|#929091
+Palettes/Neutral 50|#81818b|#787677
+Palettes/Neutral 40|#71717a|#5f5e5f
+Palettes/Neutral 35|#71717a|#535253
+Palettes/Neutral 30|#62626d|#484647
+Palettes/Neutral 25|#545460|#3c3b3c
+Palettes/Neutral 20|#474654|#313031
+Palettes/Neutral 15|#2c2c3c|#262526
+Palettes/Neutral 10|#202030|#1c1b1c
+Palettes/Neutral 5|#151425|#111111
+Palettes/Neutral 0|#0a081a|#000000
+Palettes/Neutral Variant 100|#ffffff|#ffffff
+Palettes/Neutral Variant 99|#f6f6ff|#fefbff
+Palettes/Neutral Variant 98|#e5e5f6|#fcf8f9
+Palettes/Neutral Variant 95|#d3d3e4|#f3f0f1
+Palettes/Neutral Variant 90|#c2c2d1|#e5e2e2
+Palettes/Neutral Variant 80|#b1b1bf|#c9c6c6
+Palettes/Neutral Variant 70|#a1a1ad|#adaaab
+Palettes/Neutral Variant 60|#91919c|#929091
+Palettes/Neutral Variant 50|#81818b|#787677
+Palettes/Neutral Variant 40|#71717a|#5f5e5f
+Palettes/Neutral Variant 35|#71717a|#535253
+Palettes/Neutral Variant 30|#62626d|#474647
+Palettes/Neutral Variant 25|#545460|#3c3b3c
+Palettes/Neutral Variant 20|#474654|#313031
+Palettes/Neutral Variant 15|#2c2c3c|#262526
+Palettes/Neutral Variant 10|#202030|#1c1b1c
+Palettes/Neutral Variant 5|#151425|#111112
+Palettes/Neutral Variant 0|#0a081a|#000000

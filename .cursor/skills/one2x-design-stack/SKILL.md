@@ -38,6 +38,7 @@ Rules:
 - Use `tokens/tokens.css` names for color, typography, spacing, radius, and font family.
 - Avoid naked hex, arbitrary `font-size`, arbitrary spacing, and non-token radius values.
 - Use existing project components before creating new UI primitives.
+- Icons must come from the One2X icon library `@one2x/o2x-icons` (component `<XxxIcon />` or font className `o2x-icons-<Name>`, color via `currentColor`); never hand-roll SVGs, pull in third-party icon sets (Material Symbols / Lucide / Iconfont, etc.), or use emoji as icons. See `design.md` §6.1.
 - Validate the rendered result against the same Figma node at the target viewport before completion.
 
 ### Figma MCP Write Or Edit
